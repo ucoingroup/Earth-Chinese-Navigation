@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earth Arbitrage · 地球村全球套利 × EACO</title>
+<meta name="description" content="地球村全球套利：思维逻辑、10 个核心方法、100 种方法、100 个问答、20 大高潜力行业（含套利点 / EACO 落地 / SOP / 风险 / 宣传短句），结合 EACO 生态。10 语言 · 3 主题。">
+<style>
+:root{--radius:14px;--ff:"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;--fs:15px}
+body[data-theme="green"]{--bg:#f2f9ec;--bg2:#e4f3d9;--card:#ffffff;--text:#1f2d1a;--muted:#5c7050;--accent:#3e9b34;--accent2:#2e7d32;--accentText:#fff;--border:#cfe6bd;--shadow:0 4px 18px rgba(62,155,52,.10);--chipBg:#e4f3d9}
+body[data-theme="blue"]{--bg:#0a1220;--bg2:#0e1a2e;--card:#101f36;--text:#dbe9ff;--muted:#7e97c4;--accent:#38bdf8;--accent2:#6366f1;--accentText:#04121f;--border:#1e3a5f;--shadow:0 4px 20px rgba(56,189,248,.12);--chipBg:#0e2038}
+body[data-theme="classic"]{--bg:#f6efe0;--bg2:#efe5cf;--card:#fffdf5;--text:#2b2118;--muted:#7a6a50;--accent:#a33327;--accent2:#8a6d3b;--accentText:#fffdf5;--border:#cdbb94;--shadow:0 4px 14px rgba(139,109,59,.14);--chipBg:#f1e6cc;--radius:4px;--ff:Georgia,"Songti SC","STSong","SimSun","Noto Serif SC",serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--ff);font-size:var(--fs);line-height:1.7;transition:background .3s,color .3s}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:18px 0;position:sticky;top:0;z-index:50;backdrop-filter:blur(6px)}
+.hrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-size:19px;letter-spacing:.5px}
+.brand .dot{color:var(--accent)}
+.ctrls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+select,button{font-family:inherit;font-size:13.5px;color:var(--text);background:var(--card);border:1px solid var(--border);border-radius:8px;padding:7px 10px;cursor:pointer}
+button:hover,select:hover{border-color:var(--accent)}
+button.themeBtn.active{background:var(--accent);color:var(--accentText);border-color:var(--accent)}
+.searchBox{width:100%;margin-top:10px;display:flex;gap:8px}
+.searchBox input{flex:1;font-family:inherit;font-size:14px;color:var(--text);background:var(--card);border:1px solid var(--border);border-radius:8px;padding:9px 12px;outline:none}
+.searchBox input:focus{border-color:var(--accent)}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+nav a{text-decoration:none;font-size:13.5px;padding:6px 12px;border-radius:999px;background:var(--chipBg);border:1px solid var(--border)}
+nav a:hover{border-color:var(--accent)}
+main{padding:26px 0 60px}
+section{margin-bottom:44px;scroll-margin-top:90px}
+h2{font-size:22px;margin-bottom:6px;padding-left:12px;border-left:4px solid var(--accent)}
+.desc{color:var(--muted);font-size:14px;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px}
+.grid{display:grid;gap:12px}
+.g3{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.g2{grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
+.layerCard h3{font-size:15.5px;margin-bottom:4px;color:var(--accent)}
+.layerCard p{font-size:13.5px;color:var(--muted)}
+.m10 h3{font-size:15.5px;color:var(--accent);margin-bottom:4px}
+.m10 p{font-size:13.5px}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;background:var(--chipBg);border:1px solid var(--border);color:var(--muted);margin-bottom:8px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tabs button{border-radius:999px;font-size:13px}
+.tabs button.active{background:var(--accent);color:var(--accentText);border-color:var(--accent)}
+.mItem h3{font-size:15px;margin-bottom:4px}
+.mItem .meta{font-size:13px;color:var(--muted)}
+.mItem .meta b{color:var(--accent2);font-weight:600}
+.qa details{border:1px solid var(--border);border-radius:var(--radius);background:var(--card);margin-bottom:8px;overflow:hidden}
+.qa summary{cursor:pointer;padding:12px 14px;font-weight:600;font-size:14.5px;list-style:none;display:flex;gap:8px;align-items:baseline}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .qn{color:var(--accent);font-size:12.5px;flex-shrink:0;min-width:34px}
+.qa .ans{padding:0 14px 13px 56px;font-size:13.8px;color:var(--text)}
+.roadCard h3{font-size:15.5px;color:var(--accent);margin-bottom:4px}
+.infraCard h3{font-size:16px;margin-bottom:8px;color:var(--accent)}
+.infraCard .ib{margin-bottom:7px}
+.infraCard .ib b{display:block;font-size:12.5px;color:var(--accent2);margin-bottom:2px}
+.infraCard .ib p{font-size:13.4px;color:var(--text)}
+.mHow{font-size:13px;color:var(--text);border-left:2px solid var(--accent);padding-left:8px;margin-top:6px}
+.mHow b{color:var(--accent2);font-weight:600;font-size:12.5px}
+.qa .ans .extra{margin-top:7px;padding-top:7px;border-top:1px dashed var(--border);font-size:13.2px;color:var(--muted)}
+ul.mini{list-style:none;margin-top:6px}
+ul.mini li{font-size:13.3px;line-height:1.65;padding-left:14px;position:relative;margin-bottom:5px}
+ul.mini li:before{content:"·";position:absolute;left:3px;color:var(--accent);font-weight:700}
+#m100Mode,#qaMode{margin-bottom:8px}
+#m100Mode .modeBtn,#qaMode .modeBtn{font-size:13px}
+.notice{font-size:12.5px;color:var(--muted);background:var(--chipBg);border:1px dashed var(--border);border-radius:8px;padding:8px 12px;margin-bottom:14px}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:30px 0 40px;margin-top:20px}
+.eacoGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:14px 0}
+.caBox{font-family:Consolas,Menlo,monospace;font-size:12.5px;word-break:break-all;background:var(--chipBg);border:1px solid var(--border);border-radius:8px;padding:9px 11px;margin-top:6px}
+.copyBtn{margin-top:8px;font-size:12.5px}
+.linkList{list-style:none;font-size:13.5px}
+.linkList li{margin-bottom:6px}
+.disc{font-size:12.5px;color:var(--muted);border:1px dashed var(--border);border-radius:8px;padding:12px 14px;margin-top:16px}
+.fourEq{background:var(--chipBg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:13.5px;margin-bottom:8px}
+.topBtn{position:fixed;right:18px;bottom:18px;border-radius:999px;padding:9px 14px;background:var(--accent);color:var(--accentText);border:none;box-shadow:var(--shadow);display:none;z-index:60}
+html[dir="rtl"] .topBtn{right:auto;left:18px}
+html[dir="rtl"] h2{padding-left:0;padding-right:12px;border-left:none;border-right:4px solid var(--accent)}
+html[dir="rtl"] .qa .ans{padding:0 56px 13px 14px}
+.count{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+.indStat{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.indStat span{font-size:12.5px;padding:4px 10px;border-radius:999px;background:var(--chipBg);border:1px solid var(--border);color:var(--muted)}
+.indCard h3{font-size:15.5px;color:var(--accent);margin-bottom:8px;line-height:1.45}
+.indCard .ib{margin-bottom:7px}
+.indCard .ib b{display:block;font-size:12.4px;color:var(--accent2);margin-bottom:2px;letter-spacing:.3px}
+.indCard .ib p{font-size:13.3px}
+.indCard .ib ol{font-size:13.1px;padding-left:17px;line-height:1.65}
+.indCard .ib ol li{margin-bottom:2px}
+.indCard ul.risk{list-style:none;font-size:13px;line-height:1.62}
+.indCard ul.risk li{padding-left:16px;position:relative;color:var(--muted);margin-bottom:2px}
+.indCard ul.risk li:before{content:"⚠";position:absolute;left:0;font-size:11px;color:#c9822f}
+.slogan{margin-top:9px;padding:7px 11px;border-left:3px solid var(--accent);background:var(--chipBg);border-radius:6px;font-size:13px;line-height:1.55}
+html[dir="rtl"] .slogan{border-left:none;border-right:3px solid var(--accent)}
+@media(max-width:640px){.g2{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-theme="green">
+<header>
+  <div class="wrap">
+    <div class="hrow">
+      <div class="brand">🌍 Earth Arbitrage <span class="dot">·</span> <span data-i18n="brandSub">地球村全球套利 × EACO</span></div>
+      <div class="ctrls">
+        <select id="langSel" aria-label="Language"></select>
+        <button class="themeBtn" data-theme-btn="green" data-i18n="thGreen">🍏 苹果绿</button>
+        <button class="themeBtn" data-theme-btn="blue" data-i18n="thBlue">🔵 科技蓝</button>
+        <button class="themeBtn" data-theme-btn="classic" data-i18n="thClassic">🏮 华夏古典</button>
+      </div>
+    </div>
+    <div class="searchBox"><input id="search" type="search" data-i18n-ph="searchPh" placeholder="搜索方法与问答…"></div>
+    <nav>
+      <a href="#logic" data-i18n="navLogic">思维逻辑</a>
+      <a href="#m10" data-i18n="navM10">核心十法</a>
+      <a href="#m100" data-i18n="navM100">100 种方法</a>
+      <a href="#qa" data-i18n="navQA">100 问答</a>
+      <a href="#ind" id="navInd">20 大行业</a>
+      <a href="#infra" id="navInfra">EACO + SOL</a>
+      <a href="#road" data-i18n="navRoad">90 天节奏</a>
+      <a href="#eaco" data-i18n="navEaco">EACO 信息</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="hero">
+    <div class="card">
+      <span class="tag" data-i18n="heroTag">认知框架 · 生态研究 · 不构成投资建议</span>
+      <h2 data-i18n="heroTitle">世界不是孤岛：差异本身就是机会</h2>
+      <p class="desc" data-i18n="heroSub">全球套利的本质是一切跨边界的价值搬运与重组——跨地理、跨货币、跨制度、跨时间、跨认知。本页整合思维逻辑、核心十法、100 种方法与 100 个问答，并结合 EACO（Earth's Best Coin）生态落地。</p>
+    </div>
+  </section>
+
+  <section id="logic">
+    <h2 data-i18n="secLogicT">一、思维逻辑</h2>
+    <p class="desc" data-i18n="secLogicD">六层视角 + 三大方法论支柱：边界理论、节点网络理论、信息差 × 执行力。</p>
+    <div class="grid g3" id="layerGrid"></div>
+    <div style="height:12px"></div>
+    <div class="grid g3" id="pillarGrid"></div>
+  </section>
+
+  <section id="m10">
+    <h2 data-i18n="secM10T">二、核心十法</h2>
+    <p class="desc" data-i18n="secM10D">从《全球套利》框架提炼的 10 个核心方法，每个方法对应可执行的 EACO 生态动作。</p>
+    <div class="grid g2 m10" id="m10Grid"></div>
+    <div style="height:12px"></div>
+    <div class="card">
+      <span class="tag" id="base10Tag">总纲</span>
+      <h3 id="base10Title" style="font-size:15.5px;color:var(--accent);margin-bottom:6px"></h3>
+      <ol id="base10List" style="font-size:13.6px;padding-left:20px;line-height:1.85"></ol>
+    </div>
+  </section>
+
+  <section id="m100">
+    <h2 data-i18n="secM100T">三、地球村全球套利 100 种方法</h2>
+    <p class="desc" data-i18n="secM100D">十大类 × 每类 10 种，每条含底层逻辑与 EACO 结合点。</p>
+    <div class="notice" data-i18n="fallbackNotice"></div>
+    <div class="tabs" id="m100Mode">
+      <button class="modeBtn active" data-m="sys">体系版 · 10 类 × 10</button>
+      <button class="modeBtn" data-m="biz">实务版 · 100 条（20/20/20/15/13/12）</button>
+    </div>
+    <div class="tabs" id="m100Tabs"></div>
+    <div class="count" id="m100Count"></div>
+    <div class="grid g2" id="m100Grid"></div>
+  </section>
+
+  <section id="qa">
+    <h2 data-i18n="secQAT">四、EACO 套利常见 100 问答</h2>
+    <p class="desc" data-i18n="secQAD">五组 × 20 问：基础认知、参与操作、风险合规、生态结合、长期策略。</p>
+    <div class="tabs" id="qaMode">
+      <button class="modeBtn active" data-m="sys">体系版 · 5 组 × 20</button>
+      <button class="modeBtn" data-m="biz">实务版 · 8 板块 × 100</button>
+    </div>
+    <div class="tabs" id="qaTabs"></div>
+    <div class="count" id="qaCount"></div>
+    <div class="qa" id="qaList"></div>
+  </section>
+
+  <section id="ind">
+    <h2 id="indT">五、地球村 20 大高潜力行业（2026–2030）</h2>
+    <p class="desc" id="indD"></p>
+    <div class="notice" id="indStd"></div>
+    <div class="indStat" id="indStat"></div>
+    <div class="tabs" id="indTabs"></div>
+    <div class="count" id="indCount"></div>
+    <div class="grid g2" id="indGrid"></div>
+    <div class="card" style="margin-top:16px">
+      <span class="tag" id="indSloganTag"></span>
+      <h3 id="indSloganTitle" style="font-size:15.5px;color:var(--accent);margin-bottom:6px"></h3>
+      <ul class="mini" id="indSloganList"></ul>
+    </div>
+  </section>
+
+  <section id="infra">
+    <h2 id="infraT">六、建设 Web3 基础设施：EACO + SOL 能做什么</h2>
+    <p class="desc" id="infraD">SOL 提供底层网络与结算能力（gas、质押、账户体系），EACO 提供社区组织与激励层。两者叠加可以做出的 10 类基础设施方向，每条含「做什么 / 为什么适合 / 落地步骤」。</p>
+    <div class="grid g2" id="infraGrid"></div>
+    <h3 style="font-size:17px;margin:26px 0 6px;color:var(--accent)">六大基础设施板块 · 项目级清单</h3>
+    <p class="desc" style="margin-bottom:14px">把上面的方向落到你的实业场景：光伏、房车、建材、钨金、口岸贸易、内容教育、社群治理。以下清单为华语版，逐条对照自身资源做取舍。</p>
+    <div class="grid g3" id="infra6Grid"></div>
+  </section>
+
+  <section id="road">
+    <h2 data-i18n="secRoadT">七、90 天落地节奏</h2>
+    <p class="desc" data-i18n="secRoadD">看见 → 连接 → 系统：把认知变成可复利的公开资产。</p>
+    <div class="grid g3 roadCard-wrap" id="roadGrid"></div>
+  </section>
+</main>
+
+<footer id="eaco">
+  <div class="wrap">
+    <h2 data-i18n="fT">EACO · Earth's Best Coin（地球最好币）常规信息</h2>
+    <div class="eacoGrid">
+      <div class="card">
+        <h3 data-i18n="fBasic">基本信息</h3>
+        <p style="font-size:13.5px;margin-top:6px" id="fPos" data-i18n="fPos"></p>
+        <ul class="linkList" style="margin-top:8px">
+          <li id="fSupply" data-i18n="fSupply"></li>
+          <li id="fLP" data-i18n="fLP"></li>
+          <li id="fChain" data-i18n="fChain"></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 data-i18n="fCA">合约地址（认准官方，谨防假币）</h3>
+        <div class="caBox" id="caText">DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH</div>
+        <button class="copyBtn" id="copyCA" data-i18n="fCopy">📋 复制合约地址</button>
+      </div>
+      <div class="card">
+        <h3 data-i18n="fFour">四要素</h3>
+        <div class="fourEq">华语：EACO = 正能量 × 积极态度 × 全球协作 × 持续优化</div>
+        <div class="fourEq">English: EACO = Positive Energy × Positive Mindset × Global Collaboration × Continuous Optimization</div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="fGoals">五大核心目标</h3>
+        <ol class="linkList" style="margin-top:8px;padding-left:18px" id="goalList"></ol>
+      </div>
+      <div class="card">
+        <h3 data-i18n="fLinks">官方链接</h3>
+        <ul class="linkList" style="margin-top:8px">
+          <li>🌐 <a href="https://ucoingroup.github.io/earths-best-coin/" target="_blank" rel="noopener">官网 ucoingroup.github.io/earths-best-coin</a></li>
+          <li>🧭 <a href="https://ucoingroup.github.io/Earth-Chinese-Navigation/" target="_blank" rel="noopener">地球村导航 Earth-Chinese-Navigation</a></li>
+          <li>💻 <a href="https://github.com/ucoingroup" target="_blank" rel="noopener">GitHub · ucoingroup</a></li>
+          <li>🏊 <a href="https://raydium.io" target="_blank" rel="noopener">Raydium</a> · <a href="https://meteora.ag" target="_blank" rel="noopener">Meteora</a> · <a href="https://orca.so" target="_blank" rel="noopener">Orca</a></li>
+          <li>🔍 <a href="https://solscan.io" target="_blank" rel="noopener">Solscan</a> · <a href="https://www.oklink.com" target="_blank" rel="noopener">OKLink</a></li>
+          <li>✉️ eaco2cc@gmail.com · Discord（见官网）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="disc" id="disclaimer"></div>
+  </div>
+</footer>
+
+<button class="topBtn" id="topBtn">↑ <span data-i18n="top">顶部</span></button>
+
+<script>
+/* ============ 基础数据 ============ */
+const CA="DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH";
+const LANGS=[["zh","华语"],["en","English"],["es","Español"],["fr","Français"],["de","Deutsch"],["ru","Русский"],["ar","العربية"],["ja","日本語"],["ko","한국어"],["pt","Português"]];
+const DETAIL_LANGS=["zh","en"]; // 100方法/100问答深度语言，其余语言回退英文
+
+/* ============ UI 词典（10 语言） ============ */
+const I18N={
+zh:{brandSub:"地球村全球套利 × EACO",thGreen:"🍏 苹果绿",thBlue:"🔵 科技蓝",thClassic:"🏮 华夏古典",searchPh:"搜索方法与问答…",navLogic:"思维逻辑",navM10:"核心十法",navM100:"100 种方法",navQA:"100 问答",navRoad:"90 天节奏",navEaco:"EACO 信息",heroTag:"认知框架 · 生态研究 · 不构成投资建议",heroTitle:"世界不是孤岛：差异本身就是机会",heroSub:"全球套利的本质是一切跨边界的价值搬运与重组——跨地理、跨货币、跨制度、跨时间、跨认知。本页整合思维逻辑、核心十法、100 种方法与 100 个问答，并结合 EACO（Earth's Best Coin）生态落地。",secLogicT:"一、思维逻辑",secLogicD:"六层视角 + 三大方法论支柱：边界理论、节点网络理论、信息差 × 执行力。",secM10T:"二、核心十法",secM10D:"从《全球套利》框架提炼的 10 个核心方法，每个方法对应可执行的 EACO 生态动作。",secM100T:"三、地球村全球套利 100 种方法",secM100D:"十大类 × 每类 10 种，每条含底层逻辑与 EACO 结合点。",secQAT:"四、EACO 套利常见 100 问答",secQAD:"五组 × 20 问：基础认知、参与操作、风险合规、生态结合、长期策略。",secRoadT:"七、90 天落地节奏",secRoadD:"看见 → 连接 → 系统：把认知变成可复利的公开资产。",fallbackNotice:"💡 深度内容（核心十法 / 100 方法 / 100 问答 / 90 天节奏）当前提供华语与 English 双语；选择其他语言时页面框架与简介仍为该语言，深度内容回退 English。",all:"全部",countTpl:"共 {n} 条",fT:"EACO · Earth's Best Coin（地球最好币）常规信息",fBasic:"基本信息",fPos:"Solana 链上「地球最好的 AI + RWA + Web3 代币」，社区驱动的 MEME 币，主张计算劳动价值、量化地球资源，人人可参与全球协作。",fSupply:"总供应量：13.5 亿枚（1.35 billion）",fLP:"LP：10% 永久锁定",fChain:"区块链：Solana",fCA:"合约地址（认准官方，谨防假币）",fCopy:"📋 复制合约地址",fCopied:"✅ 已复制",fFour:"四要素",fGoals:"五大核心目标",fLinks:"官方链接",goals:["提升个体认知","提升组织效率","推动社会文明进步","促进地球可持续发展","融合 100 个认知模型"],disc:"免责声明：本页仅为认知框架与生态研究整理，不构成任何投资建议。EACO 为社区驱动的 MEME 币，加密资产波动剧烈，可能部分或全部损失；参与前请自行核实信息、评估风险并遵守当地法律法规（中国内地对加密货币交易及相关金融活动有严格监管限制）。本页不含价格预测与收益承诺；涉及收益率的数据仅为官网公开信息记录，其风险与可持续性需自行评估；分配类数据存在待澄清口径，未作自行合并。认准合约地址，谨防假币。",top:"顶部",pillars:["边界理论","所有套利都发生在边界上：国界、语言界、行业界、认知界。边界越难跨越，利润越厚。","节点网络理论","连接两个以上社群/市场的人，拥有信息差与信任差的双重红利。","信息差 × 执行力","信息差决定你能不能看见，执行力决定你能不能拿到。"]},
+en:{brandSub:"Global Village Arbitrage × EACO",thGreen:"🍏 Apple Green",thBlue:"🔵 Tech Blue",thClassic:"🏮 Chinese Classic",searchPh:"Search methods & Q&A…",navLogic:"Mindset",navM10:"Core 10",navM100:"100 Methods",navQA:"100 Q&A",navRoad:"90-Day Plan",navEaco:"EACO Info",heroTag:"Cognitive framework · Ecosystem research · Not investment advice",heroTitle:"The world is not an island: differences ARE the opportunity",heroSub:"Global arbitrage is the cross-border movement and recombination of value — across geography, currency, institutions, time and cognition. This page integrates mindset, core 10 methods, 100 methods and 100 Q&A, grounded in the EACO (Earth's Best Coin) ecosystem.",secLogicT:"1. The Mindset",secLogicD:"Six lenses + three methodology pillars: Border Theory, Node-Network Theory, Information Gap × Execution.",secM10T:"2. Core 10 Methods",secM10D:"Ten core methods distilled from the Global Arbitrage framework, each paired with actionable EACO moves.",secM100T:"3. 100 Methods of Global-Village Arbitrage",secM100D:"10 categories × 10 methods, each with underlying logic and an EACO integration point.",secQAT:"4. 100 EACO Arbitrage Q&A",secQAD:"5 groups × 20 questions: basics, operations, risk & compliance, ecosystem, long-term strategy.",secRoadT:"7. 90-Day Action Rhythm",secRoadD:"See → Connect → Systemize: turn cognition into compounding public assets.",fallbackNotice:"💡 Deep content (Core 10 / 100 Methods / 100 Q&A / 90-Day Plan) is available in 华语 and English; with other languages the frame and intros are localized while deep content falls back to English.",all:"All",countTpl:"{n} items",fT:"EACO · Earth's Best Coin — Key Facts",fBasic:"Basics",fPos:"The 'Earth's best AI + RWA + Web3 token' on Solana — a community-driven MEME coin that values labor and quantifies Earth's resources, open to global collaboration.",fSupply:"Total supply: 1.35 billion",fLP:"LP: 10% permanently locked",fChain:"Blockchain: Solana",fCA:"Contract address (verify officially, beware fakes)",fCopy:"📋 Copy CA",fCopied:"✅ Copied",fFour:"Four Elements",fGoals:"Five Core Goals",fLinks:"Official Links",goals:["Elevate individual cognition","Boost organizational efficiency","Advance social civilization","Promote Earth's sustainability","Integrate 100 cognitive models"],disc:"Disclaimer: This page is a cognitive framework and ecosystem research compilation, NOT investment advice. EACO is a community-driven MEME coin; crypto assets are highly volatile and may lose all value. Verify information, assess risks and follow local laws (crypto trading is severely restricted in mainland China). No price predictions or yield promises; any APR figures are official-site records only; allocation figures have unresolved definitions. Always verify the contract address and beware fake tokens.",top:"Top",pillars:["Border Theory","All arbitrage happens on borders: national, linguistic, industrial, cognitive. The harder the border, the thicker the margin.","Node-Network Theory","Those connecting 2+ communities enjoy dual dividends: information gap and trust gap.","Information Gap × Execution","The gap decides what you can see; execution decides what you get."]},
+es:{brandSub:"Aldea Global Arbitrage × EACO",thGreen:"🍏 Verde Manzana",thBlue:"🔵 Azul Tec",thClassic:"🏮 Clásico Chino",searchPh:"Buscar métodos y P&R…",navLogic:"Mentalidad",navM10:"10 Esenciales",navM100:"100 Métodos",navQA:"100 P&R",navRoad:"Plan 90 Días",navEaco:"Info EACO",heroTag:"Marco cognitivo · Investigación · No es asesoría de inversión",heroTitle:"El mundo no es una isla: la diferencia ES la oportunidad",heroSub:"El arbitraje global es el movimiento y recombinación de valor a través de fronteras: geografía, moneda, instituciones, tiempo y cognición. Esta página integra mentalidad, 10 métodos esenciales, 100 métodos y 100 P&R sobre el ecosistema EACO.",secLogicT:"1. La Mentalidad",secLogicD:"Seis lentes + tres pilares: Teoría de Fronteras, Teoría de Redes de Nodos, Brecha de Información × Ejecución.",secM10T:"2. Los 10 Métodos Esenciales",secM10D:"Diez métodos destilados del marco de Arbitraje Global, cada uno con acciones concretas en EACO.",secM100T:"3. 100 Métodos de Arbitraje Global",secM100D:"10 categorías × 10 métodos, con lógica y punto de integración EACO.",secQAT:"4. 100 P&R de Arbitraje EACO",secQAD:"5 grupos × 20 preguntas: bases, operación, riesgo y cumplimiento, ecosistema, estrategia a largo plazo.",secRoadT:"7. Ritmo de 90 Días",secRoadD:"Ver → Conectar → Sistematizar: convertir cognición en activos públicos que se acumulan.",fallbackNotice:"💡 El contenido profundo está disponible en 华语 y English; en otros idiomas el marco se traduce y el contenido profundo vuelve a English.",all:"Todo",countTpl:"{n} ítems",fT:"EACO · Earth's Best Coin — Datos clave",fBasic:"Básicos",fPos:"El 'mejor token de IA + RWA + Web3 de la Tierra' en Solana: MEME coin comunitaria que valora el trabajo y cuantifica los recursos del planeta.",fSupply:"Suministro total: 1.350 millones",fLP:"LP: 10% bloqueado permanentemente",fChain:"Blockchain: Solana",fCA:"Dirección del contrato (verifica oficialmente, cuidado con falsos)",fCopy:"📋 Copiar CA",fCopied:"✅ Copiado",fFour:"Cuatro Elementos",fGoals:"Cinco Metas Centrales",fLinks:"Enlaces oficiales",goals:["Elevar la cognición individual","Mejorar la eficiencia organizativa","Avanzar la civilización social","Promover la sostenibilidad de la Tierra","Integrar 100 modelos cognitivos"],disc:"Aviso: esta página es un marco cognitivo e investigación, NO asesoría de inversión. EACO es una MEME coin comunitaria; las cripto son muy volátiles. Verifica la información y cumple las leyes locales. Sin predicciones de precio ni promesas de rentabilidad. Verifica la dirección del contrato y evita falsos.",top:"Arriba",pillars:["Teoría de Fronteras","Todo arbitraje ocurre en fronteras: nacionales, lingüísticas, industriales, cognitivas. A mayor dificultad, mayor margen.","Teoría de Redes de Nodos","Quien conecta 2+ comunidades obtiene doble dividendo: información y confianza.","Brecha de Información × Ejecución","La brecha decide qué ves; la ejecución decide qué obtienes."]},
+fr:{brandSub:"Arbitrage Village Mondial × EACO",thGreen:"🍏 Vert Pomme",thBlue:"🔵 Bleu Tech",thClassic:"🏮 Classique Chinois",searchPh:"Rechercher méthodes et Q&R…",navLogic:"État d'esprit",navM10:"10 Essentiels",navM100:"100 Méthodes",navQA:"100 Q&R",navRoad:"Plan 90 Jours",navEaco:"Infos EACO",heroTag:"Cadre cognitif · Recherche · Pas un conseil en investissement",heroTitle:"Le monde n'est pas une île : la différence EST l'opportunité",heroSub:"L'arbitrage global est le déplacement et la recombinaison de valeur à travers les frontières : géographie, monnaie, institutions, temps, cognition. Cette page intègre mentalité, 10 méthodes essentielles, 100 méthodes et 100 Q&R sur l'écosystème EACO.",secLogicT:"1. L'État d'Esprit",secLogicD:"Six lentilles + trois piliers : Théorie des Frontières, Théorie des Réseaux de Nœuds, Écart d'Information × Exécution.",secM10T:"2. Les 10 Méthodes Essentielles",secM10D:"Dix méthodes clés issues du cadre Global Arbitrage, chacune avec des actions EACO concrètes.",secM100T:"3. 100 Méthodes d'Arbitrage Global",secM100D:"10 catégories × 10 méthodes, avec logique et point d'intégration EACO.",secQAT:"4. 100 Q&R Arbitrage EACO",secQAD:"5 groupes × 20 questions : bases, opération, risque & conformité, écosystème, long terme.",secRoadT:"7. Rythme 90 Jours",secRoadD:"Voir → Connecter → Systématiser : transformer la cognition en actifs publics composés.",fallbackNotice:"💡 Le contenu approfondi est disponible en 华语 et English ; dans les autres langues, le cadre est traduit et le contenu approfondi retombe sur l'anglais.",all:"Tout",countTpl:"{n} éléments",fT:"EACO · Earth's Best Coin — Infos clés",fBasic:"Bases",fPos:"Le « meilleur token IA + RWA + Web3 de la Terre » sur Solana : MEME coin communautaire valorisant le travail et quantifiant les ressources terrestres.",fSupply:"Offre totale : 1,35 milliard",fLP:"LP : 10 % verrouillés permanent",fChain:"Blockchain : Solana",fCA:"Adresse du contrat (vérifiez officiellement, méfiez-vous des faux)",fCopy:"📋 Copier le CA",fCopied:"✅ Copié",fFour:"Quatre Éléments",fGoals:"Cinq Objectifs Centraux",fLinks:"Liens officiels",goals:["Élever la cognition individuelle","Améliorer l'efficacité organisationnelle","Faire progresser la civilisation","Promouvoir la durabilité de la Terre","Intégrer 100 modèles cognitifs"],disc:"Avertissement : cette page est un cadre cognitif et une recherche, PAS un conseil en investissement. EACO est une MEME coin communautaire ; les cryptos sont très volatiles. Vérifiez les informations et respectez les lois locales. Aucune prédiction de prix ni promesse de rendement. Vérifiez l'adresse du contrat, méfiez-vous des faux.",top:"Haut",pillars:["Théorie des Frontières","Tout arbitrage se produit aux frontières : nationales, linguistiques, sectorielles, cognitives. Plus la frontière est dure, plus la marge est épaisse.","Théorie des Réseaux de Nœuds","Qui connecte 2+ communautés touche un double dividende : information et confiance.","Écart d'Information × Exécution","L'écart décide de ce que vous voyez ; l'exécution décide de ce que vous obtenez."]},
+de:{brandSub:"Globales Dorf Arbitrage × EACO",thGreen:"🍏 Apfelgrün",thBlue:"🔵 Tech-Blau",thClassic:"🏮 Chinesisch Klassisch",searchPh:"Methoden & F&A suchen…",navLogic:"Denkweise",navM10:"10 Kernmethoden",navM100:"100 Methoden",navQA:"100 F&A",navRoad:"90-Tage-Plan",navEaco:"EACO-Infos",heroTag:"Kognitiver Rahmen · Recherche · Keine Anlageberatung",heroTitle:"Die Welt ist keine Insel: Unterschiede SIND die Chance",heroSub:"Globale Arbitrage ist die grenzüberschreitende Bewegung und Rekombination von Wert — über Geografie, Währung, Institutionen, Zeit und Kognition. Diese Seite bündelt Denkweise, 10 Kernmethoden, 100 Methoden und 100 F&A rund um das EACO-Ökosystem.",secLogicT:"1. Die Denkweise",secLogicD:"Six Linsen + drei Pfeiler: Grenztheorie, Knotennetzwerk-Theorie, Informationsgefälle × Umsetzung.",secM10T:"2. Die 10 Kernmethoden",secM10D:"Zehn Kernmethoden aus dem Global-Arbitrage-Rahmen, jede mit konkreten EACO-Aktionen.",secM100T:"3. 100 Methoden des globalen Dorf-Arbitrage",secM100D:"10 Kategorien × 10 Methoden, mit Logik und EACO-Bezug.",secQAT:"4. 100 F&A zu EACO-Arbitrage",secQAD:"5 Gruppen × 20 Fragen: Grundlagen, Betrieb, Risiko & Compliance, Ökosystem, Langfriststrategie.",secRoadT:"7. 90-Tage-Rhythmus",secRoadD:"Sehen → Verbinden → Systematisieren: Kognition in zusammensetzende öffentliche Assets verwandeln.",fallbackNotice:"💡 Tiefgehende Inhalte sind auf 华语 und English verfügbar; in anderen Sprachen wird der Rahmen übersetzt und tiefer Inhalt fällt auf Englisch zurück.",all:"Alle",countTpl:"{n} Einträge",fT:"EACO · Earth's Best Coin — Kernfakten",fBasic:"Grundlagen",fPos:"Der 'beste KI + RWA + Web3-Token der Erde' auf Solana — eine Community-MEME-Coin, die Arbeit wertschätzt und Ressourcen der Erde quantifiziert.",fSupply:"Gesamtmenge: 1,35 Milliarden",fLP:"LP: 10 % dauerhaft gesperrt",fChain:"Blockchain: Solana",fCA:"Vertragsadresse (offiziell prüfen, Vorsicht vor Fälschungen)",fCopy:"📋 CA kopieren",fCopied:"✅ Kopiert",fFour:"Vier Elemente",fGoals:"Fünf Kernziele",fLinks:"Offizielle Links",goals:["Individuelle Kognition heben","Organisationseffizienz steigern","Zivilisation voranbringen","Nachhaltigkeit der Erde fördern","100 kognitive Modelle integrieren"],disc:"Hinweis: Diese Seite ist ein kognitiver Rahmen und Recherche, KEINE Anlageberatung. EACO ist eine Community-MEME-Coin; Krypto ist hochvolatil. Informieren Sie sich und folgen Sie den lokalen Gesetzen. Keine Preisprognosen oder Renditeversprechen. Vertragsadresse immer prüfen, Vorsicht vor Fälschungen.",top:"Nach oben",pillars:["Grenztheorie","Alle Arbitrage geschieht an Grenzen: national, sprachlich, branchenbezogen, kognitiv. Je härter die Grenze, desto dicker die Marge.","Knotennetzwerk-Theorie","Wer 2+ Communities verbindet, erhält doppelte Dividenden: Informationsgefälle und Vertrauensgefälle.","Informationsgefälle × Umsetzung","Das Gefälle entscheidet, was du siehst; die Umsetzung, was du bekommst."]},
+ru:{brandSub:"Арбитраж мировой деревни × EACO",thGreen:"🍏 Яблочно-зелёный",thBlue:"🔵 Техно-синий",thClassic:"🏮 Китайская классика",searchPh:"Поиск методов и вопросов…",navLogic:"Мышление",navM10:"10 ключевых",navM100:"100 методов",navQA:"100 вопросов",navRoad:"План на 90 дней",navEaco:"Инфо EACO",heroTag:"Когнитивная рамка · Исследование · Не инвестиционная рекомендация",heroTitle:"Мир не остров: разница и есть возможность",heroSub:"Глобальный арбитраж — это трансграничное перемещение и рекомбинация ценности: география, валюта, институты, время, познание. Здесь собраны мышление, 10 ключевых методов, 100 методов и 100 вопросов об экосистеме EACO.",secLogicT:"1. Мышление",secLogicD:"Шесть линз + три столпа: Теория границ, Теория узловых сетей, Информационный разрыв × Исполнение.",secM10T:"2. 10 ключевых методов",secM10D:"Десять методов из рамки Global Arbitrage, каждый с конкретными шагами в EACO.",secM100T:"3. 100 методов арбитража мировой деревни",secM100D:"10 категорий × 10 методов, с логикой и точкой интеграции EACO.",secQAT:"4. 100 вопросов об арбитраже EACO",secQAD:"5 групп × 20 вопросов: основы, практика, риски и соответствие, экосистема, долгосрочная стратегия.",secRoadT:"7. Ритм 90 дней",secRoadD:"Видеть → Соединять → Систематизировать: превращать познание в накапливающиеся открытые активы.",fallbackNotice:"💡 Глубокий контент доступен на 华语 и English; на других языках рамка переводится, а глубокий контент откатывается к английскому.",all:"Все",countTpl:"{n} записей",fT:"EACO · Earth's Best Coin — ключевые факты",fBasic:"Основное",fPos:"«Лучший токен Земли: AI + RWA + Web3» на Solana — общинная MEME-монета, ценящая труд и квантифицирующая ресурсы планеты.",fSupply:"Общий объём: 1,35 млрд",fLP:"LP: 10% заблокировано навсегда",fChain:"Блокчейн: Solana",fCA:"Адрес контракта (проверяйте официально, остерегайтесь подделок)",fCopy:"📋 Копировать CA",fCopied:"✅ Скопировано",fFour:"Четыре элемента",fGoals:"Пять ключевых целей",fLinks:"Официальные ссылки",goals:["Повышать индивидуальное познание","Повышать эффективность организаций","Двигать социальную цивилизацию","Содействовать устойчивости Земли","Интегрировать 100 когнитивных моделей"],disc:"Дисклеймер: страница — когнитивная рамка и исследование, НЕ инвестиционная рекомендация. EACO — общинная MEME-монета; криптоактивы крайне волатильны. Проверяйте информацию и соблюдайте местные законы. Без прогнозов цен и обещаний доходности. Проверяйте адрес контракта, остерегайтесь подделок.",top:"Вверх",pillars:["Теория границ","Весь арбитраж происходит на границах: национальных, языковых, отраслевых, когнитивных. Чем труднее граница, тем толще маржа.","Теория узловых сетей","Кто соединяет 2+ сообщества, получает двойной дивиденд: разрыв информации и разрыв доверия.","Информационный разрыв × Исполнение","Разрыв решает, что вы видите; исполнение — что вы получаете."]},
+ar:{brandSub:"مرابحة القرية العالمية × EACO",thGreen:"🍏 أخضر تفاحي",thBlue:"🔵 أزرق تقني",thClassic:"🏮 الطراز الصيني الكلاسيكي",searchPh:"ابحث في الطرق والأسئلة…",navLogic:"العقلية",navM10:"العشر الأساسية",navM100:"100 طريقة",navQA:"100 سؤال",navRoad:"خطة 90 يوماً",navEaco:"معلومات EACO",heroTag:"إطار معرفي · بحث · ليس نصيحة استثمارية",heroTitle:"العالم ليس جزيرة: الفرق هو الفرصة نفسها",heroSub:"المرابحة العالمية هي نقل القيمة وإعادة تركيبها عبر الحدود: الجغرافيا والعملة والمؤسسات والزمن والمعرفة. تجمع هذه الصفحة العقلية والعشر طرق الأساسية و100 طريقة و100 سؤال حول منظومة EACO.",secLogicT:"١. العقلية",secLogicD:"ست عدسات + ثلاثة أعمدة: نظرية الحدود، نظرية شبكات العقد، فجوة المعلومات × التنفيذ.",secM10T:"٢. العشر طرق الأساسية",secM10D:"عشر طرق مستخلصة من إطار المرابحة العالمية، كل منها بخطوات عملية في EACO.",secM100T:"٣. 100 طريقة لمرابحة القرية العالمية",secM100D:"10 فئات × 10 طرق، مع المنطق ونقطة التكامل مع EACO.",secQAT:"٤. 100 سؤال وجواب حول مرابحة EACO",secQAD:"5 مجموعات × 20 سؤالاً: الأساسيات، العمليات، المخاطر والامتثال، المنظومة، الاستراتيجية طويلة المدى.",secRoadT:"٧. إيقاع الـ90 يوماً",secRoadD:"انظر → اربط → نظّم: حوّل المعرفة إلى أصول عامة متراكمة.",fallbackNotice:"💡 المحتوى المتعمق متاح بالصينية والإنجليزية؛ في اللغات الأخرى يُترجم الإطار ويعود المحتوى المتعمق إلى الإنجليزية.",all:"الكل",countTpl:"{n} عنصراً",fT:"EACO · Earth's Best Coin — حقائق أساسية",fBasic:"الأساسيات",fPos:"«أفضل رمز أرضي للذكاء الاصطناعي + RWA + Web3» على Solana — عملة MEME مجتمعية تُقدّر العمل وتقيس موارد الأرض.",fSupply:"الإجمالي: 1.35 مليار",fLP:"السيولة: 10% مقفلة نهائياً",fChain:"البلوكتشين: Solana",fCA:"عقد العقد (تحقق رسمياً، واحذر المقلّد)",fCopy:"📋 نسخ العقد",fCopied:"✅ تم النسخ",fFour:"العناصر الأربعة",fGoals:"الأهداف الخمسة",fLinks:"روابط رسمية",goals:["رفع المعرفة الفردية","رفع كفاءة المؤسسات","دفع الحضارة الاجتماعية","تعزيز استدامة الأرض","دمج 100 نموذج معرفي"],disc:"إخلاء مسؤولية: هذه الصفحة إطار معرفي وبحث وليست نصيحة استثمارية. EACO عملة MEME مجتمعية والأصول الرقمية شديدة التقلب. تحقق من المعلومات والتزم بالقوانين المحلية. بلا توقعات للأسعار أو وعود بعوائد. تحقق من عنوان العقد واحذر المقلّد.",top:"أعلى",pillars:["نظرية الحدود","كل مرابحة تحدث عند الحدود: وطنية ولغوية ومهنية ومعرفية. كلما صعبت الحدود زاد الهامش.","نظرية شبكات العقد","من يربط جماعتين أو أكثر يحصل على عائد مزدوج: فجوة معلومات وفجوة ثقة.","فجوة المعلومات × التنفيذ","الفجوة تحدد ما تراه؛ والتنفيذ يحدد ما تحصل عليه."]},
+ja:{brandSub:"地球村グローバル裁定 × EACO",thGreen:"🍏 アップルグリーン",thBlue:"🔵 テックブルー",thClassic:"🏮 中華クラシック",searchPh:"方法とQ&Aを検索…",navLogic:"思考法",navM10:"核心10法",navM100:"100の方法",navQA:"100のQ&A",navRoad:"90日プラン",navEaco:"EACO情報",heroTag:"認知フレームワーク · エコシステム研究 · 投資助言ではありません",heroTitle:"世界は島ではない：差異こそが機会",heroSub:"グローバル・アービトラージとは、地理・通貨・制度・時間・認知を越えた価値の移動と再結合です。本ページは思考法・核心10法・100の方法・100のQ&Aを、EACO（Earth's Best Coin）エコシステムと結びつけてまとめました。",secLogicT:"1. 思考法",secLogicD:"6つの視点 + 3つの方法論の柱：境界理論、ノードネットワーク理論、情報差 × 実行力。",secM10T:"2. 核心10法",secM10D:"『グローバル裁定』の枠組みから抽出した10の核心メソッド、それぞれにEACOでの実行アクションを対応。",secM100T:"3. 地球村グローバル裁定100の方法",secM100D:"10カテゴリ × 10方法、各項目に論理とEACO結合点を記載。",secQAT:"4. EACO裁定の常见100問答",secQAD:"5グループ × 20問：基礎認知、参加操作、リスクとコンプライアンス、エコシステム、長期戦略。",secRoadT:"7. 90日間の実行リズム",secRoadD:"見る → つなぐ → 仕組み化：認知を複利で育つ公開資産に。",fallbackNotice:"💡 深掘りコンテンツは华语とEnglishで提供；他の言語では枠組みのみ翻訳し、深掘り部分は英語にフォールバックします。",all:"すべて",countTpl:"全 {n} 件",fT:"EACO · Earth's Best Coin（地球最高のコイン）基本情報",fBasic:"基本情報",fPos:"Solana 上の「地球最高の AI + RWA + Web3 トークン」。コミュニティ主導のMEMEコインで、労働価値の計算と地球資源の定量化を掲げ、誰でもグローバル協働に参加可能。",fSupply:"総供給量：13.5億枚（1.35 billion）",fLP:"LP：10% 永久ロック",fChain:"ブロックチェーン：Solana",fCA:"コントラクトアドレス（公式確認・偽物注意）",fCopy:"📋 CAをコピー",fCopied:"✅ コピーしました",fFour:"四要素",fGoals:"5つのコア目標",fLinks:"公式リンク",goals:["個人の認知を高める","組織の効率を高める","社会文明を進める","地球の持続可能性を促す","100の認知モデルを融合する"],disc:"免責事項：本ページは認知フレームワークとエコシステム研究であり、投資助言ではありません。EACOはコミュニティ主導のMEMEコインで、暗号資産は極めて変動しやすく全額損失の可能性があります。情報を自己検証し、現地の法規を守ってください。価格予測や利回りの約束はありません。コントラクトアドレスを必ず確認し、偽物にご注意ください。",top:"上部",pillars:["境界理論","すべての裁定は境界で起きる：国境、言語、業界、認知。境界が越えにくいほどマージンは厚い。","ノードネットワーク理論","2つ以上のコミュニティを繋ぐ者は、情報差と信頼差の二重配当を得る。","情報差 × 実行力","情報差が見えるかを決め、実行力が取れるかを決める。"]},
+ko:{brandSub:"지구촌 글로벌 차익거래 × EACO",thGreen:"🍏 애플 그린",thBlue:"🔵 테크 블루",thClassic:"🏮 중국 클래식",searchPh:"방법과 Q&A 검색…",navLogic:"사고법",navM10:"핵심 10법",navM100:"100가지 방법",navQA:"100 Q&A",navRoad:"90일 플랜",navEaco:"EACO 정보",heroTag:"인지 프레임워크 · 생태계 연구 · 투자 자문이 아님",heroTitle:"세계는 섬이 아니다: 차이가 곧 기회",heroSub:"글로벌 차익거래는 지리·통화·제도·시간·인지를 넘나드는 가치의 이동과 재결합입니다. 이 페이지는 사고법, 핵심 10법, 100가지 방법, 100 Q&A를 EACO(Earth's Best Coin) 생태계와 결합해 정리했습니다.",secLogicT:"1. 사고법",secLogicD:"6개 렌즈 + 3대 방법론 기둥: 경계 이론, 노드 네트워크 이론, 정보 격차 × 실행력.",secM10T:"2. 핵심 10법",secM10D:"글로벌 차익거래 프레임워크에서 추린 10가지 핵심 방법, 각각 EACO 실행 포인트 포함.",secM100T:"3. 지구촌 글로벌 차익거래 100가지 방법",secM100D:"10개 카테고리 × 10가지, 각 항목에 논리와 EACO 결합점 기재.",secQAT:"4. EACO 차익거래 100 Q&A",secQAD:"5그룹 × 20문: 기초 인지, 참여 조작, 리스크·컴플라이언스, 생태계, 장기 전략.",secRoadT:"7. 90일 실행 리듬",secRoadD:"보기 → 연결 → 시스템화: 인지를 복리로 자라는 공개 자산으로.",fallbackNotice:"💡 심층 콘텐츠는 华语과 English로 제공；다른 언어에서는 프레임만 번역되고 심층 내용은 영어로 대체됩니다.",all:"전체",countTpl:"총 {n}건",fT:"EACO · Earth's Best Coin(지구 최고의 코인) 기본 정보",fBasic:"기본 정보",fPos:"Solana 위의 '지구 최고의 AI + RWA + Web3 토큰'. 커뮤니티 주도 MEME 코인으로, 노동 가치의 계산과 지구 자원의 정량화를 표방하며 누구나 글로벌 협업에 참여 가능.",fSupply:"총 공급량: 13.5억 개(1.35 billion)",fLP:"LP: 10% 영구 잠금",fChain:"블록체인: Solana",fCA:"컨트랙트 주소(공식 확인·가짜 주의)",fCopy:"📋 CA 복사",fCopied:"✅ 복사됨",fFour:"4대 요소",fGoals:"5대 핵심 목표",fLinks:"공식 링크",goals:["개인 인지 향상","조직 효율 향상","사회 문명 진보","지구 지속가능성 촉진","100개 인지 모델 융합"],disc:"면책 조항: 본 페이지는 인지 프레임워크와 생태계 연구이며 투자 자문이 아닙니다. EACO는 커뮤니티 주도 MEME 코인이며 암호화 자산은 변동성이 큽니다. 정보를 직접 검증하고 현지 법규를 준수하세요. 가격 예측과 수익 약속은 없습니다. 컨트랙트 주소를 반드시 확인하고 가짜에 주의하세요.",top:"맨 위",pillars:["경계 이론","모든 차익거래는 경계에서 일어난다: 국경, 언어, 업계, 인지. 경계를 넘기 어려울수록 마진은 두껍다.","노드 네트워크 이론","2개 이상의 커뮤니티를 잇는 자는 정보 격차와 신뢰 격차의 이중 배당을 받는다.","정보 격차 × 실행력","격차가 무엇을 볼지 결정하고, 실행력이 무엇을 얻을지 결정한다."]},
+pt:{brandSub:"Aldeia Global Arbitrage × EACO",thGreen:"🍏 Verde Maçã",thBlue:"🔵 Azul Tech",thClassic:"🏮 Clássico Chinês",searchPh:"Pesquisar métodos e P&R…",navLogic:"Mentalidade",navM10:"10 Essenciais",navM100:"100 Métodos",navQA:"100 P&R",navRoad:"Plano 90 Dias",navEaco:"Info EACO",heroTag:"Estrutura cognitiva · Pesquisa · Não é consultoria de investimento",heroTitle:"O mundo não é uma ilha: a diferença É a oportunidade",heroSub:"Arbitragem global é o movimento e recombincação de valor através de fronteiras: geografia, moeda, instituições, tempo, cognição. Esta página integra mentalidade, 10 métodos essenciais, 100 métodos e 100 P&R do ecossistema EACO.",secLogicT:"1. A Mentalidade",secLogicD:"Seis lentes + três pilares: Teoria das Fronteiras, Teoria das Redes de Nós, Lacuna de Informação × Execução.",secM10T:"2. Os 10 Métodos Essenciais",secM10D:"Dez métodos destilados da estrutura Global Arbitrage, cada um com ações EACO concretas.",secM100T:"3. 100 Métodos de Arbitragem Global",secM100D:"10 categorias × 10 métodos, com lógica e ponto de integração EACO.",secQAT:"4. 100 P&R de Arbitragem EACO",secQAD:"5 grupos × 20 perguntas: bases, operação, risco & conformidade, ecossistema, estratégia de longo prazo.",secRoadT:"7. Ritmo de 90 Dias",secRoadD:"Ver → Conectar → Sistematizar: transformar cognição em ativos públicos compostos.",fallbackNotice:"💡 O conteúdo profundo está disponível em 华语 e English; nos outros idiomas a estrutura é traduzida e o conteúdo profundo volta ao inglês.",all:"Tudo",countTpl:"{n} itens",fT:"EACO · Earth's Best Coin — Fatos-chave",fBasic:"Básico",fPos:"O 'melhor token de IA + RWA + Web3 da Terra' na Solana — MEME coin comunitária que valoriza o trabalho e quantifica os recursos da Terra.",fSupply:"Fornecimento total: 1,35 bilhão",fLP:"LP: 10% bloqueado permanentemente",fChain:"Blockchain: Solana",fCA:"Endereço do contrato (verifique oficialmente, cuidado com falsos)",fCopy:"📋 Copiar CA",fCopied:"✅ Copiado",fFour:"Quatro Elementos",fGoals:"Cinco Metas Centrais",fLinks:"Links oficiais",goals:["Elevar a cognição individual","Aumentar a eficiência organizacional","Avançar a civilização social","Promover a sustentabilidade da Terra","Integrar 100 modelos cognitivos"],disc:"Aviso: esta página é uma estrutura cognitiva e pesquisa, NÃO consultoria de investimento. EACO é uma MEME coin comunitária; criptoativos são altamente voláteis. Verifique informações e cumpra as leis locais. Sem previsões de preço ou promessas de retorno. Verifique o endereço do contrato e cuidado com falsos.",top:"Topo",pillars:["Teoria das Fronteiras","Toda arbitragem ocorre em fronteiras: nacionais, linguísticas, setoriais, cognitivas. Quanto mais difícil a fronteira, maior a margem.","Teoria das Redes de Nós","Quem conecta 2+ comunidades recebe dividendo duplo: lacuna de informação e lacuna de confiança.","Lacuna de Informação × Execução","A lacuna decide o que você vê; a execução decide o que você obtém."]}
+};
+
+/* ============ 六层视角 ============ */
+const LAYERS={
+zh:[["人力资本套利","同一技能在不同市场定价差 3–10 倍"],["地理套利","收入端全球化、支出端本地化，赚取生活成本差"],["金融套利","资产跨市场、跨货币、跨周期配置"],["技术套利","新技术在国与国之间的普及存在时差"],["收入套利","单一收入 → 多货币、多来源、多周期的收入组合"],["身份套利","多重身份（居民/税务/数字身份）的合规优化"]],
+en:[["Human Capital Arbitrage","The same skill prices 3–10x differently across markets"],["Geographic Arbitrage","Global income, local spending — pocket the cost-of-living gap"],["Financial Arbitrage","Allocate assets across markets, currencies and cycles"],["Technology Arbitrage","New tech adoption lags differ between countries"],["Income Arbitrage","One income → multi-currency, multi-source, multi-cycle portfolio"],["Identity Arbitrage","Compliant optimization of multiple identities (residency/tax/digital)"]]};
+const LANG_FALLBACK=l=>DETAIL_LANGS.includes(l)?l:"en";
+
+/* ============ 核心十法 ============ */
+const M10=[
+["认知差套利","早知道 6 个月：EACO 三叙事（AI+RWA+Web3）交叉研究，产出华语圈稀缺内容","Cognitive-Gap Arbitrage","Know 6 months earlier: study the AI+RWA+Web3 crossover of EACO, produce scarce Chinese-language content"],
+["人力资本套利","技能跨境定价：为 EACO 15+ 语言社区提供翻译/运营服务，积累链上作品集","Human-Capital Arbitrage","Price skills globally: translate & operate for EACO's 15+ language communities, build an on-chain portfolio"],
+["地理套利","收入全球化、支出本地化：远程参与全球社区，赚取生活成本差","Geographic Arbitrage","Global income, local costs: join the global community remotely and pocket the living-cost gap"],
+["金融套利","跨市场配置：EACO 作为 Solana 生态研究标的（小仓位、只研究不喊单）","Financial Arbitrage","Cross-market allocation: treat EACO as a Solana research subject (tiny position, study only)"],
+["技术套利","技术扩散时差：实操链上工具链（钱包→Solscan→DEX→DAO 池），做成 SOP","Technology Arbitrage","Ride tech diffusion: master the on-chain toolchain (wallet→Solscan→DEX→DAO pool) as an SOP"],
+["收入套利","收入矩阵化：内容 / 服务 / 知识产品 / 资产分析四条线并行","Income Arbitrage","Matrix your income: content, services, knowledge products and asset analysis in parallel"],
+["身份套利","多重身份合规规划：研究 DID 链上身份，积累建设者可验证履历","Identity Arbitrage","Compliant multi-identity: study on-chain DID and build a verifiable builder résumé"],
+["节点网络套利","连接两个世界：做华语社区 ↔ EACO 国际社区的双向翻译器","Node-Network Arbitrage","Bridge two worlds: act as the two-way translator between Chinese and global EACO communities"],
+["一人公司套利","系统替代雇员：用 EACO 四要素作价值观，搭建四层业务系统","One-Person-Company Arbitrage","Systems over employees: build a 4-layer business system on the E-A-C-O values"],
+["长期主义套利","时间复利：以五大核心目标为 10 年认知路线图，每月融合 1 个认知模型","Long-Termism Arbitrage","Compound through time: a 10-year roadmap on the five goals, one cognitive model per month"]
+];
+
+/* ============ 100 种方法 [cat, zh名, zh逻辑, zhEACO, en名, en逻辑, enEACO] ============ */
+const CATS=["人力资本","地理","金融","技术","收入","身份合规","信息认知","网络节点","时间周期","EACO 生态"];
+const CATS_EN=["Human Capital","Geographic","Financial","Technology","Income","Identity & Compliance","Info & Cognition","Network & Nodes","Time & Cycles","EACO Ecosystem"];
+const M100=[
+[0,"远程服务高定价市场","同一技能跨市场差价 3–10 倍","为全球 Web3 社区提供远程运营/设计/开发","Remote services for high-paying markets","Same skill, 3–10x cross-market gap","Remote ops/design/dev for global Web3 communities"],
+[0,"技能国际认证","证书跨境通用 = 定价权提升","考取 Web3 相关国际认证后服务生态项目","International skill certification","Portable credentials raise pricing power","Earn Web3 certifications, serve ecosystem projects"],
+[0,"多语言服务溢价","语言边界 = 价格边界","加入 EACO 15+ 语言社区做翻译与本地化","Multilingual service premium","Language borders are price borders","Translate & localize for EACO's 15+ language communities"],
+[0,"时区接力交付","让工作 24 小时不落地","与跨时区伙伴接力完成 EACO 社区任务","Time-zone relay delivery","Keep work running 24 hours","Relay EACO community tasks with cross-timezone partners"],
+[0,"经验反向输出","国内成熟打法是海外稀缺品","把华语圈社群打法输出给海外 Web3 团队","Reverse experience export","Mature local playbooks are scarce abroad","Export Chinese community playbooks to overseas Web3 teams"],
+[0,"社区运营兼职化","全球项目都需要本地化运营者","申请成为 EACO 各语言区社区贡献者","Part-time community ops","Every global project needs local operators","Become an EACO community contributor for your language"],
+[0,"AI 增强单人产能","一人 + AI = 过去一个小团队","用 AI 工具批量处理 EACO 内容翻译与摘要","AI-amplified solo output","One person + AI = a former small team","Use AI to batch-translate and summarize EACO content"],
+[0,"链上作品集","链上记录不可篡改 = 新简历","把为 EACO 生态做的贡献用 GitHub/链上留痕","On-chain portfolio","Immutable records are the new résumé","Log EACO contributions via GitHub / on-chain"],
+[0,"跨境知识付费","教程类知识无物流成本","制作 EACO 四要素认知模型课程面向全球","Cross-border knowledge products","Teaching content ships free","Build a course on the E-A-C-O cognitive model for the world"],
+[0,"咨询服务跨境","咨询按结果计价，不看所在地","为想进入 Solana 生态的团队提供入门咨询","Cross-border consulting","Consulting prices on results, not location","Intro consulting for teams entering the Solana ecosystem"],
+[1,"收入美元级、支出本币级","生活成本差即利润","远程赚取 Web3 稳定币报酬，本地生活","Earn in USD-grade, spend in local","The cost gap is the profit","Earn stablecoin Web3 income, live locally"],
+[1,"数字游民选址","选成本低、网络好的城市","以地球村理念实践旅居办公","Digital-nomad site selection","Pick cheap cities with good internet","Practice borderless work in the Global Village spirit"],
+[1,"跨境电商低买高卖","商品价格跨市场不均匀","传统套利基本盘，收入一部分做长期配置","Cross-border e-commerce","Prices are uneven across markets","A classic base; allocate part of income long-term"],
+[1,"二手商品跨市场搬运","信息差让旧物残值差异巨大","用闲余资金而非加密仓位参与","Second-hand cross-market resale","Info gaps make used goods' value differ wildly","Use spare cash, never crypto positions"],
+[1,"本地特产供应链出海","原产地直达消费者","对接 EACO 生态地球村青年十大产业思路","Local specialty supply chains","Origin-direct-to-consumer","Connect with EACO's Global Village ten-industry concept"],
+[1,"服务外包双向倒流","发达市场发包、新兴市场交付","自己是节点：接海外单、组本地小队","Two-way outsourcing flows","Developed markets task, emerging markets deliver","Be the node: take overseas orders, organize local teams"],
+[1,"生活成本指数选址法","用数据而非感觉选城市","定期更新个人全球成本-收入比表","Cost-of-living index method","Choose cities with data, not vibes","Maintain a personal global cost-to-income ratio sheet"],
+[1,"合规税务居民规划","制度成本跨地区不同","合法前提下了解规则，不做规避行为","Compliant tax-residency planning","Institutional costs differ by region","Learn the rules legally; never evade"],
+[1,"教育/医疗跨境性价比","服务价格跨市场差异大","长期规划课题，与加密投资无关","Cross-border education & healthcare","Service prices differ widely across markets","A long-term planning topic, unrelated to crypto"],
+[1,"淡旺季旅居套利","淡季成本减半、体验更佳","旅居途中维护社区在线协作","Off-season slow-mad arbitrage","Off-season halves costs, doubles experience","Keep online community collaboration while traveling"],
+[2,"多货币资产分层","单一货币 = 单点风险","法币 + 稳定币 + 小比例加密资产的分层","Multi-currency layering","One currency = single point of failure","Fiat + stablecoins + a small crypto layer"],
+[2,"稳定币跨境结算","绕开传统汇路的时间与费用成本","研究 USDC/USDT 收付的合规边界","Stablecoin cross-border settlement","Bypass slow, costly legacy rails","Study compliant USDC/USDT payment boundaries"],
+[2,"资产类别分散","股/债/金/加密不同步","EACO 仅作为加密类中的观察仓（≤5–10%）","Asset-class diversification","Stocks/bonds/gold/crypto don't move together","EACO only as a small watch-position (≤5–10% of crypto)"],
+[2,"流动性池机制研究","理解池子结构先于参与","拆解 EACO 在 Raydium/Meteora/Orca 的池子差异","Liquidity-pool mechanics study","Understand pools before touching them","Dissect EACO pools on Raydium/Meteora/Orca"],
+[2,"跨市场指数观察","各市场估值周期不同步","记录而不追价，训练周期感","Cross-market index watching","Valuation cycles are asynchronous","Record without chasing; train cycle sense"],
+[2,"利率环境差异研究","全球利率不同步 = 资金流信号","宏观研究作为 Web3 参与决策的背景板","Rate-environment research","Desynchronized global rates signal flows","Use macro research as backdrop for Web3 decisions"],
+[2,"三角对冲思维","法币/黄金/加密互为保险","任一类别都不超过自设上限","Triangular hedging mindset","Fiat/gold/crypto insure each other","Cap every class below your own limits"],
+[2,"定投纪律化","用规则对抗情绪","若决定小仓位参与，用定额纪律而非情绪","Disciplined DCA","Rules beat emotions","If participating, use fixed-amount discipline"],
+[2,"风险预算管理","先定最多亏多少再谈收益","参与 EACO 前先写下最大可承受损失","Risk-budget management","Define max loss before returns","Write down your maximum acceptable loss first"],
+[2,"链上链下价差观察","价差反映流动性深度","仅作研究；私下换汇有合规风险，坚决不碰","On/off-chain price-gap watching","Gaps reveal liquidity depth","Research only; avoid non-compliant OTC exchanges"],
+[3,"新工具早采用","工具扩散有时差","早跑通 AI Agent + 链上工具组合","Early tool adoption","Tools diffuse with a lag","Master AI-agent + on-chain tool combos early"],
+[3,"操作流程 SOP 化","把经验变成可复制文档","写 EACO 链上工具链实操手册公开分享","SOP everything","Turn experience into copyable docs","Publish an EACO on-chain toolchain manual"],
+[3,"自动化工作流","让机器做重复劳动","用 EACO Agent 思路搭建内容自动化管线","Automated workflows","Let machines do repetitive work","Build a content pipeline inspired by EACO Agent"],
+[3,"开源项目本地化","开源是免费的全球杠杆","参与 EACO 的 GitHub（ucoingroup）仓库共建","Open-source localization","Open source is a free global lever","Contribute to EACO's GitHub (ucoingroup) repos"],
+[3,"技术教程跨境翻译","翻译 = 低成本高价值搬运","把英文 Web3 教程译成华语，反向亦然","Cross-border tutorial translation","Translation is cheap, high-value transport","Translate EN Web3 tutorials to ZH and vice versa"],
+[3,"低代码快速建站","验证想法快过招人","用 base44 等工具搭 EACO 主题信息站","Low-code rapid sites","Validate faster than hiring","Build EACO info sites with low-code tools"],
+[3,"数据能力变现","会读数据的人稀缺","分析 EACO 链上公开数据写研究报告","Monetize data skills","Data readers are scarce","Write research from EACO's public on-chain data"],
+[3,"RWA 叙事早期学习","新叙事的早期理解者最少","研究官网虚拟地球中 RWA & NFT 板块","Early RWA-narrative learning","Few understand new narratives early","Study the Virtual Earth RWA & NFT section"],
+[3,"DID 早期实践","链上身份是未来基础设施","体验 EACO 虚拟地球的链上身份方向","Early DID practice","On-chain identity is future infrastructure","Explore the Virtual Earth DID direction"],
+[3,"AI 多语言内容矩阵","AI 让一人覆盖 15 种语言","用 AI 把 EACO 科普内容做成本地语言版本","AI multilingual content matrix","AI lets one person cover 15 languages","Localize EACO explainers with AI"],
+[4,"收入来源 ≥3 条线","单点收入 = 单点故障","内容 + 服务 + 知识产品三条线并行","≥3 income streams","Single income = single point of failure","Run content, services and knowledge products in parallel"],
+[4,"多货币收入结构","汇率与周期天然分散","本币工资 + 稳定币服务费组合","Multi-currency income","FX and cycles diversify naturally","Local-currency salary + stablecoin fees"],
+[4,"内容流量收入","注意力本身就是资产","EACO 科普账号的多平台分发","Content-traffic income","Attention itself is an asset","Distribute EACO explainers across platforms"],
+[4,"知识产品收入","一次创作、反复销售","100 个认知模型 × EACO 系列手册","Knowledge-product income","Create once, sell repeatedly","A '100 cognitive models × EACO' handbook series"],
+[4,"服务外包收入","时间换现金流的起点","给生态项目做翻译/运营/设计","Freelance service income","Time-for-cash starting point","Translation/ops/design for ecosystem projects"],
+[4,"联盟/推荐收入","可信推荐值得报酬","若参与任何推荐计划，必须公开披露","Affiliate income","Trustworthy referrals deserve reward","Disclose openly in any referral program"],
+[4,"社区贡献激励","建设者获得生态回馈","参与 EACO DAO 池相关社区活动的合规部分","Community-contribution incentives","Builders earn ecosystem feedback","Join compliant parts of EACO DAO-pool community activities"],
+[4,"长期资产配置","让资产替你上班","风险预算内的小额长期观察仓","Long-term allocation","Let assets work for you","A small long-term watch position within risk budget"],
+[4,"订阅制收入","订阅 = 可预测现金流","EACO 生态研究月报订阅（免费+付费分层）","Subscription income","Subscriptions = predictable cash flow","A free+paid EACO ecosystem monthly research letter"],
+[4,"版权/授权收入","内容可以复利","课程/手册的多语言授权","Licensing income","Content compounds","Multi-language licensing of courses and handbooks"],
+[5,"建设者链上履历","公开可验证 = 新信任货币","长期 GitHub 提交 + 社区贡献记录","On-chain builder résumé","Public verifiability is the new trust currency","Long-term GitHub commits + community records"],
+[5,"DID 数字身份","链上身份跨平台通用","跟踪 EACO 虚拟地球 DID 板块进展","DID digital identity","On-chain identity works across platforms","Track the Virtual Earth DID roadmap"],
+[5,"多社群身份叠加","跨圈身份带来独特位置","华语圈 × Web3 × 认知模型三重身份","Multi-community identity","Cross-circle identity is a unique position","Chinese community × Web3 × cognitive models"],
+[5,"开源贡献者身份","开源履历全球通用","以贡献者身份参与生态代码/文档","Open-source contributor identity","OSS résumés are globally valid","Contribute code/docs to the ecosystem"],
+[5,"多渠道内容分发","不依赖单一平台","同一内容发多平台，降低封号风险","Multi-channel distribution","Never depend on one platform","Publish everywhere to cut ban risk"],
+[5,"合规申报习惯","合规是长期套利的地基","加密相关收入按当地法规申报","Compliant filing habits","Compliance is arbitrage's foundation","Declare crypto income per local rules"],
+[5,"了解两地法规差异","规则差异要研究而非利用","参与前先查当地对加密资产的最新政策","Know cross-region rules","Study rule differences, don't exploit them","Check local crypto policy before participating"],
+[5,"数据与隐私合规","数据是责任不是资产","处理社区用户数据时遵循最小化原则","Data & privacy compliance","Data is a duty, not an asset","Minimize community-user data handling"],
+[5,"平台规则研究","规则内行事才能长久","熟读各平台加密内容政策避免限流封号","Platform-rule literacy","Play within rules to last long","Read each platform's crypto content policy"],
+[5,"声誉长期经营","信任积累最慢也最值钱","只推荐自己验证过的信息，不做夸大宣传","Long-term reputation care","Trust accrues slowest and pays most","Only share verified info; never overhype"],
+[6,"一手信息源优先","二手信息滞后 6–18 个月","直接读 EACO 官网/GitHub/白皮书原文","Primary sources first","Second-hand info lags 6–18 months","Read EACO's site/GitHub/docs directly"],
+[6,"早读白皮书","白皮书是项目的自述真相","通读 EACO 定义（2026 推荐版）与生态文档","Read whitepapers early","Whitepapers are a project's self-truth","Read the EACO 2026 definition and ecosystem docs"],
+[6,"每月 1 个认知模型","认知模型可迁移复用","从边界理论、节点网络理论开始","One cognitive model per month","Models transfer and compound","Start with Border Theory and Node-Network Theory"],
+[6,"认知笔记公开化","公开笔记 = 复利 + 信用","每周发布一篇 EACO/套利学习笔记","Publicize learning notes","Public notes = compounding + credibility","Publish a weekly EACO/arbitrage note"],
+[6,"社群信息互换","交换让信息总量翻倍","与海外社区成员结对互换情报","Community info exchange","Exchange doubles the information pool","Pair up with overseas members to swap intel"],
+[6,"行业报告跟踪","报告是浓缩的二手地图","跟踪 Solana 生态季度报告","Industry-report tracking","Reports are condensed maps","Follow Solana ecosystem quarterly reports"],
+[6,"反脆弱阅读","主动读反面观点防盲区","每研究一个项目先搜 criticisms","Antifragile reading","Read opposing views to kill blind spots","Search 'criticisms' for every project first"],
+[6,"AI 辅助速读","AI 把阅读成本降 10 倍","用 AI 快速消化长文档再人工验证关键点","AI-assisted speed reading","AI cuts reading cost 10x","Digest long docs with AI, verify keys manually"],
+[6,"个人知识库","知识不整理等于没学","建立套利 × EACO 主题知识库","Personal knowledge base","Unorganized knowledge is unlearned","Build an arbitrage × EACO knowledge base"],
+[6,"教是最好的学","输出倒逼理解","开设 EACO 入门答疑栏目","Teaching is the best learning","Output forces understanding","Run an EACO beginner Q&A column"],
+[7,"做中英双语桥","语言桥 = 信任桥","华语圈 ↔ EACO 国际社区双向解读","Bilingual ZH-EN bridge","Language bridges are trust bridges","Two-way interpretation between ZH and global EACO"],
+[7,"连接两个社群","节点比孤点值钱","把认知模型社群与 Web3 社区互相导流","Connect two communities","Nodes beat loners","Cross-traffic cognitive-model and Web3 communities"],
+[7,"组织跨时区 AMA","AMA 是最低成本的连接","协办 EACO 中英双语 AMA","Cross-timezone AMAs","AMAs are the cheapest connection","Co-host bilingual EACO AMAs"],
+[7,"GitHub 协作","代码是全球通用语","在 ucoingroup 仓库提 issue/PR","GitHub collaboration","Code is the global language","Open issues/PRs in ucoingroup repos"],
+[7,"翻译志愿者计划","翻译是进入社区的门票","认领官网新语种的翻译任务","Translation-volunteer programs","Translation is a community entry ticket","Claim new-language translation tasks"],
+[7,"线下 Meetup 发起","线下信任 > 线上百倍","在所在城市发起地球村 Web3 线下聚会","Local meetups","Offline trust beats online 100x","Start a Global-Village Web3 meetup in your city"],
+[7,"社区大使角色","大使 = 官方背书的节点","申请成为 EACO 区域社区大使（若有该机制）","Community-ambassador role","Ambassadors are officially backed nodes","Apply as an EACO regional ambassador (if available)"],
+[7,"伙伴目录维护","目录本身就是流量入口","梳理官网 20+ 生态站点做成华语导航","Partner-directory upkeep","Directories are traffic entrances","Catalog the 20+ ecosystem sites into a ZH guide"],
+[7,"引荐经济","可信引荐自带成交","只引荐亲自验证过的人和项目","Referral economics","Trusted referrals close themselves","Refer only people/projects you've verified"],
+[7,"内容互推联盟","互推让流量组合增长","与同领域创作者建立长期互推关系","Content cross-promotion","Mutual promotion compounds traffic","Build lasting cross-promotion with peers"],
+[8,"长期定投时间复利","时间的复利最稳定","对认知模型的长期投入（而非对币价的押注）","Long-term DCA of time","Time compounds most reliably","Invest in cognitive models, not price bets"],
+[8,"底部学习、顶部谨慎","淡季积累、旺季变现","市场冷淡期专注学习与内容储备","Learn at bottoms, caution at tops","Accumulate in off-seasons, monetize in peaks","Focus on learning and content in cold markets"],
+[8,"早布局叙事、不追热点","叙事先于价格、研究先于叙事","关注虚拟地球/模拟地球长期叙事而非短线消息","Narrative early, never chase","Narratives precede prices","Follow Virtual/Simulated Earth narratives, not noise"],
+[8,"90 天冲刺节奏","短周期冲刺 + 长周期方向","按 90 天计划执行","90-day sprint rhythm","Short sprints, long direction","Execute on the 90-day plan"],
+[8,"年度复盘制度化","复盘让经验可积累","每年 11 月做套利动作与 EACO 参与复盘","Institutionalized annual review","Reviews make experience stackable","Each November, review arbitrage & EACO participation"],
+[8,"睡眠时间资产化","自动化系统夜间也在工作","内容排期、自动化工具接管重复发布","Assetize sleeping hours","Automated systems work overnight","Schedule content; let tools handle reposting"],
+[8,"延迟满足习惯","先储蓄后消费","任何收入的固定比例进入长期池","Delayed-gratification habit","Save first, spend later","Route a fixed share of all income to the long-term pool"],
+[8,"十年路线图","长期主义对冲短期波动","以 EACO 五大目标为十年认知路线图","A 10-year roadmap","Long-termism hedges short-term noise","Map the EACO five goals onto a 10-year plan"],
+[8,"等待期变生产期","等待是最贵的浪费","空仓/等待期产出研究报告","Turn waiting into production","Waiting is the costliest waste","Write research while you wait"],
+[8,"复利式人脉维护","关系的复利不输资产","每月维护 5 个核心节点关系","Compounding relationships","Relationships compound like assets","Nurture 5 core node relationships monthly"],
+[9,"DAO 治理研究","治理是链上协作的教科书","研究 Meteora DAMM v2 DAO 池的机制设计","DAO-governance study","Governance is the textbook of on-chain collaboration","Study the Meteora DAMM v2 DAO pool design"],
+[9,"多语言内容共建","内容共建 = 深度参与","为官网/文档贡献小语种版本","Multilingual co-creation","Co-creating content = deep participation","Contribute minor-language versions to site/docs"],
+[9,"生态站点矩阵合作","20+ 站点 = 20+ 合作入口","从 Good Books、Linguistic Capital 等站点切入","Ecosystem-site partnerships","20+ sites = 20+ partnership doors","Start with Good Books, Linguistic Capital and peers"],
+[9,"四要素课程化","把理念变成产品","E-A-C-O 四要素做成个人成长课程","Productize the four elements","Turn ideas into products","Build a personal-growth course on E-A-C-O"],
+[9,"Agent 自动化实践","Agent 是 AI 时代的杠杆","用 EACO Agent 思路搭建个人自动化助手","Agent automation practice","Agents are the AI-era lever","Build a personal assistant on the EACO Agent pattern"],
+[9,"数字孪生内容创作","虚拟地球叙事内容稀缺","写数字孪生地球科普系列","Digital-twin content","Virtual-Earth narrative content is scarce","Write a digital-twin Earth explainer series"],
+[9,"模拟地球研究报告","先模拟后决策是方法论","就资源/气候/经济模拟写公开研究","Simulated-Earth research","Simulate first, decide later","Publish research on resource/climate/economy simulation"],
+[9,"青年十大产业对接","产业是叙事的落地","梳理地球村青年十大产业与本地机会","Ten-industry alignment","Industries ground the narrative","Map the Global Village ten industries to local chances"],
+[9,"生态项目互推","生态内互推成本最低","与生态站点建立内容互推与友情链接","Ecosystem cross-promotion","In-ecosystem promotion is cheapest","Set up cross-promotion and links with ecosystem sites"],
+[9,"建设者履历沉淀","十年建设者身份 = 最大复利","把以上所有动作统一沉淀为公开可验证履历","Builder-résumé compounding","A decade of building = max compounding","Consolidate all actions into a verifiable public résumé"]
+];
+
+/* ============ 100 问答 [group, zhQ, zhA, enQ, enA] ============ */
+const GRPS=["基础认知","参与操作","风险合规","生态结合","长期策略"];
+const GRPS_EN=["Basics","Operations","Risk & Compliance","Ecosystem","Long-Term"];
+const QA=[
+[0,"EACO 是什么？","EACO（Earth's Best Coin，地球最好币，简称 E）是 Solana 链上的社区驱动 MEME 币，定位「地球最好的 AI + RWA + Web3 代币」，主张计算劳动价值、量化地球资源。","What is EACO?","EACO (Earth's Best Coin) is a community-driven MEME coin on Solana, positioned as 'the Earth's best AI + RWA + Web3 token', valuing labor and quantifying Earth's resources."],
+[0,"EACO 的四要素是什么？","EACO = 正能量 × 积极态度 × 全球协作 × 持续优化；英文等价表述为 Positive Energy × Positive Mindset × Global Collaboration × Continuous Optimization，两者互为解释。","What are EACO's four elements?","EACO = Positive Energy × Positive Mindset × Global Collaboration × Continuous Optimization（华语：正能量 × 积极态度 × 全球协作 × 持续优化）— two equivalent formulations."],
+[0,"EACO 的总供应量是多少？","13.5 亿枚（1.35 billion），Solana 链。","What is EACO's total supply?","1.35 billion tokens on the Solana blockchain."],
+[0,"EACO 的合约地址（CA）是什么？","DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH。每次交易前务必逐字核对，谨防假币。","What is EACO's contract address (CA)?","DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH — verify it character-by-character every time; beware fakes."],
+[0,"EACO 的 LP 情况如何？","按官方口径，10% LP 永久锁定。更细的代币分配数据存在不同早期资料的口径差异，遇到分配类计算建议先向社区确认口径。","What about EACO's LP?","Per official wording, 10% of LP is permanently locked. Finer allocation figures differ across early materials — confirm definitions with the community before computing."],
+[0,"EACO 的五大核心目标是什么？","① 提升个体认知；② 提升组织效率；③ 推动社会文明进步；④ 促进地球可持续发展；⑤ 融合 100 个认知模型。","What are the five core goals?","① Elevate individual cognition; ② Boost organizational efficiency; ③ Advance social civilization; ④ Promote Earth's sustainability; ⑤ Integrate 100 cognitive models."],
+[0,"EACO 的最高原则是什么？","一切文明为人类文明服务，包括 EACO。","What is EACO's highest principle?","All civilizations serve human civilization — including EACO."],
+[0,"EACO 与普通 MEME 币有何不同？","它以全球文明升级模型为叙事：四要素 + 五大目标 + 虚拟地球/模拟地球/星际文明路线。但本质上仍是高风险社区币。","How is EACO different from typical MEME coins?","It layers a civilization-upgrade narrative (four elements, five goals, Virtual/Simulated Earth, interstellar roadmap) on MEME culture — yet it remains a high-risk community coin."],
+[0,"官网在哪里？","https://ucoingroup.github.io/earths-best-coin/ ，支持 15+ 种语言。","Where is the official site?","https://ucoingroup.github.io/earths-best-coin/ — available in 15+ languages."],
+[0,"EACO 的三大生态板块是什么？","🌐 虚拟地球（数字孪生、DID、RWA、DAO）、🚀 模拟地球（AI 文明模拟、资源优化、星际沙盒）、从地球到星际文明路线。","What are the three ecosystem pillars?","🌐 Virtual Earth (digital twin, DID, RWA, DAO), 🚀 Simulated Earth (AI civilization simulation, resource optimization, interstellar sandbox), and the Earth-to-interstellar roadmap."],
+[0,"EACO 与 Solana 的关系？","EACO 是 Solana 链上的代币，依赖 Solana 网络的安全性与低费用特性。","How does EACO relate to Solana?","EACO is a token on Solana, relying on its security and low fees."],
+[0,"什么是地球村全球套利？","在全球化+数字化的地球村中，利用地理、货币、制度、技术、认知差异进行合法的价值搬运与配置，与 EACO 的全球协作理念契合。","What is Global-Village arbitrage?","Legal cross-border value movement and allocation across geographic, currency, institutional, tech and cognitive gaps — aligned with EACO's global-collaboration ethos."],
+[0,"EACO 为什么与套利思维相关？","四要素中的 C（全球协作）本质就是做跨边界节点；五大目标第一条「提升个体认知」就是认知差套利的内核。","Why does EACO relate to arbitrage thinking?","The C (Global Collaboration) is node-building across borders; the first goal — elevating cognition — is the core of cognitive-gap arbitrage."],
+[0,"官网提到的 100 Ways to Wealth 是什么？","是 EACO 生态的周边项目之一（百种致富方法），属社区共创内容，具体内容以其站点为准。","What is '100 Ways to Wealth'?","One of EACO's ecosystem side-projects — community-created content; refer to its own site for specifics."],
+[0,"EACO 的官方社区渠道有哪些？","Discord、邮箱 eaco2cc@gmail.com、GitHub（ucoingroup）。","What are the official community channels?","Discord, e-mail eaco2cc@gmail.com, and GitHub (ucoingroup)."],
+[0,"EACO 的交易入口有哪些？","Raydium、Meteora（DAMM v2 DAO 池、DLMM 池）、Orca。交易前务必核对 CA。","Where can EACO be traded?","Raydium, Meteora (DAMM v2 DAO pool, DLMM), Orca — always verify the CA first."],
+[0,"区块浏览器用哪个？","Solscan、OKLink、Orbmarkets，用于核实代币合约与链上数据。","Which block explorers?","Solscan, OKLink, Orbmarkets — for verifying the token contract and on-chain data."],
+[0,"什么是 e-DOGE 池？","官网列出的 EACO 相关交易池之一（e-DOGE / DOGE-e），具体机制以链上数据与官方文档为准。","What is the e-DOGE pool?","One of the EACO-related pools listed on the official site (e-DOGE / DOGE-e); mechanics per on-chain data and official docs."],
+[0,"官网的 AI 提示词是做什么用的？","官方提供了一段可复制到各类 AI 的 Prompt，用于把 EACO 基本信息写进个人 AI 工作流，保持这套认知框架。","What is the AI prompt on the site for?","An official prompt you can paste into AI tools to embed EACO's basics into your personal AI workflow."],
+[0,"新手第一件事该做什么？","不是买币，而是学习：读完官网 → 核对 CA → 了解 MEME 币高风险属性 → 再决定是否用可承受损失的资金参与。","What should a beginner do first?","Not buy — learn: read the site, verify the CA, understand MEME-coin risk, then decide with money you can afford to lose."],
+[1,"如何购买 EACO？","准备 Solana 钱包 → 购入少量 SOL 作 gas → 在 Raydium/Meteora/Orca 用 SOL 交换 → 全程核对 CA。具体步骤以官方最新文档为准。","How to buy EACO?","Set up a Solana wallet → get a little SOL for gas → swap on Raydium/Meteora/Orca → verify the CA throughout. Follow official docs."],
+[1,"需要多少资金起步？","没有门槛要求；原则是只用完全亏掉也不影响生活的金额。MEME 币波动剧烈，建议极小仓位。","How much capital to start?","No minimum; the rule is only money whose total loss wouldn't affect your life. Tiny positions."],
+[1,"什么是 DAO 池？","Meteora DAMM v2 上的 eaco-dao-pool，与 DAO 治理/社区资金相关的流动性池，参与前先读懂其机制与费用结构。","What is the DAO pool?","The eaco-dao-pool on Meteora DAMM v2 — a liquidity pool tied to DAO governance/community funds. Read its mechanics and fees before joining."],
+[1,"Farm APR 23.56% 是什么意思？","这是官网曾展示的 EACO Farm 年化参考数据。APR 是动态变化的，高 APR 通常伴随高风险（无常损失、币价波动、池子可持续性），不构成收益承诺。","What does Farm APR 23.56% mean?","A reference annualized rate once shown on the official site. APR changes dynamically and high APR usually means high risk (impermanent loss, price swings, pool sustainability). Not a yield promise."],
+[1,"什么是无常损失？","向流动性池提供资金时，因价格变动导致存入池子比单纯持有价值更低的风险。参与任何池子前必须理解这一概念。","What is impermanent loss?","The risk that depositing into a liquidity pool underperforms simply holding, due to price moves. Understand it before any pool."],
+[1,"如何核实链上数据？","用 Solscan 查看合约持有者分布、池子深度、交易记录；用 OKLink/Orbmarkets 交叉验证。","How to verify on-chain data?","Use Solscan for holder distribution, pool depth and transactions; cross-check with OKLink/Orbmarkets."],
+[1,"钱包安全要注意什么？","私钥/助记词离线保存、不点不明链接、不授权不明合约、大额操作前先用小额测试。","Wallet safety?","Keep keys offline, never click unknown links, don't approve unknown contracts, test with small amounts first."],
+[1,"如何参与 EACO 社区建设而不投入资金？","翻译文档、写科普内容、GitHub 提 PR、组织 AMA、做本地化社群——这些贡献不需要买币。","Can I contribute without spending money?","Yes: translate docs, write explainers, PR on GitHub, host AMAs, localize communities — none require buying."],
+[1,"GitHub 上能做什么贡献？","提交文档翻译、修复站点问题、贡献代码、维护生态站点目录。仓库：ucoingroup。","What can I do on GitHub?","Translate docs, fix site issues, contribute code, maintain the ecosystem-site catalog. Repo: ucoingroup."],
+[1,"如何把 EACO 四要素用于个人工作？","把 E（行动力）、A（心态）、C（协作）、O（迭代）作为每日复盘四问：今天做了什么、心态如何、协作了谁、优化了什么。","How to apply E-A-C-O at work?","Use E, A, C, O as four daily review questions: What did I do? How was my attitude? Who did I collaborate with? What did I optimize?"],
+[1,"认知套利在 EACO 场景如何落地？","早于大多数人理解 AI+RWA+Web3 三叙事交叉，并把理解转化为公开内容与实际技能。","How does cognitive arbitrage land in EACO?","Understand the AI+RWA+Web3 crossover earlier than most, then convert it into public content and real skills."],
+[1,"可以用 AI 来研究 EACO 吗？","可以且推荐：用官网 AI 提示词初始化框架，再用 AI 辅助读文档、翻译、总结——但关键数据（CA、总量）必须人工核对原文。","Can AI help research EACO?","Yes, recommended: initialize with the official prompt, then use AI to read, translate, summarize — but verify key data (CA, supply) manually."],
+[1,"EACO 的多语言社区如何利用？","把自己定位为某一语言区的桥梁：把英文一手信息带入本地，把本地反馈带回国际社区。","How to leverage the multilingual community?","Position as a bridge for your language: bring first-hand English info in, carry local feedback back out."],
+[1,"如何判断社区活跃度？","Discord 在线与讨论质量、GitHub 提交频率、链上独立地址数与交易笔数（作研究观察，不作为价格判断依据）。","How to gauge community activity?","Discord presence and discussion quality, GitHub commit cadence, unique addresses and tx counts — for research, not price calls."],
+[1,"什么是节点身份实践？","持续做双语内容桥、组织 AMA、维护生态站点目录，让自己成为两个社群之间被信任的连接者。","What is practicing a 'node identity'?","Persistently bridge bilingual content, host AMAs, maintain site catalogs — become the trusted connector between two communities."],
+[1,"一人公司如何围绕 EACO 搭建？","产品层（研究手册/课程）+ 流量层（多语言内容）+ 运营层（AI 自动化）+ 财务层（多货币记账）。","How to build a one-person company around EACO?","Product (handbooks/courses) + traffic (multilingual content) + operations (AI automation) + finance (multi-currency bookkeeping)."],
+[1,"如何做 EACO 主题内容？","选题从真实问题出发（新手如何核对 CA、什么是 DAO 池），引用官方来源，附免责声明，不做价格预测。","How to create EACO content?","Start from real questions (verify CA, what's a DAO pool), cite official sources, add disclaimers, no price predictions."],
+[1,"内容创作会有合规风险吗？","有可能。遵守各平台加密内容政策：不做收益承诺、不喊单、不诱导投资、标注风险与免责声明。","Any compliance risk in content creation?","Possibly. Follow each platform's crypto policy: no yield promises, no shilling, no inducement, always label risks."],
+[1,"如何参与模拟地球板块？","目前主要是研究与内容参与：阅读其 AI 文明模拟理念，撰写解读报告，关注相关站点更新。","How to engage the Simulated Earth pillar?","Mostly research and content: read its AI-civilization simulation ideas, write interpretations, follow site updates."],
+[1,"从地球到星际文明路线是什么？","官网叙事路线：真实地球 → 虚拟地球 → 模拟地球 → 月球 → 火星 → 星际文明，EACO 四要素贯穿全程。这是长期愿景叙事，非近期承诺。","What is the Earth-to-interstellar roadmap?","Real Earth → Virtual Earth → Simulated Earth → Moon → Mars → interstellar civilization, with E-A-C-O throughout. A long-term vision narrative, not a near-term promise."],
+[2,"MEME 币最大的风险是什么？","价格归零的可能性真实存在。流动性枯竭、社区冷却、市场系统性风险都可能发生。","What's the biggest MEME-coin risk?","Going to zero is real: liquidity dry-ups, community cooling, systemic market risk."],
+[2,"EACO 是投资品吗？","官方明确其为社区驱动的 MEME 币，不构成投资建议。把它当作社区参与 + 认知学习的载体更符合其定位。","Is EACO an investment product?","Officially a community-driven MEME coin — not investment advice. A carrier for community participation and learning fits better."],
+[2,"仓位上限应该怎么定？","常见稳健做法是加密资产合计 ≤ 总资产 5–10%，单个 MEME 币更小，具体取决于个人风险承受力。","How to set position caps?","A common prudent cap: all crypto ≤ 5–10% of total assets, single MEME coins smaller — per your own risk tolerance."],
+[2,"遇到内部消息或保证收益怎么办？","一律视为骗局。加密领域没有任何人能保证收益，承诺收益即是危险信号。","Insider tips or guaranteed returns?","Treat as scams. Nobody can guarantee crypto returns; such promises are a red flag."],
+[2,"如何识别假币？","只认官方 CA：DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH，从官网跳转交易入口，不通过陌生人发的链接。","How to spot fake tokens?","Trust only the official CA: DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH; enter via the official site, never via strangers' links."],
+[2,"APR 高就值得进吗？","不一定。高 APR 常意味着高无常损失与代币价格风险，年化可能被币价下跌完全吞掉。先懂机制，再谈参与。","Is a high APR worth chasing?","Not necessarily. High APR usually implies high impermanent loss and price risk that can swallow the yield. Understand mechanics first."],
+[2,"需要报税吗？","加密资产的取得、交换、处置在多数司法辖区可能有税务申报义务，请按当地法规处理，必要时咨询专业税务人士。","Do I need to file taxes?","Acquiring, swapping and disposing of crypto may be taxable in many jurisdictions — follow local rules and consult a professional if needed."],
+[2,"中国大陆用户参与加密交易合规吗？","中国内地对加密货币交易及相关金融活动有严格监管限制，相关业务活动属非法金融活动。请务必遵守所在地区法律法规，本页所有内容仅供认知研究。","Is crypto trading compliant in mainland China?","Mainland China strictly restricts crypto trading and related financial activities, which are deemed illegal financial activity. Follow local law; everything on this page is for cognitive research only."],
+[2,"什么是 RUG（卷款跑路）风险？","指项目方撤走流动性。观察指标：LP 是否锁定（EACO 官方口径 10% 永久锁定）、持有者集中度、团队公开度。任何项目都无法完全排除此风险。","What is a rug pull?","When a team drains liquidity. Watch: LP locking (officially 10% locked for EACO), holder concentration, team transparency. No project fully removes this risk."],
+[2,"什么是待澄清口径？","早期生态资料中关于流动性/DAO 基金/城市配额等分配数字存在统计口径重叠与冲突，本文不做自行合并，遇到分配类问题建议向社区官方确认。","What is the 'unresolved definition' issue?","Early ecosystem materials overlap/conflict on liquidity, DAO fund and city-quota allocations. This page doesn't merge them — confirm with official community sources."],
+[2,"社区里的喊单该信吗？","不。所有投资决策必须独立做出，喊单者不承担你的损失。","Should I trust shilling in the community?","No. Every decision must be your own; shillers won't bear your losses."],
+[2,"如何设置止损思维？","MEME 币语境下更现实的做法是仓位即止损：进门前就确定这笔钱可以归零，避免事后被迫决策。","How to think about stop-loss?","For MEME coins, position-size IS the stop-loss: accept zero before entering, avoiding forced decisions later."],
+[2,"FOMO 时怎么办？","执行 24 小时冷静期规则：任何因情绪产生的操作，隔一天再执行，多数 FOMO 会在一天后消失。","What about FOMO?","Apply a 24-hour cooling rule: delay any emotional action one day — most FOMO evaporates."],
+[2,"如何防范钓鱼？","官网域名逐字核对、Discord 私信链接一律不点、钱包授权定期用工具检查并撤销。","How to avoid phishing?","Verify domains character-by-character, never open Discord DM links, audit and revoke wallet approvals regularly."],
+[2,"内容创作者要注意什么？","不夸大、不承诺收益、披露任何利益关系（如持有仓位）、固定附免责声明。","What should creators watch?","No exaggeration, no yield promises, disclose interests (e.g., holdings), always attach a disclaimer."],
+[2,"什么是链上可验证的贡献履历？","GitHub 提交记录、公开文章、链上地址的公开活动等，可被第三方独立核实，比自我介绍更可信。","What is a verifiable on-chain track record?","GitHub commits, public articles, on-chain activity — independently checkable by third parties, more credible than self-intro."],
+[2,"参与 DAO 治理有法律风险吗？","DAO 的法律地位在各国差异巨大且仍在演变，参与治理前建议了解当地对 DAO 参与者的定性。","Any legal risk in DAO governance?","DAO legal status varies widely and evolves; understand how your jurisdiction treats DAO participants before joining governance."],
+[2,"隐私该注意什么？","不在公开场合暴露持仓量、钱包地址与真实身份的关联；社区交流对事不对地址。","Privacy precautions?","Never link holdings/addresses to your real identity publicly; discuss issues, not addresses."],
+[2,"如果项目停止更新怎么办？","这是 MEME 币的常态风险之一。参与前就应接受项目可能不再活跃的情形，这也是仓位要小的原因。","What if the project goes quiet?","A normal MEME-coin risk. Accept possible inactivity before joining — which is exactly why positions stay tiny."],
+[2,"风险管理的总原则是什么？","① 仓位小；② 分散；③ 只用闲钱；④ 合规；⑤ 独立决策。五条缺一不可。","Core risk-management principles?","① Tiny positions; ② diversify; ③ idle money only; ④ compliance; ⑤ independent decisions. All five, no exceptions."],
+[3,"EACO 与地理套利如何结合？","EACO 社区不分地理位置，任何人可在低成本地区远程参与全球协作，赚取跨市场收入。","EACO × geographic arbitrage?","The community is location-agnostic: participate remotely from low-cost regions and earn cross-market income."],
+[3,"EACO 与技术套利如何结合？","官网 20+ 生态站点（EACO Swap、FreeToken、Mohist Tech 墨家科技等）是学习与实践 Web3 工具链的现成材料库。","EACO × technology arbitrage?","The 20+ ecosystem sites (EACO Swap, FreeToken, Mohist Tech, etc.) are a ready-made lab for Web3 toolchains."],
+[3,"EACO 与收入套利如何结合？","围绕 EACO 构建内容/服务/知识产品三条收入线，而非依赖单一收入或单一资产。","EACO × income arbitrage?","Build content, service and knowledge-product income lines around EACO instead of a single stream."],
+[3,"EACO 与身份套利如何结合？","以建设者身份（翻译者、贡献者、组织者）积累公开履历与 DID 链上声誉，形成传统体系之外的身份资产。","EACO × identity arbitrage?","Accumulate a public track record and DID reputation as a builder (translator, contributor, organizer) — identity assets outside legacy systems."],
+[3,"什么是虚拟地球？","EACO 生态对数字孪生地球的设想：元宇宙城市/地球村、链上身份 DID、RWA & NFT、DAO 全球协作、AI 教育与文明知识库、绿色经济。","What is Virtual Earth?","EACO's digital-twin vision: metaverse cities/Global Village, DID, RWA & NFT, DAO collaboration, AI education & civilization knowledge base, green economy."],
+[3,"什么是模拟地球？","用 AI 模拟文明发展路径（气候、能源、经济、人口、月球/火星殖民等），理念是先在数字世界模拟未来，再帮现实世界做更好决策。","What is Simulated Earth?","AI-simulated civilization paths (climate, energy, economy, population, Moon/Mars colonies) — simulate futures digitally to make better real-world decisions."],
+[3,"Mohist Tech（墨家科技）是什么？","EACO 生态周边项目之一，借用墨家「兼爱、非攻」的东方协作理念，具体内容以其站点为准。","What is Mohist Tech?","An EACO ecosystem side-project borrowing Mohist ideas (universal care, non-aggression); specifics on its own site."],
+[3,"地球村青年十大产业如何对接？","这是生态中的产业设想框架，可逐个对照本地实际机会（如教育、内容、电商）寻找落地结合点，需向社区确认最新清单。","How to align with the Global Village ten industries?","A conceptual industry framework — map each to local opportunities (education, content, e-commerce) and confirm the latest list with the community."],
+[3,"EACO 50 Rate 是什么？","EACO 生态站点矩阵之一，具体功能以其站点为准。","What is EACO 50 Rate?","One of the ecosystem site matrix; see its own site for functionality."],
+[3,"EUR-EACO、AU-Trade 是什么？","生态周边站点，从命名看与欧洲区、澳洲区及交易主题相关，具体以各站点官方信息为准，参与前逐一核实。","What are EUR-EACO and AU-Trade?","Ecosystem side-sites, apparently themed on Europe/Australia and trading; verify each on its official site before engaging."],
+[3,"如何与生态站点建立合作？","步骤：梳理站点清单 → 试用并写测评 → 主动联系负责人提出互推/内容合作 → 从小合作开始积累信任。","How to partner with ecosystem sites?","Catalog sites → trial and review → contact owners with cross-promotion/content proposals → build trust from small collaborations."],
+[3,"EACO Agent 能用来做什么？","它是生态中的 AI Agent 方向项目。个人可借鉴其思路搭建自己的自动化助手（内容排期、翻译、问答），具体能力以其产品现状为准。","What can EACO Agent do?","The ecosystem's AI-agent direction project. Borrow its pattern for personal automation (scheduling, translation, Q&A); capabilities per its current product."],
+[3,"如何做 EACO 的华语科普？","从官方一手资料出发，回答真实问题（如本文 100 问的思路），每篇附 CA 与免责声明，不搬运不核实过的信息。","How to do Chinese-language explainers?","From official first-hand sources, answer real questions, attach the CA and disclaimer to each piece, never republish unverified info."],
+[3,"Linguistic Capital 站点与套利的关系？","它呼应「多语言 = 资本」的命题：语言能力是最便宜的套利工具，与多语言服务溢价方法直接对应。","Linguistic Capital and arbitrage?","It echoes 'language = capital': language skills are the cheapest arbitrage tool — matching the multilingual-premium method."],
+[3,"如何组织一场 EACO 双语 AMA？","定主题 → 邀请社区成员 → 双语主持与字幕 → 会后整理双语纪要发布。AMA 是建立节点身份最快的方式之一。","How to host a bilingual EACO AMA?","Pick a theme → invite members → bilingual hosting and captions → publish bilingual minutes. One of the fastest node-identity builders."],
+[3,"EACO 与教育结合的空间？","四要素与五大目标本身是认知教育框架，可开发成面向年轻人的全球协作 + 认知模型课程，注意与投资建议严格切割。","EACO × education?","The four elements and five goals are a cognitive-education frame — build youth courses on global collaboration and cognitive models, strictly separated from investment advice."],
+[3,"绿色经济板块能做什么？","围绕促进地球可持续发展目标做内容与研究：绿色经济案例、链上环保叙事分析，呼应官网可持续发展板块。","What about the green-economy pillar?","Content and research around sustainability: green-economy cases, on-chain environmental narratives — echoing the site's sustainability section."],
+[3,"如何评估某个生态站点是否值得投入时间？","三问：是否有一手信息可核实？社区是否真实活跃？投入时间能否沉淀为可复用资产（作品/履历/技能）？","How to judge if an ecosystem site merits time?","Three checks: verifiable first-hand info? genuinely active community? does time spent become reusable assets (work, résumé, skills)?"],
+[3,"什么是 EACO 式复盘？","用四要素做周复盘：E 本周推进了什么、A 心态是否积极、C 与谁协作、O 优化了什么流程。","What is an EACO-style review?","A weekly review through the four elements: E — what advanced; A — attitude; C — collaborations; O — what got optimized."],
+[3,"生态参与和代币参与是什么关系？","可以只参与生态不持币（建设者路径），也可以极小仓位持币 + 深度参与生态（研究者路径）。两者独立，后者需承担全部价格风险。","Ecosystem vs token participation?","You can build without holding (builder path) or hold tiny + engage deeply (researcher path). Independent paths; the latter bears full price risk."],
+[4,"为什么提升个体认知排五大目标第一位？","因为一切套利的底层是认知差：你只能赚到认知范围内的钱，也只会亏掉认知范围外的钱。","Why is 'elevating cognition' the first goal?","Because all arbitrage rests on cognitive gaps: you only earn within your cognition and lose outside it."],
+[4,"什么是 100 个认知模型融合？","EACO 的长期目标之一：把边界理论、节点网络理论等 100 个思维模型融合成个人决策系统。建议每月精读 1 个，十年完成。","What is integrating 100 cognitive models?","A long-term EACO goal: fuse 100 mental models (Border Theory, Node-Network Theory…) into a personal decision system — one per month for a decade."],
+[4,"长期主义者在 EACO 生态该积累什么？","认知（研究能力）、履历（公开贡献）、网络（节点关系）、内容（复利资产）——这四样不随币价波动归零。","What should a long-termist accumulate?","Cognition (research skill), résumé (public contributions), network (node relations), content (compounding assets) — none go to zero with price."],
+[4,"如何平衡套利进取与风险保守？","用结构而非预测：高风险尝试用小仓位与时间盒（如 90 天冲刺），核心收入与储蓄保持保守。","Balance aggression and prudence?","Use structure, not prediction: small positions and time-boxes for risky bets; keep core income and savings conservative."],
+[4,"熊市该做什么？","学习、写作、建设履历、维护关系——所有在牛市没空做的复利动作。市场冷清期是认知套利成本最低的时期。","What to do in a bear market?","Learn, write, build your résumé, maintain relationships — all the compounding work bull markets crowd out. Cold markets are the cheapest time for cognitive arbitrage."],
+[4,"如何避免为套利而套利？","回到最高原则：一切文明为人类文明服务。套利是手段，自由与生活是目的；不符合这个方向的机会可以放弃。","How to avoid arbitrage for its own sake?","Return to the highest principle: all civilizations serve human civilization. Arbitrage is the means; freedom and life are the ends."],
+[4,"EACO 十年视角下个人该站在哪里？","成为虚拟地球叙事 × 华语世界 × 认知模型教育交叉点上最早的公开建设者之一。","Where to stand in a 10-year view?","Be among the earliest public builders at the crossing of Virtual-Earth narrative × Chinese-speaking world × cognitive-model education."],
+[4,"如何检验自己是否真的在进步？","看公开资产：文章数量与质量、GitHub 记录、可验证贡献、被引用次数——而非账户余额。","How to verify real progress?","Public assets: article count and quality, GitHub history, verifiable contributions, citations — not your account balance."],
+[4,"如果币价长期低迷，生态参与还有意义吗？","有。建设者路径的产出（技能、履历、网络）独立于币价存在；这正是仓位小 + 生态深策略的意义。","If price stays low, does participation still matter?","Yes. Builder-path outputs (skills, résumé, network) exist independently of price — the point of tiny positions + deep ecosystem work."],
+[4,"什么是套利的终极形态？","《全球套利》的答案：成为自己的世界——当你构建了个人经济系统与全球网络，你就不再依赖任何一个市场的单一估值。","The ultimate form of arbitrage?","Per Global Arbitrage: become your own world — with a personal economic system and global network, you no longer depend on any single market's valuation."],
+[4,"如何把本文 100 个方法用起来？","不要全用。选 3 个（建议：一个收入类、一个网络类、一个认知类），执行 90 天，复盘后再扩展。","How to actually use the 100 methods?","Don't use them all. Pick 3 (one income, one network, one cognition), run 90 days, review, then expand."],
+[4,"如何把 100 个问答用起来？","当作 EACO 入门答疑库：每周挑 5 问做成内容发布，既完成学习又完成输出。","How to use the 100 Q&A?","As a beginner答疑 library: publish 5 per week as content — learning and output in one motion."],
+[4,"新人最容易犯的三个错误？","① 重仓单一 MEME 币；② 不核对 CA 买到假币；③ 只盯价格不建履历。","Three classic beginner mistakes?","① Over-allocating to one MEME coin; ② buying fakes by skipping CA checks; ③ watching price while never building a résumé."],
+[4,"如何判断一条 EACO 相关信息可信度？","四查：官网有没有、链上可否验证、GitHub 有无记录、社区核心成员是否背书。四项全过才可信。","How to judge an EACO claim?","Four checks: on the official site? verifiable on-chain? recorded on GitHub? endorsed by core members? All four, or it's not trustworthy."],
+[4,"EACO 的叙事风险是什么？","宏大叙事（星际文明等）兑现周期极长且不确定，参与时应把叙事当作愿景参考而非事实承诺。","What is the narrative risk?","Grand narratives (interstellar etc.) have extremely long, uncertain horizons — treat them as vision references, never factual promises."],
+[4,"什么时候应该完全停止参与？","当它影响你的财务健康、情绪稳定或让你违反所在地法律时。任何资产都不值得这三样。","When to stop entirely?","When it harms your finances, emotional stability, or makes you violate local law. No asset is worth those three."],
+[4,"如何向朋友介绍 EACO 而不误导？","一句话版本：一个以「正能量×积极态度×全球协作×持续优化」为理念的 Solana 社区 MEME 币，高风险，仅供研究，不构成投资建议，认准官方 CA。","How to introduce EACO without misleading?","One line: a Solana community MEME coin built on Positive Energy × Positive Mindset × Global Collaboration × Continuous Optimization — high risk, research only, not investment advice, always verify the official CA."],
+[4,"个人如何对齐促进地球可持续发展目标？","把套利所得按固定比例投入认知公共品（开源内容、社区教育）与可持续项目，让利他成为系统的一部分。","How to align with Earth's sustainability?","Route a fixed share of gains into cognitive public goods (open content, community education) and sustainable projects — make altruism systemic."],
+[4,"这份文档的局限是什么？","① 生态站点信息以官网为准且会变化；② 分配类数据存在待澄清口径；③ 所有风险判断基于写作时点（2026-11），法规与项目状态会更新。","What are this page's limits?","① Ecosystem-site info follows the official site and changes; ② allocation data has unresolved definitions; ③ risk judgments are as of Nov 2026 — laws and project status evolve."],
+[4,"最后一问：如果只记住一件事？","认准合约地址，谨防假币：DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH——以及，仓位永远小到可以归零，认知永远大到足以独立判断。","The last question: if you remember one thing?","Verify the contract address, beware fakes: DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH — and keep positions small enough to lose, cognition large enough to judge independently."]
+];
+
+/* ============ 90 天节奏 ============ */
+const ROAD={
+zh:[["第 1–30 天 · 看见","跑通链上工具链；完成 EACO 官网/生态站点矩阵梳理；确定 1 个技能方向（内容 or 翻译 or 运营）。"],["第 31–60 天 · 连接","开始双向内容输出（华语圈 ↔ 国际社区）；积累第一批链上/公开作品；建立多货币记账。"],["第 61–90 天 · 系统","上线最小业务系统（一份认知手册 + 一个内容渠道 + 一个服务报价）；复盘收入矩阵，砍掉无效线。"]],
+en:[["Days 1–30 · See","Run the on-chain toolchain end-to-end; map EACO's site & ecosystem matrix; pick one skill lane (content / translation / ops)."],["Days 31–60 · Connect","Start two-way content (ZH ↔ global); accumulate first public/on-chain works; set up multi-currency bookkeeping."],["Days 61–90 · Systemize","Launch a minimal business system (one handbook + one channel + one service quote); review the income matrix and cut dead lines."]]};
+
+/* ============ 100 种方法的「怎么做」细节（按中文名索引） ============ */
+const M100D={
+"远程服务高定价市场":["先做 3 个样本交付建立作品集，再挂到海外自由职业平台与社区，按目标市场而非本地定价。","Ship 3 sample deliverables, list them on global freelance platforms and communities, and price against the target market — not your local market."],
+"技能国际认证":["优先选可验证、可展示的认证（开源项目/链上课程），把证书编号写进简历与 GitHub README。","Prefer verifiable, showcaseable credentials (open-source or on-chain courses), and put certificate IDs in your résumé and GitHub README."],
+"多语言服务溢价":["从官方文档翻译切入：先免费译一篇建立信任，再报长期维护价格。","Start with official-doc translation: one free piece to build trust, then quote a long-term maintenance rate."],
+"时区接力交付":["与 2–3 位不同时区伙伴约定交接模板与验收标准，把交付周期从 48 小时压到 12 小时。","Agree a handover template and acceptance criteria with 2–3 cross-timezone partners; cut delivery from 48 to 12 hours."],
+"经验反向输出":["把本地社群 SOP 写成英文 playbook（招募、激励、内容节奏），作为付费咨询或开源共享。","Turn your local community SOP into an English playbook (recruiting, incentives, content cadence) — paid consulting or open source."],
+"社区运营兼职化":["先做 4 周志愿贡献留下公开记录，再申请正式贡献者角色或赏金任务。","Contribute voluntarily for 4 weeks to build a public record, then apply for a formal contributor role or bounty."],
+"AI 增强单人产能":["搭 3 条流水线：抓取→翻译→排版→发布，每步用 AI 处理，人工只做终审。","Build 3 pipelines: fetch → translate → format → publish. Let AI do the steps; humans only do final review."],
+"链上作品集":["用固定钱包地址提交 PR 与发布内容，把地址写进简历，形成可点开的公开档案。","Use one stable wallet address for PRs and publishing; put it in your résumé to create a clickable public record."],
+"跨境知识付费":["把四要素做成 6 节小课，先在社区免费讲 1 节验证需求，再上架。","Turn the four elements into a 6-lesson mini-course; teach lesson 1 free to validate demand, then launch."],
+"咨询服务跨境":["面向想进入 Solana 的团队，提供 90 分钟入门诊断＋交付清单，按次收费。","Offer a 90-minute entry diagnostic plus a delivery checklist to teams entering Solana, charged per session."],
+"收入美元级、支出本币级":["先建立 1 条稳定币收入线（服务费），再谈支出端优化。","Build one stablecoin income line (service fees) first; optimize the spending side after."],
+"数字游民选址":["按网络质量、时区、生活成本、签证四项打分，季度复核一次。","Score cities on internet quality, time zone, cost of living and visas; re-check quarterly."],
+"跨境电商低买高卖":["选轻小、高毛利、合规品类，先小批量测款再放量。","Pick light, high-margin, compliant categories; test small batches before scaling."],
+"二手商品跨市场搬运":["聚焦一个品类做到懂行，用平台历史成交价做定价锚。","Focus on one category until you know it cold; anchor pricing on platform historical sales."],
+"本地特产供应链出海":["先做 1 个 SKU 的跨境小样测试，跑通物流与售后再谈规模化。","Test one SKU cross-border with small samples; only scale after logistics and after-sales work."],
+"服务外包双向倒流":["建立 3 人可信交付小队，用固定模板与验收清单控制质量。","Build a trusted 3-person delivery squad and control quality with fixed templates and checklists."],
+"生活成本指数选址法":["把房租/餐饮/网络/交通做成一张表，每月更新，用数据而不是感觉决策。","Put rent/food/internet/transport in one table and update it monthly — decide with data, not vibes."],
+"合规税务居民规划":["记录居住天数与收入来源，必要时请当地会计师复核，不做任何规避安排。","Track days of residence and income sources; have a local accountant review when needed. Never arrange to evade."],
+"教育/医疗跨境性价比":["提前比价与排期，避免临时决策；把服务价格与质量做成对比表。","Compare prices and schedules in advance; build a price-versus-quality table instead of deciding under pressure."],
+"淡旺季旅居套利":["提前 2–3 个月订长期房源，避开旺季溢价，把省下的钱转入长期池。","Book long-stay housing 2–3 months ahead to avoid peak pricing; route the savings into your long-term pool."],
+"多货币资产分层":["把资金分日常/应急/长期三层，每层限定币种与上限。","Split funds into daily, emergency and long-term layers, each with a fixed currency and cap."],
+"稳定币跨境结算":["只用主流稳定币，保留完整收付凭证与对手方信息以备申报。","Use mainstream stablecoins only, and keep full payment records and counterparty details for filing."],
+"资产类别分散":["先定目标比例，再按季度再平衡，不追单类涨幅。","Set target weights first, rebalance quarterly, and never chase one asset class's rally."],
+"流动性池机制研究":["记录 TVL、费率、无常损失区间，先纸上模拟再动手，绝不用生活资金。","Record TVL, fees and impermanent-loss ranges; simulate on paper before acting, and never use living funds."],
+"跨市场指数观察":["每月记录 3 个核心指数的分位，训练周期判断而非预测点位。","Log the percentile of 3 core indices monthly to train cycle judgment — not to predict levels."],
+"利率环境差异研究":["跟踪主要经济体政策利率变化，只作背景判断，不据此做短线交易。","Track policy rates in major economies as background context — never as a short-term trading trigger."],
+"三角对冲思维":["给每类资产设定上限，超限即减，不讨论「这次不一样」。","Set caps per asset class; cut when breached, with no 'this time is different' exception."],
+"定投纪律化":["固定日期、固定金额、固定来源，写进日历并自动执行。","Fix the date, amount and funding source; put it in a calendar and automate it."],
+"风险预算管理":["先算「全部归零也不影响生活」的金额，再决定是否参与。","First compute the amount whose total loss wouldn't affect your life; only then decide whether to participate."],
+"链上链下价差观察":["只记录公开市场价差，不参与任何私下换汇或代收代付。","Record public price gaps only; never join private FX swaps or payment collection."],
+"新工具早采用":["每季度选 1 个新工具，用真实任务跑 2 周再决定去留。","Adopt one new tool per quarter; run it on real tasks for 2 weeks before keeping it."],
+"操作流程 SOP 化":["每完成一次操作就写 5 步清单，第二次执行时逐条校验并修订。","After each task, write a 5-step checklist; verify and revise it on the second run."],
+"自动化工作流":["从最重复的一步开始自动化，先跑通再加环节，避免一次做太大。","Automate the most repetitive step first; add steps only after it runs reliably."],
+"开源项目本地化":["选 1 个仓库，从文档翻译与 issue 复现开始，逐步进入代码。","Pick one repo, start with doc translation and issue reproduction, then move into code."],
+"技术教程跨境翻译":["选高价值长文，译后加术语表与本地案例，让内容真正可用。","Choose high-value long reads; add a glossary and local examples so the translation is usable."],
+"低代码快速建站":["先做单页信息站，验证流量与需求后再扩展成多页。","Build a one-page info site first; expand to multiple pages only after traffic validates demand."],
+"数据能力变现":["固定 3 个链上指标，每周更新图表与一段解读，形成可订阅产出。","Fix 3 on-chain metrics; publish a chart plus commentary weekly as a subscribable output."],
+"RWA 叙事早期学习":["读完官方文档后写一份「能落地/不能落地」清单，逼自己分辨叙事与产品。","After the docs, write a 'shippable vs. not shippable' list to separate narrative from product."],
+"DID 早期实践":["注册测试身份，完整走一遍签发—出示—验证流程，并写下体验报告。","Register a test identity, run the full issue–present–verify flow, and write a UX report."],
+"AI 多语言内容矩阵":["先做 3 种语言（华语/英语/西语），跑通发布与反馈闭环后再扩到 10 种。","Start with 3 languages (Chinese/English/Spanish); expand to 10 only after the publish-feedback loop works."],
+"收入来源 ≥3 条线":["画出收入矩阵表，标注每条线的启动成本、现金流周期与最大风险。","Draw an income matrix: start-up cost, cash-flow cycle and top risk for each line."],
+"多货币收入结构":["收入到账即按比例分配：生活 / 税费准备 / 长期池，先分配后消费。","On receipt, allocate by ratio: living / tax reserve / long-term pool — allocate before spending."],
+"内容流量收入":["固定更新节奏（每周 1 篇长文 + 2 条短内容），先做 20 期再评估效果。","Fix a cadence (1 long post + 2 short items weekly); evaluate only after 20 issues."],
+"知识产品收入":["把已有内容重组为结构化手册，一次创作、多次销售，并持续修订版本。","Reorganize existing content into a structured handbook: create once, sell repeatedly, revise versions."],
+"服务外包收入":["先接小单验证交付流程与沟通效率，再谈长期框架合作。","Take small jobs to validate delivery and communication, then discuss long-term frameworks."],
+"联盟/推荐收入":["只推自己长期使用的产品，页面明确披露利益关系与佣金。","Recommend only products you actually use; disclose interests and commissions on the page."],
+"社区贡献激励":["先做贡献记录（表格/GitHub），再与社区讨论回馈机制，避免先谈钱。","Keep a contribution record first (sheet/GitHub); discuss rewards later — never lead with money."],
+"长期资产配置":["每月定额转入长期池，不看短期波动，年度再平衡一次。","Transfer a fixed amount to the long-term pool monthly; ignore short-term swings; rebalance yearly."],
+"订阅制收入":["免费版建立信任（如本页的 100 问答），付费版只卖「省时间」。","Use a free tier to build trust (like this page's 100 Q&A); sell only time-saving in the paid tier."],
+"版权/授权收入":["给内容加明确许可协议（如 CC BY-NC），写清可商用范围与授权流程。","Attach a clear license (e.g., CC BY-NC) stating commercial scope and licensing process."],
+"建设者链上履历":["每月至少 1 次公开提交，年终汇总成一页时间线，附可点开链接。","At least one public contribution monthly; yearly, compile a one-page timeline with clickable links."],
+"DID 数字身份":["跟踪官方进展，先做测试网体验并写体验报告，不急于绑定真实身份。","Track official progress; test on testnet and write a report — don't bind real identity too early."],
+"多社群身份叠加":["固定一个自我介绍模板，突出你的交叉位置（语言 × 领域 × 社群）。","Use one fixed self-intro template that highlights your intersection (language × domain × community)."],
+"开源贡献者身份":["从 good-first-issue 开始，积累 merged PR，再承担模块维护。","Start with good-first-issues, accumulate merged PRs, then take on module maintenance."],
+"多渠道内容分发":["一稿多发：主阵地 + 2 个备份渠道，降低单一平台封禁风险。","Publish everywhere: one primary channel plus 2 backups to reduce single-platform ban risk."],
+"合规申报习惯":["建收支台账，保留链上与法币凭证，按当地要求定期汇总。","Keep a ledger with on-chain and fiat receipts, summarized periodically per local rules."],
+"了解两地法规差异":["每季度查一次所在地最新政策，写进个人风险清单并标注日期。","Check local policy quarterly; add it to a personal risk list with the date checked."],
+"数据与隐私合规":["只收集必要信息，公开内容前做脱敏（地址、金额、身份关联）。","Collect only necessary data; redact addresses, amounts and identity links before publishing."],
+"平台规则研究":["读三遍内容政策，建立「不碰清单」：不承诺收益、不带单、不诱导。","Read the content policy three times and keep a 'never do' list: no yield promises, no signals, no inducement."],
+"声誉长期经营":["公开承诺少而准，兑现率高于 90% 再谈扩张。","Make few, precise public promises; expand only after a >90% delivery rate."],
+"一手信息源优先":["订阅官网、GitHub Release 与官方社媒，二手解读只用于发现线索。","Subscribe to the official site, GitHub releases and official socials; use second-hand takes only as leads."],
+"早读白皮书":["读完写 300 字摘要 + 3 个疑点，再决定相信多少。","After reading, write a 300-word summary plus 3 doubts — then decide how much to trust."],
+"每月 1 个认知模型":["每个模型写「定义—案例—我的用法」三段笔记，一年就是 12 个可用工具。","For each model write definition–example–my usage; a year yields 12 usable tools."],
+"认知笔记公开化":["每周固定一天发布，形成节奏与索引页，便于他人检索与引用。","Publish on a fixed weekday; keep an index page so others can search and cite."],
+"社群信息互换":["找 3 位不同语区伙伴，每月互报一次动态，做成交接文档。","Find 3 partners in different language regions; exchange updates monthly in a shared doc."],
+"行业报告跟踪":["只精读 3 份核心报告，其余看摘要与图表，避免信息过载。","Deep-read only 3 core reports; skim summaries and charts for the rest."],
+"反脆弱阅读":["每个结论强制找 1 条反证，找不到就标注「待验证」。","Force one counter-evidence per conclusion; if none, mark it 'unverified'."],
+"AI 辅助速读":["先让 AI 出结构化摘要，再人工核对关键数字与原始出处。","Let AI produce a structured summary, then verify key numbers and sources yourself."],
+"个人知识库":["按「主题—来源—结论」三级建库，每季度清理一次失效条目。","Build a three-level base: topic–source–conclusion; prune stale entries quarterly."],
+"教是最好的学":["用问答形式（如本页 100 问）倒逼自己讲清楚，被追问住才算真懂。","Use Q&A format to force clarity; if you get cornered by follow-ups, you don't know it yet."],
+"做中英双语桥":["每周译 1 条国际动态 + 1 条本地反馈，让双向都看得见你。","Weekly: translate 1 global update and 1 local insight, so both sides see you."],
+"连接两个社群":["先做一次小型联合活动（共读/AMA），验证双方意愿再加深。","Run one small joint activity (a reading group or AMA) to validate mutual interest."],
+"组织跨时区 AMA":["固定模板：主题、嘉宾、双语字幕、会后纪要，流程化后可复制。","Standardize: topic, guests, bilingual captions, minutes — then replicate the process."],
+"GitHub 协作":["先提 issue 再提 PR，遵守贡献指南，保持提交小而清晰。","Open an issue before a PR, follow the contributing guide, keep commits small and clear."],
+"翻译志愿者计划":["选小语种缺口，先建术语表保证一致性，再分工翻译。","Target under-served languages; build a glossary for consistency, then split the work."],
+"线下 Meetup 发起":["先 5 人小聚，稳定每月一次后再扩大规模与赞助。","Start with 5 people; after it's stable monthly, expand size and sponsors."],
+"社区大使角色":["先确认官方是否有该机制，再用贡献记录与计划书申请。","Confirm the program exists, then apply with your contribution record and a plan."],
+"伙伴目录维护":["用表格维护名称/链接/一句话说明，月度检查失效链接并更新。","Maintain name/link/one-liner in a table; check for dead links monthly."],
+"引荐经济":["只引荐合作过的人与项目，并主动说明利益关系。","Refer only people and projects you've worked with, and disclose interests proactively."],
+"内容互推联盟":["选受众重叠但非竞争的伙伴，写一页简单互推约定（频率/形式）。","Pick partners with overlapping but non-competing audiences; agree a one-page cross-promo deal."],
+"长期定投时间复利":["把学习时间固定化（每天 1 小时），时间的纪律比金额更重要。","Fix learning time (1 hour daily); time discipline matters more than money."],
+"底部学习、顶部谨慎":["冷清期做内容与技能储备，热闹期只做分发与转化。","Build content and skills in quiet markets; only distribute and convert in hot ones."],
+"早布局叙事、不追热点":["每季度写一份「叙事地图」，标出早期区、共识区与过热区。","Quarterly, draw a narrative map marking early, consensus and overheated zones."],
+"90 天冲刺节奏":["每个冲刺只设 1 个核心指标，结束即复盘，不叠加目标。","One core metric per sprint; review at the end; never stack goals."],
+"年度复盘制度化":["固定 11 月回看 12 个月的动作与产出，写下明年只做的 3 件事。","Every November review 12 months of actions and outputs; write down only 3 priorities for next year."],
+"睡眠时间资产化":["把发布、监控、备份设为自动任务，让系统在你睡觉时继续工作。","Automate publishing, monitoring and backups so the system works while you sleep."],
+"延迟满足习惯":["收入到账先划 20% 到长期池，再安排消费，顺序不能反。","Move 20% to the long-term pool on receipt, then plan spending — never reverse the order."],
+"十年路线图":["把五大目标拆成年度里程碑，每年只推进 1–2 个，避免全面铺开。","Break the five goals into yearly milestones; advance only 1–2 per year."],
+"等待期变生产期":["设「等待清单」：空仓期只做研究与写作，不做临时决策。","Keep a waiting list: in flat periods do research and writing only, no ad-hoc decisions."],
+"复利式人脉维护":["每月 5 人，不寒暄，直接分享一条对对方有用的信息。","Five people monthly; skip small talk and share one genuinely useful item."],
+"DAO 治理研究":["读提案模板与投票记录，写机制分析笔记，先看懂再参与。","Read proposal templates and voting records; write mechanism notes before participating."],
+"多语言内容共建":["认领一个语种的文档段落，按术语表统一，避免各译各的。","Claim one language's section and align to the glossary to avoid divergent translations."],
+"生态站点矩阵合作":["先写一篇测评文章，再谈互推与联合内容，用作品代替自我介绍。","Publish a review first, then discuss cross-promotion — let work replace self-introduction."],
+"四要素课程化":["把 E·A·C·O 拆成 4 个练习，做成 4 周打卡，配复盘模板。","Split E-A-C-O into 4 exercises as a 4-week challenge with a review template."],
+"Agent 自动化实践":["先自动化「收集→摘要→发布」最小闭环，跑顺后再加资金相关环节（谨慎）。","Automate a minimal collect→summarize→publish loop; add money-related steps only with great care."],
+"数字孪生内容创作":["做「一个城市的一天」数据叙事系列，用公开数据讲真实故事。","Create a 'one day in a city' data-narrative series using public data."],
+"模拟地球研究报告":["选一个变量（能源/人口/气候）做情景推演，标明假设与不确定性。","Pick one variable (energy/population/climate) and run scenarios, labeling assumptions and uncertainty."],
+"青年十大产业对接":["把清单逐条对照本地资源，标出「可做/需合作/不可做」三档。","Map each item to local resources into three tiers: doable / needs partners / not viable."],
+"生态项目互推":["建统一素材包（Logo/一句话/链接），降低合作方的工作量。","Build a shared asset kit (logo, one-liner, links) to minimize partners' effort."],
+"建设者履历沉淀":["把所有动作汇总成一页公开档案，每季度更新一次并留版本记录。","Consolidate all actions into one public page, updated quarterly with version history."]
+};
+
+/* ============ 100 问答的「补充说明」 ============ */
+const QA_EXTRA={
+0:["官方定义为社区驱动 MEME 币：AI+RWA+Web3 是叙事，代币本身不产生现金流，价值高度依赖共识与情绪。","Officially a community-driven MEME coin: AI+RWA+Web3 is narrative; the token generates no cash flow, so value rests on consensus and sentiment."],
+1:["四要素是价值主张而非技术特性，最实用的用法是当决策检查表：每做一件事问是否有能量、心态、协作、优化。","The four elements are a value proposition, not a feature set. Use them as a checklist: energy, mindset, collaboration, optimization."],
+2:["总量固定意味着没有增发稀释（以官方文档为准）；查供应量最终以链上 mint 数据为准。","A fixed supply means no inflationary dilution (per official docs); always confirm supply from on-chain mint data."],
+3:["建议把 CA 存进密码管理器并做校验和比对；只从官网按钮进入交易页，不复制群聊里的地址。","Store the CA in a password manager and compare checksums; enter trading pages only via the official site."],
+4:["LP 锁定降低撤池风险，但不等于价格安全；还要看池子深度与持有人集中度。","LP locking lowers pull-liquidity risk but not price risk; also check pool depth and holder concentration."],
+5:["五条是价值排序：第一条「认知」最可操作，它把参与者从投机者变成学习者。","The five goals are a value ranking: 'cognition' is the most actionable — it turns speculators into learners."],
+6:["这句话是给生态设边界：任何玩法若损害人类文明长期利益，就不该被鼓励。","This sets a boundary: any practice harming long-term human interest shouldn't be encouraged."],
+7:["差异在「叙事密度」，风险特征却相同：高波动、高不确定性、可能归零。","The difference is narrative density; the risk profile is identical: volatility, uncertainty, possible zero."],
+8:["它是多语言 GitHub Pages 站点，可作一手信息源，但关键数据仍要链上核验。","A multilingual GitHub Pages site — useful as a primary source, but verify key data on-chain."],
+9:["虚拟地球偏「映射现实」，模拟地球偏「推演未来」，星际路线是长期愿景；三者都是叙事层。","Virtual Earth maps reality, Simulated Earth projects futures, the interstellar path is long-term vision — all narrative layers."],
+10:["SOL 用于支付 gas 与参与 Solana 生态；EACO 是该网络上的社区资产，角色不同。","SOL pays gas and powers Solana participation; EACO is a community asset on that network — different roles."],
+11:["关键词是「合法」与「可复现」：能重复做的才叫方法，靠运气的一次性收益不算。","The keywords are legal and repeatable: a one-off lucky gain is not a method."],
+12:["C 提供「连接」的位置优势，认知目标提供「信息差」的方向，两者相乘就是节点套利。","C gives positional advantage in connecting; the cognition goal gives direction — multiply them and you get node arbitrage."],
+13:["生态周边多为社区共创，质量参差，使用前先看是否有可核实来源。","Many side-projects are community-made with uneven quality; check for verifiable sources first."],
+14:["Discord 是主要实时社区，GitHub 是贡献留痕地，邮箱用于正式联络。","Discord for real-time community, GitHub for contribution records, e-mail for formal contact."],
+15:["不同池子的深度与滑点不同，先小额测试；警惕搜索结果里的仿冒站点。","Pool depth and slippage differ; test small amounts and beware look-alike sites in search results."],
+16:["Solscan 看代币与持有人，OKLink 做交叉验证，Orbmarkets 看市场数据。","Solscan for token and holders, OKLink for cross-checks, Orbmarkets for market data."],
+17:["命名体现「地球币」与主流 MEME 的配对思路，机制细节以链上合约与官方说明为准。","The name reflects pairing the Earth coin with a mainstream MEME; mechanics per on-chain contract and official notes."],
+18:["它的价值在统一口径：让不同 AI 基于同一套定义输出，减少信息漂移。","Its value is a shared standard: different AIs output from the same definitions, reducing drift."],
+19:["推荐顺序：定义 → 风险 → 链上验证 → 小额体验；任何一步不清楚就停。","Sequence: definition → risk → on-chain verification → small test; stop if any step is unclear."],
+20:["全程不点私信链接；首次交互先用极小金额测试到账与卖出流程。","Never click DM links; first interaction should test both receipt and selling with a tiny amount."],
+21:["把「可归零金额」写在纸上，超过就不加；这是 MEME 币唯一有效的前置风控。","Write the 'can-go-to-zero' amount on paper and never exceed it — the only effective upfront control."],
+22:["先看费用层级、奖励来源与解锁节奏，再判断是否只是短期激励。","Check fee tiers, reward sources and unlock schedules to see if incentives are merely short-term."],
+23:["APR 不等于实际收益：还要扣无常损失、手续费与价格变化，且数据会随时间变化。","APR is not realized yield: subtract impermanent loss, fees and price moves — and figures change over time."],
+24:["价格单向大幅波动时最明显；对高波动代币，做 LP 往往不如直接持有。","Most visible in large one-way moves; for highly volatile tokens, LP often underperforms holding."],
+25:["重点看前 10 地址占比、池子 TVL 变化、24 小时交易笔数三项。","Focus on top-10 holder share, pool TVL changes and 24-hour transaction counts."],
+26:["用独立小额钱包参与高风险资产，与主钱包隔离。","Use a separate small wallet for high-risk assets, isolated from your main wallet."],
+27:["贡献路径的时间投入可积累成履历，比小额投机更可能带来长期回报。","Time spent contributing compounds into a track record — more likely to pay off long term than small speculation."],
+28:["先读 CONTRIBUTING，从文档错字、失效链接这类小 PR 开始。","Read CONTRIBUTING first; start with tiny PRs like typos and dead links."],
+29:["把四问写进每日笔记模板，连续 30 天就能看出行为模式。","Put the four questions in a daily template; 30 days reveals your behavior pattern."],
+30:["判断标准是能否讲清三者的连接点；讲不清说明还停在表面。","The test is whether you can explain the connection among the three — otherwise you're still at the surface."],
+31:["AI 容易编造数字与链接，任何具体数据都要回到原文核验。","AI readily invents numbers and links; verify every specific figure against the source."],
+32:["桥梁价值在「双向」：只搬运不反馈，很快会被当作噪音。","A bridge must be two-way: one-way reposting quickly becomes noise."],
+33:["看「讨论的问题质量」比看人数更准；真实社区会讨论机制与风险。","Discussion quality beats headcount; real communities debate mechanics and risks."],
+34:["节点身份的核心资产是「被信任」，需要长期稳定输出而非短期爆发。","The core asset of a node identity is trust — built by steady output, not bursts."],
+35:["四层里最容易先跑通的是「产品+流量」，财务层最易被忽略却决定能否持续。","Product + traffic are easiest to start; finance is most neglected yet decides sustainability."],
+36:["每篇结尾固定三件事：风险提示、CA、信息来源。","End every piece with three things: risk warning, CA, sources."],
+37:["涉及「推荐」「收益」「带单」的表述风险最高，尽量改为研究与科普口径。","Wording about recommendations, returns or signals is riskiest — reframe as research and education."],
+38:["目前适合做「读—写—讨论」三步，不适合当作已交付产品传播。","Currently suits read–write–discuss; don't present it as a shipped product."],
+39:["把愿景与交付分开看：愿景用于凝聚，交付看链上与文档。","Separate vision from delivery: vision aligns people; delivery is judged on-chain and in docs."],
+40:["最常见路径不是暴跌，而是流动性慢慢枯竭、无人交易。","The usual path isn't a crash but gradual liquidity death and no trading."],
+41:["判断标准很简单：它是否产生现金流？没有，就只有共识定价。","Simple test: does it generate cash flow? If not, it's priced purely by consensus."],
+42:["更稳的做法是先定「总加密敞口」，再在其中分配给具体标的。","Set total crypto exposure first, then allocate within it."],
+43:["真正的内部信息不会免费给陌生人；免费给的通常是出货工具。","Real insider info isn't given free to strangers; free 'tips' are usually exit liquidity."],
+44:["假币常伪装同名同图标，唯一保险是逐字比对 CA。","Fakes copy names and logos; the only safeguard is character-by-character CA comparison."],
+45:["问三个问题：奖励从哪来、能持续多久、退出时滑点多大。","Ask: where do rewards come from, how long can they last, what's the exit slippage?"],
+46:["保留链上记录与法币出入金凭证，年度汇总一次。","Keep on-chain records and fiat on/off-ramp receipts; summarize annually."],
+47:["相关业务活动属非法金融活动，本页仅作认知研究，不提供任何参与指引。","Such activities are illegal financial activity in mainland China; this page is research only and offers no participation guidance."],
+48:["LP 锁定只降低一类风险，不能防止价格操纵与集中抛售。","LP locking reduces one risk only; it doesn't prevent manipulation or concentrated selling."],
+49:["口径冲突时最稳妥的做法是标注「未确认」，而不是取一个好看的数字。","When definitions conflict, label it 'unconfirmed' rather than picking a flattering number."],
+50:["把「谁在受益」作为第一问：推荐者是否持仓、是否有返佣。","Ask who benefits: does the promoter hold, and do they earn referral fees?"],
+51:["MEME 币流动性差，止损单常无法成交；仓位控制才是唯一可靠手段。","Memo coins are illiquid; stop orders often fail — position sizing is the only reliable control."],
+52:["FOMO 有生理基础（多巴胺），延迟一天能显著降低误判率。","FOMO is dopaminergic; a one-day delay sharply cuts misjudgment."],
+53:["每月检查一次钱包授权，撤销不用的 dApp 权限。","Audit wallet approvals monthly and revoke unused dApp permissions."],
+54:["把「不承诺收益」写进个人内容规范，长期看是保护自己。","Write 'no yield promises' into your personal content policy — it protects you long term."],
+55:["地址人格化要谨慎：公开地址等于公开你的部分财务行为。","Be careful personalizing an address: it exposes part of your financial behavior."],
+56:["治理参与可能带来税务与法律责任，先问清定性再投票。","Governance can carry tax and legal implications; clarify your status before voting."],
+57:["不同身份用不同钱包，避免一处泄露导致全部关联。","Use separate wallets per identity so one leak doesn't expose everything."],
+58:["把「项目可能消失」写进预期，就不会在停更时做出情绪化决策。","Price in 'the project may vanish' so silence doesn't trigger emotional decisions."],
+59:["五条里最容易破的是「只用闲钱」，破了这条其余四条都失效。","The easiest rule to break is 'idle money only' — breaking it voids the other four."],
+60:["核心不是「去哪里」，而是「收入来源是否真的全球化」。","It's not about where you go, but whether your income is genuinely global."],
+61:["把每个站点当作练习题：读懂机制、跑通流程、写下笔记。","Treat each site as an exercise: understand mechanics, complete the flow, write notes."],
+62:["三条线要错开周期：内容慢、服务快、知识产品介于两者之间。","Stagger the cycles: content is slow, services fast, knowledge products in between."],
+63:["建设者身份的好处是可验证、可迁移，不依赖任何单一平台。","Builder identity is verifiable and portable, independent of any single platform."],
+64:["目前是叙事与文档阶段，适合研究，不适合当作既成事实传播。","Currently narrative and docs — suitable for study, not for stating as fact."],
+65:["其方法论价值大于产品价值：「先模拟后决策」可迁移到个人规划。","Its methodology outvalues the product: simulate-then-decide transfers to personal planning."],
+66:["命名借东方协作哲学，具体产品需以其站点与仓库为准。","Named after Eastern collaboration philosophy; check its site and repos for actual products."],
+67:["清单可能更新，落地前向社区确认最新版本，避免引用过期信息。","The list may change; confirm the latest version before acting to avoid stale citations."],
+68:["名称含义未在官网明确说明，使用前先向其站点核实。","The name isn't clearly defined on the main site; verify on its own site."],
+69:["这类区域站点常处于早期，先观察再投入时间。","Regional sites are often early-stage; observe before investing time."],
+70:["小合作验证执行力，比一次大承诺更能建立长期关系。","Small collaborations prove execution and build better long-term relations than big promises."],
+71:["先做「信息收集与摘要」这类低风险任务，不要一开始就自动化资金操作。","Start with low-risk tasks like collection and summarization — never automate funds first."],
+72:["华语区最缺的是可核实的华语一手解读，这正是差异化空间。","Chinese-speaking markets lack verifiable first-hand analysis — that's the differentiation."],
+73:["语言资本可量化：多一门语言等于多一个市场入口。","Language capital is quantifiable: one more language is one more market entrance."],
+74:["双语主持要提前准备术语对照表，避免现场卡顿与误译。","Prepare a terminology sheet for bilingual hosting to avoid stalls and mistranslation."],
+75:["教育产品必须与投资建议彻底切割，否则合规风险极高。","Education must be fully separated from investment advice; otherwise compliance risk is high."],
+76:["可持续叙事需要可验证数据支撑，避免空喊口号。","Sustainability narratives need verifiable data — avoid slogans."],
+77:["三问里最关键的是第三问：不能沉淀为资产的时间投入要警惕。","The third question matters most: beware time that doesn't become an asset."],
+78:["四要素复盘每周 10 分钟即可，重点是形成节奏而非写长文。","A 10-minute weekly four-element review is enough; rhythm beats long essays."],
+79:["两条路径可并存，但要分清哪部分是研究、哪部分是风险敞口。","Both paths can coexist; keep clear which part is research and which is risk exposure."],
+80:["认知决定你能否识别机会，也决定你能否识别骗局。","Cognition determines whether you spot opportunities — and scams."],
+81:["不必追求数量，能熟练使用 10 个模型已超过大多数人。","Don't chase quantity: 10 models used fluently beats most people."],
+82:["这四样资产的共同点是不随价格归零，也是最能穿越周期的部分。","All four don't go to zero with price — the most cycle-proof assets you can hold."],
+83:["用「时间盒 + 小仓位」把高风险尝试限制在可承受范围内。","Use time-boxes plus small positions to cap risky experiments."],
+84:["冷清期的产出成本最低，因为注意力竞争最少。","Quiet markets are the cheapest to produce in — least competition for attention."],
+85:["定期问「这件事三年后还有价值吗」，能过滤掉大部分噪音。","Regularly ask whether this still matters in three years — it filters most noise."],
+86:["站位越早越有价值，但前提是持续输出而非一次性表态。","Earlier positioning helps, but only with sustained output, not one-off statements."],
+87:["余额会骗人，公开产出不会。","Balances lie; public output doesn't."],
+88:["把生态参与和持币分开记账，能显著降低情绪波动。","Track ecosystem work and holdings separately; it stabilizes emotions."],
+89:["个人经济系统的标志是：收入不依赖单一雇主、单一平台、单一货币。","A personal economy is marked by income independent of one employer, platform or currency."],
+90:["三个方法要形成闭环：认知选方向、网络拿机会、收入做验证。","The three should loop: cognition picks direction, network brings chances, income validates."],
+91:["讲给别人听是检验理解最快的方式，能被追问住才算真懂。","Teaching is the fastest test; surviving follow-ups means you truly understand."],
+92:["三个错误背后是同一个问题：把「参与」当成了「投资」。","All three mistakes share one root: mistaking participation for investment."],
+93:["四查之外再加一条：信息能否追溯到原始出处。","Add one more check: can the claim be traced to its original source?"],
+94:["叙事越宏大，兑现周期越长，越需要用里程碑而不是口号来验证。","The grander the narrative, the longer the horizon — verify with milestones, not slogans."],
+95:["设三条硬线：影响生活、影响睡眠、触碰法规，任一触发即退出。","Set three hard lines: harms living, harms sleep, breaks the law — any one triggers exit."],
+96:["介绍时先说风险再说愿景，是最不容易误导的顺序。","Lead with risk, then vision — the least misleading order."],
+97:["利他比例不必高，固定且长期比金额更重要。","The giving ratio needn't be high; fixed and long-term beats size."],
+98:["任何页面都会过期，把「核验日期」写进引用习惯。","Every page expires: make 'date verified' part of your citation habit."],
+99:["把这句话贴在交易界面前，能避免大多数低级错误。","Paste this line next to your trading screen; it prevents most basic errors."]
+};
+
+/* ============ 总纲：10 个基础落地方法 ============ */
+const BASE10={
+zh:["人力资本套利：把高性价比劳动力与技能，输出到高溢价市场（跨境外包、知识服务、远程咨询）","地理套利：生活在低成本地区，收入来自高 GDP 地区；跨境物产、旅居、口岸贸易","金融套利：跨市场资产价差、RWA 实物资产上链、稳定币跨境结算、低息资金配置","技术套利：复用成熟 AI 工具、开源代码与自动化脚本，替代高成本人工流程","收入套利：多渠道、多币种收入与多现金流组合，避免单一来源依赖","身份套利：合规利用不同国家/地区的政策红利、税务、居留与创业扶持规则","信息差套利：搭建全球信息节点，抓取行业、政策、供需信息，做信息服务商","节点套利：搭建地球村本地/社群/支付节点，赚取连接服务费","资源置换套利：跨行业资源互换（实物、算力、流量、渠道），减少现金消耗","认知套利：输出这套体系（课程、社群、咨询），赋能其他超级个体"],
+en:["Human capital: export cost-effective skills to premium markets (outsourcing, knowledge services, remote consulting)","Geographic: live in low-cost regions, earn from high-GDP markets; cross-border goods, slow travel, port trade","Financial: cross-market spreads, RWA tokenization, stablecoin settlement, low-cost capital allocation","Technology: reuse mature AI tools, open-source code and automation to replace costly labor","Income: multi-channel, multi-currency cash-flow portfolios instead of a single source","Identity: compliant use of policy incentives, tax rules, residency and startup support across jurisdictions","Information gap: build global information nodes on industry, policy and supply-demand; sell information services","Node: operate local / community / payment nodes in the Global Village and earn connection fees","Resource swap: exchange goods, compute, traffic and channels across industries to cut cash burn","Cognition: productize this system (courses, community, consulting) to empower other super-individuals"]
+};
+
+/* ============ 六大基础设施板块（项目级清单，华语） ============ */
+const INFRA6=[
+["① 结算支付层",["全球多币种跨境 DEX 兑换网关（蒙图、缅元、卢布、eCNH、法币通道），适配边境跨境贸易、光伏与建材外贸回款","地球村统一支付账户：一人多钱包、多链资产聚合，跨境小额 B2B 与个体服务商收款","外贸、房车租赁、光伏项目的链上合约收款、自动分账、保证金托管"]],
+["② RWA 实物资产上链",["房车租赁 NFT 化：每台房车铸造 NFT，租金收益按合约自动分润，EACO 作治理凭证","光伏电站 EMC 资产上链：发电量与收益数据喂价，拆分份额供全球认购（需线下确权与审计）","钨金、软装建材仓单代币化，支持跨境仓单流转与质押融资"]],
+["③ AI Agent 套利机器人集群",["全球套利扫描 Agent：抓取跨境价差、人力报价差、物产价差与各地政策红利","多语言客服 Agent：面向东盟、中亚客商做商务对接、报价与合同生成","链上策略 Agent：DEX 三角套利、流动性配置、资产再平衡（策略收益回流生态池）","向量知识库 Agent：承载本书、100 问答、路书与行业资料，提供付费检索"]],
+["④ 身份、信誉与节点网络",["地球村去中心化身份 DID：EACO 绑定个人节点信誉分，跨境服务商与外贸伙伴互信核验","全球节点注册系统：口岸、旅居博主、外贸经销商、光伏服务商注册为节点，激励用 EACO 发放","一人公司链上凭证：合同、资质、交付记录链上存证，跨国可核验"]],
+["⑤ 内容与教育基础设施",["课程 NFT：《全球套利》课程、边境自驾路书、光伏工程手册，NFT 售卖并自动分润版税","贡献激励系统：翻译、内容整理、案例投稿按规则奖励 EACO","地球村导航站赋能：作为总入口聚合节点、工具与链接，流量收益回流生态"]],
+["⑥ 社群与治理基础设施",["DAO 治理：生态资金使用、新项目投票（光伏出海、跨境项目扶持）","LP 与激励池：在 10% 永久锁定 LP 基础上，另设节点、开发者、贡献者激励池","风险保险池：为跨境贸易与 RWA 履约提供保障，降低跨地域信用风险"]]
+];
+
+/* ============ Web3 基础设施：EACO + SOL ============ */
+const INFRA_I18N={
+zh:{nav:"EACO + SOL",T:"六、建设 Web3 基础设施：EACO + SOL 能做什么",D:"SOL 提供底层网络与结算能力（gas、质押、账户体系），EACO 提供社区组织与激励层。两者叠加可做出 10 类基础设施方向，每条含「做什么 / 为什么适合 / 落地步骤」。",what:"做什么",why:"为什么适合 EACO + SOL",steps:"落地步骤"},
+en:{nav:"EACO + SOL",T:"6. Building Web3 Infrastructure: What EACO + SOL Can Do",D:"SOL supplies the network and settlement layer (gas, staking, accounts); EACO supplies community organization and incentives. Ten infrastructure directions, each with what / why / steps.",what:"What",why:"Why EACO + SOL",steps:"Steps"},
+es:{nav:"EACO + SOL",T:"6. Infraestructura Web3: qué pueden hacer EACO + SOL",D:"SOL aporta la red y la capa de liquidación (gas, staking, cuentas); EACO aporta organización comunitaria e incentivos. Diez direcciones de infraestructura con qué/por qué/pasos.",what:"Qué",why:"Por qué EACO + SOL",steps:"Pasos"},
+fr:{nav:"EACO + SOL",T:"6. Infrastructure Web3 : ce que permettent EACO + SOL",D:"SOL fournit le réseau et le règlement (gas, staking, comptes) ; EACO fournit l'organisation communautaire et les incitations. Dix directions, avec quoi/pourquoi/étapes.",what:"Quoi",why:"Pourquoi EACO + SOL",steps:"Étapes"},
+de:{nav:"EACO + SOL",T:"6. Web3-Infrastruktur: Was EACO + SOL leisten können",D:"SOL liefert Netzwerk und Abrechnung (Gas, Staking, Konten); EACO liefert Community-Organisation und Anreize. Zehn Infrastruktur-Richtungen mit Was/Warum/Schritten.",what:"Was",why:"Warum EACO + SOL",steps:"Schritte"},
+ru:{nav:"EACO + SOL",T:"6. Инфраструктура Web3: что могут EACO + SOL",D:"SOL даёт сеть и расчёты (gas, стейкинг, аккаунты), EACO — организацию сообщества и стимулы. Десять инфраструктурных направлений: что/почему/шаги.",what:"Что",why:"Почему EACO + SOL",steps:"Шаги"},
+ar:{nav:"EACO + SOL",T:"٦. بناء بنية Web3: ماذا يمكن لـ EACO + SOL أن يفعلا",D:"توفّر SOL الشبكة وطبقة التسوية (الغاز، الستيكينغ، الحسابات)، ويوفّر EACO تنظيم المجتمع والحوافز. عشرة اتجاهات مع: ماذا/لماذا/الخطوات.",what:"ماذا",why:"لماذا EACO + SOL",steps:"الخطوات"},
+ja:{nav:"EACO + SOL",T:"6. Web3インフラ構築：EACO + SOL でできること",D:"SOL はネットワークと決済層（ガス、ステーキング、アカウント）、EACO はコミュニティ運営とインセンティブを担います。10の方向性を「何を/なぜ/手順」で整理。",what:"何を",why:"なぜ EACO + SOL か",steps:"手順"},
+ko:{nav:"EACO + SOL",T:"6. Web3 인프라 구축: EACO + SOL이 할 수 있는 일",D:"SOL은 네트워크와 결제 계층(gas, 스테이킹, 계정)을, EACO는 커뮤니티 조직과 인센티브를 제공합니다. 10가지 방향을 무엇/왜/절차로 정리.",what:"무엇을",why:"왜 EACO + SOL인가",steps:"절차"},
+pt:{nav:"EACO + SOL",T:"6. Infraestrutura Web3: o que EACO + SOL podem fazer",D:"SOL fornece a rede e a liquidação (gas, staking, contas); EACO fornece organização comunitária e incentivos. Dez direções com o quê/por quê/passos.",what:"O quê",why:"Por que EACO + SOL",steps:"Passos"}};
+const INFRA=[
+["支付与结算网关","面向跨境小额服务与内容付费的收单结算工具：客户用 SOL/USDC 付款，自动拆分到运营、税费与长期池账户，并生成可申报流水。","SOL 手续费低、确认快，适合小额高频；EACO 社区本身就是第一批真实用户与测试场景。","① 钱包收款+手工记账跑 30 天 → ② 按 Solana Pay 规范生成收款码 → ③ 加自动拆分与月度报表 → ④ 模板开源。","Payment & settlement gateway","A checkout and settlement tool for cross-border micro-services and content: clients pay in SOL/USDC, funds auto-split into operations, tax reserve and a long-term pool, with exportable statements.","Low fees and fast finality suit micro-payments; the EACO community is a ready first user base and testbed.","① Collect in a wallet and keep manual books for 30 days → ② Issue Solana Pay–style payment links → ③ Add auto-splitting and monthly reports → ④ Open-source the template."],
+["贡献证明与激励层","把翻译、内容、活动、代码等贡献登记为可验证记录（表格/GitHub/链上哈希），按公开规则结算 EACO 或发放徽章 NFT。","全球协作最难的是「谁做了什么」，链上留痕解决信任问题；SOL 承担低成本批量登记。","① 定义贡献类型与权重 → ② 用表格跑 1 个月 → ③ 在测试网部署徽章/凭证 → ④ 公开规则与账本。","Proof-of-contribution layer","Register translations, content, events and code as verifiable records (sheets/GitHub/on-chain hashes), then settle EACO or badge NFTs by public rules.","The hardest part of global collaboration is attribution; on-chain traces solve trust, and Solana makes bulk registration cheap.","① Define contribution types and weights → ② Run one month on a sheet → ③ Deploy badges/credentials on testnet → ④ Publish rules and ledger."],
+["多语言知识库与内容存证","华语/英语/西语等多语言 Web3 入门知识库，文章哈希上链存证，防篡改与抢注。","多语言是 EACO 的既有优势；Solana 存证成本极低，适合规模化。","① 选 30 个核心词条 → ② 先跑双语 → ③ 批量哈希上链 → ④ 开放 PR 修订机制。","Multilingual knowledge base with on-chain proofs","A multilingual Web3 primer (Chinese/English/Spanish…), with article hashes anchored on-chain to prevent tampering and squatting.","Multilingual reach is EACO's existing strength; anchoring on Solana is extremely cheap at scale.","① Pick 30 core entries → ② Ship bilingual first → ③ Batch-anchor hashes → ④ Open a PR-based revision process."],
+["链上身份与声誉（DID/可验证凭证）","为社区建设者签发可验证凭证：贡献等级、语言能力、活动主持记录，可跨平台出示。","生态需要「可信协作者」筛选机制；DID 是公共品，不该是某个项目的私产。","① 设计 3 类凭证 → ② 测试网签发 → ③ 做公开展示页 → ④ 明确撤销与更新规则。","On-chain identity & reputation (DID/VC)","Issue verifiable credentials to builders — contribution level, language skills, hosting records — presentable across platforms.","The ecosystem needs a way to identify trustworthy collaborators; DID is public infrastructure, not a private asset.","① Design 3 credential types → ② Issue on testnet → ③ Build a public profile page → ④ Define revocation and renewal rules."],
+["RWA / 绿色资产登记原型","用 NFT 或凭证登记真实世界的绿色资产与社区公共物品（一片林、一个回收项目），公开来源与凭证链。","官网「虚拟地球」叙事需要可核实的落地样本；Solana 低成本适合高频登记。","① 选 1 个可核实的小标的 → ② 只做登记不做募资 → ③ 公开尽调资料 → ④ 邀请第三方复核。","RWA / green-asset registry prototype","Register real-world green assets or community public goods (a grove, a recycling project) as NFTs or credentials, with public provenance.","The 'Virtual Earth' narrative needs verifiable samples; low fees suit high-frequency registration.","① Choose one verifiable small asset → ② Register only, never raise funds → ③ Publish due-diligence files → ④ Invite third-party review."],
+["DAO 治理与资金透明工具","提案模板 + 投票 + 资金流水看板：任何社区可复制，账本公开可查。","EACO 已有 DAO 池实践；治理透明是社区规模化的前提。","① 手工提案+公开表格起步 → ② 建三张表看板（提案/投票/支出） → ③ 上线模板仓库 → ④ 季度治理报告。","DAO governance & treasury transparency","Proposal templates, voting and a treasury dashboard any community can copy — with a publicly auditable ledger.","EACO already experiments with DAO pools; transparent governance is the precondition for scaling.","① Start with manual proposals and a public sheet → ② Build a three-table dashboard → ③ Publish a template repo → ④ Issue quarterly governance reports."],
+["开发者教育与脚手架","Solana 入门课程 + 可运行脚手架（钱包连接、代币查询、简单支付），配悬赏任务。","华语区 Solana 开发者稀缺，教育是回报最高的基础设施；EACO 可作激励。","① 写 6 节课程 → ② 做 1 个可跑通 demo → ③ 设 3 个新手任务 → ④ 建完成者人才池。","Developer education & scaffolding","Solana onboarding courses plus runnable scaffolds (wallet connect, token queries, simple payments), paired with bounties.","Solana developers are scarce in Chinese-speaking markets; education is the highest-leverage infrastructure, and EACO can fund bounties.","① Write 6 lessons → ② Ship one runnable demo → ③ Set 3 beginner tasks → ④ Build a talent pool of finishers."],
+["开放数据与链上看板","公开 EACO 与 Solana 网络关键指标看板：持有人分布、池子深度、活跃地址、费用趋势。","数据透明降低信息不对称，也降低被虚假宣传误导的概率。","① 固定 6 个指标 → ② 每周更新图表 → ③ 公开数据来源与方法 → ④ 只写解读不下结论。","Open data & on-chain dashboards","Public dashboards for EACO and Solana network metrics: holder distribution, pool depth, active addresses, fee trends.","Transparency reduces information asymmetry and the odds of being misled by hype.","① Fix 6 metrics → ② Update charts weekly → ③ Publish sources and method → ④ Interpret, never predict."],
+["AI Agent 协作基础设施","多语言客服/内容/数据 Agent：自动答疑、翻译、生成周报；调用成本用 SOL 结算。","全球社区跨时区，Agent 是唯一能 24 小时覆盖多语的方案。","① 先做 FAQ 问答 Agent → ② 加翻译与摘要 → ③ 加周报生成 → ④ 保留人工审核关口。","AI agent collaboration infrastructure","Multilingual support/content/data agents: auto-answering, translation, weekly reports — with compute settled in SOL.","A global community spans time zones; agents are the only way to cover many languages around the clock.","① Build an FAQ agent → ② Add translation and summaries → ③ Add report generation → ④ Keep a human review gate."],
+["公共品资助与匹配捐赠","对开源工具、翻译、教育内容做小额资助，社区按 1:1 匹配捐赠，评审过程公开。","公共品是长期主义最直接的形式；「促进地球可持续发展」需要具体载体。","① 定评审标准 → ② 每季度 1 轮 → ③ 公开受助清单与产出 → ④ 年度影响报告。","Public-goods funding & matching","Small grants for open-source tools, translations and education, with community 1:1 matching and open review.","Public goods are the most direct form of long-termism; 'Earth's sustainability' needs concrete carriers.","① Set review criteria → ② Run quarterly rounds → ③ Publish recipients and outputs → ④ Annual impact report."]
+];
+
+/* ============ 实务版：100 种方法（20/20/20/15/13/12） ============ */
+const BIZ_CATS=["人力资本套利（1–20）","地理套利（21–40）","金融套利（41–60）","技术套利（61–75）","收入套利（76–88）","身份·节点·认知（89–100）"];
+const BIZ_M=[
+[0,"面向欧美客户远程中文技术外包、文案、设计服务"],
+[0,"面向东南亚企业提供国内电商运营代运营"],
+[0,"跨境双语咨询：外贸合规、口岸通关咨询"],
+[0,"线上跨境财税、注册代办知识服务"],
+[0,"把国内成熟培训课程翻译成多语言对外售卖"],
+[0,"海外华人社群的国内货源对接顾问"],
+[0,"远程工程制图、光伏图纸代画服务，接单海外项目"],
+[0,"短视频脚本、剪辑外包，承接海外创作者订单"],
+[0,"线上心理咨询、成长教练，服务时差不同地区客户"],
+[0,"跨境法律咨询文书代写、翻译校对"],
+[0,"旅居向导、边境口岸地陪知识服务"],
+[0,"海外自媒体账号代运营、账号托管"],
+[0,"供应链品控远程验货服务，替海外买家验货"],
+[0,"线上编程、AI 提示词定制外包接单"],
+[0,"国内讲师出海，线上跨境直播授课"],
+[0,"展会远程代参展、线上代洽谈业务"],
+[0,"跨境标书、可研报告代写服务"],
+[0,"软装、建材方案远程设计，对接海外经销商"],
+[0,"海外华人子女线上中文辅导"],
+[0,"行业调研报告定制，卖给海外投资机构"],
+[1,"低成本地区居住，高收入地区线上赚钱（数字游民模式）"],
+[1,"环中国边境口岸跨境小商品贸易"],
+[1,"房车自驾旅居租赁，跨区域流转出租"],
+[1,"产地直采特产，销往溢价更高地区"],
+[1,"跨境农产品、土特产集采分销"],
+[1,"边境仓储中转服务，做两地货流节点"],
+[1,"海外闲置资产托管、代出租"],
+[1,"异地康养、旅居打包套餐分销"],
+[1,"口岸物流信息中介，匹配货主与车队"],
+[1,"跨境建材、地毯墙布窗帘批发出口"],
+[1,"国内光伏设备出口至东盟、非洲市场"],
+[1,"钨金等稀有金属跨境供需撮合"],
+[1,"海外地皮、农业用地信息中介服务"],
+[1,"跨境民宿托管、短租代运营"],
+[1,"季节性迁徙经营（反季节物产、旅游）"],
+[1,"跨境二手车、工程车供需对接"],
+[1,"海外工厂代工订单匹配国内供应商"],
+[1,"跨境展会场地、资源对接中介"],
+[1,"多国旅行路线、自驾路书付费售卖"],
+[1,"跨境仓储代发、一件代发链路搭建"],
+[2,"RWA 实物资产代币化份额分销（房车、电站、仓单）"],
+[2,"Solana DEX 跨币对价差套利（合规策略）"],
+[2,"多币种汇兑节点服务，跨境小额结算"],
+[2,"稳定币跨境资金周转，降低换汇成本"],
+[2,"光伏电站收益份额认购与分红"],
+[2,"大宗商品仓单质押、流转融资服务"],
+[2,"海外低息资金对接国内优质实体项目"],
+[2,"多平台流动性挖矿、质押收益组合配置"],
+[2,"跨境保单、再保险资产份额配置"],
+[2,"链上保证金托管，外贸交易履约担保"],
+[2,"eCNH 跨境结算通路搭建"],
+[2,"多国税务优化、资产隔离规划咨询"],
+[2,"海外债券、高股息资产信息撮合"],
+[2,"代币版税流自动分账系统搭建"],
+[2,"跨境众筹实体项目（光伏、基建配套）"],
+[2,"黄金、钨金等贵金属数字化份额交易"],
+[2,"外汇波动对冲工具服务外贸商家"],
+[2,"链上定期理财池，生态资金稳健增值"],
+[2,"资产碎片化，让小额投资人参与大额实业"],
+[2,"跨境应收账款保理、贴现撮合"],
+[3,"AI 批量翻译工具搭建，对外 API 收费"],
+[3,"跨境比价爬虫、价差监控机器人售卖"],
+[3,"套利策略脚本、自动化工具订阅"],
+[3,"向量知识库搭建服务，给企业私有化部署"],
+[3,"Solana 链上合约开发、NFT、RWA 合约代工"],
+[3,"AI 短视频批量生产系统，对外授权使用"],
+[3,"外贸智能报价 Agent，自动核算关税与物流成本"],
+[3,"数据索引、链上数据分析看板搭建"],
+[3,"开源工具二次封装，做成 SaaS 面向跨境商家"],
+[3,"光伏数据监控、发电量自动化采集系统"],
+[3,"多渠道订单统一管理自动化中台"],
+[3,"AI 提示词培训、提示词库售卖"],
+[3,"自动多语言社媒发布机器人"],
+[3,"图片、素材 AI 生成商用素材库分销"],
+[3,"节点服务器、DePIN 算力共享租赁"],
+[4,"同时持有法币、稳定币、EACO、多币种收入流"],
+[4,"被动版权收入：路书、课程、电子书持续分成"],
+[4,"社群会员订阅制，地球村套利社群年费"],
+[4,"广告流量分成：地球村导航站、自媒体矩阵"],
+[4,"渠道返佣：光伏、建材、房车项目居间提成"],
+[4,"NFT 二次交易版税被动收入"],
+[4,"节点服务费：跨境支付、信息撮合抽成"],
+[4,"咨询项目按小时或按项目收费"],
+[4,"自有 IP 联名、授权合作收入"],
+[4,"托管代运营分成（账号、资产、电站）"],
+[4,"活动、跨境沙龙门票收入"],
+[4,"工具插件订阅、年费授权"],
+[4,"生态激励：EACO 节点贡献奖励"],
+[5,"利用不同地区创业补贴、税收优惠注册一人公司"],
+[5,"多国居留、数字游民签证信息与代办咨询"],
+[5,"去中心化 DID 身份服务，跨境节点信誉背书"],
+[5,"搭建本地地球村子社群，发展区域节点"],
+[5,"《全球套利》体系授权讲师、城市合伙人"],
+[5,"全球行业政策红利情报订阅服务"],
+[5,"跨境资质、认证资源对接"],
+[5,"跨行业资源酒会、资源对接会组织"],
+[5,"套利案例库、复盘资料库会员订阅"],
+[5,"新人一对一陪跑、套利落地辅导"],
+[5,"翻译、本地化生态内容，拓展海外社区"],
+[5,"EACO 生态 DAO 治理，提案孵化新项目，获取项目份额"]
+];
+
+/* ============ 实务版：100 问答（八大板块） ============ */
+const BIZ_SECS=["基础认知 Q1–15","EACO 代币 Q16–30","六层套利实操 Q31–55","Solana & Web3 Q56–70","风控与合规 Q71–85","地球村导航 Q86–92","节点与社群 Q93–98","长期主义 Q99–100"];
+const BIZ_QA=[
+[0,"全球套利是不是炒币、投机？","不是。本书定义的全球套利核心是跨边界资源匹配；加密资产只是结算工具之一，主线是实体贸易、技能、地理与 RWA 资产，追求可持续价差，不是赌涨跌。"],
+[0,"超级个体是什么？","不绑定单一雇主、单一地域，搭建多源现金流；一人公司，分布式生产、分布式收款，自己掌握资产与时间。"],
+[0,"边界理论怎么理解？","所有人为划分的边界（国界、行业壁垒、平台规则、信息围墙），两侧的供需、成本与价格不同，边界就是套利窗口。"],
+[0,"节点网络理论是什么？","你不需要拥有全部资源，只需成为连接两边的节点；节点越多，套利机会越多、抗风险越强。"],
+[0,"资源配置原则是什么？","稀缺优先、流动性优先、分散配置；不要把资源押在单一地域、单一资产、单一收入上。"],
+[0,"信息差套利与诈骗的区别？","信息差是公开信息的高效整合与传递；诈骗是编造虚假信息。套利必须基于真实供需。"],
+[0,"全球套利适合普通人吗？门槛是什么？","适合。门槛是持续学习、跨文化沟通与风险控制意识；不需要巨额本金，从小节点、小撮合起步。"],
+[0,"一人公司和普通个体户的区别？","一人公司面向全球市场，多币种收款、线上分布式业务，不局限本地市场。"],
+[0,"长期主义在套利里代表什么？","优先保证生存与自由，而不是短期暴利；收益一部分再投入节点网络，一部分用于对冲风险。"],
+[0,"套利一定会赚钱吗？","不会。价差会消失，还有政策、履约与流动性风险；风险平衡是套利的必修课。"],
+[0,"自由与生活，最终目标是什么？","套利是手段，目标是时间自由、地理自由与资产自主，不被单一地域或雇主束缚。"],
+[0,"「世界不是孤岛」怎么落地？","主动打通跨区域渠道，不只依赖国内信息源，同步观察全球各地的供需变化。"],
+[0,"套利的底层三要素？","价差（差异）、流通通道、结算工具；EACO + Solana 提供的是流通与结算层。"],
+[0,"套利和做生意有什么异同？","传统生意自己生产囤货；套利更多做连接、撮合与服务，轻资产优先。"],
+[0,"这套体系的核心价值观？","正能量、利他、全球协作、可持续——与 EACO 的原生理念一致。"],
+[1,"EACO 全称、链、合约地址？","Earth's Best Coin，Solana 链；CA：DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH；总量 13.5 亿枚，10% LP 永久锁定。交易前务必逐字核对，谨防假币。"],
+[1,"EACO 是 MEME 币吗？和其他 MEME 有何区别？","官方定位为社区驱动的 MEME 币；同时生态围绕 RWA 实体资产、节点激励与 AI Agent 展开，价值锚定在节点网络与真实使用场景，而非单纯概念炒作。"],
+[1,"EACO 有什么用途？","节点激励、课程 NFT 购买、生态服务费、DAO 投票、RWA 份额认购、Agent 算力付费等。"],
+[1,"EACO 官网是哪个？","https://ucoingroup.github.io/earths-best-coin/ （多语言）。"],
+[1,"EACO 会不会增发？","总供应量固定为 13.5 亿枚；生态激励来自预留份额，不靠增发新币（以官方文档为准）。"],
+[1,"10% 永久锁定 LP 的意义？","保障基础流动性，降低撤池跑路风险，为生态提供长期信心；但它不等于价格安全。"],
+[1,"EACO 可以在哪些 DEX 交易？","Solana 主流 DEX：Raydium、Orca、Meteora 等；不同池子深度与滑点不同，先小额测试。"],
+[1,"EACO 和 SOL 是什么关系？","SOL 是底层公链能源（Gas、算力、账户），EACO 是生态通证，二者互补：一个付网络费，一个做激励与治理。"],
+[1,"EACO 有没有团队预留？","生态份额用于节点、开发者与内容贡献激励，具体规则以官网文档为准；分配类数据存在待澄清口径，勿自行合并计算。"],
+[1,"EACO 的收益来自哪里？","生态服务费、RWA 项目手续费、工具订阅分成、导航流量收益等回流生态池；代币本身不承诺分红。"],
+[1,"持有 EACO 会自动分红吗？","基础持有不自动分红；参与指定 RWA 池、节点质押或项目份额，才可能获得对应资产收益，且需承担相应风险。"],
+[1,"怎么成为 EACO 生态贡献者？","提交内容、开发工具、搭建区域节点、翻译生态资料、孵化合规项目，通过 DAO 提案申请激励。"],
+[1,"EACO 可以跨境支付货款吗？","可作生态内结算凭证；大额外贸主通道优先使用合规稳定币或 eCNH 类通路，EACO 更多用于激励与服务费。"],
+[1,"生态保险池是做什么的？","用于对冲 RWA 项目履约与跨境交易信用风险，由 DAO 共同管理；人为违规不在赔付范围。"],
+[1,"EACO 向量知识库是什么？","把全书、FAQ、路书与行业资料入库，AI Agent 可检索回答，是内容基础设施的一部分。"],
+[2,"人力资本套利，新手从哪起步？","先打磨一项可线上交付的技能：设计、翻译、工程绘图、短视频剪辑，再到海外平台接单。"],
+[2,"地理套利，数字游民怎么选落脚地？","优先生活成本低、网络稳定、出入境便利、适合长期居住的地方，同时收入来自高 GDP 地区的线上业务。"],
+[2,"地理套利与边境贸易的风险点？","各国海关政策、进出口管制、外汇监管；先从小批量撮合与信息中介起步，不盲目囤货。"],
+[2,"金融套利里的 RWA 是什么？","Real World Asset：现实资产上链，如房车、光伏电站、仓单、贵金属，拆成链上份额流通，前提是线下确权清晰。"],
+[2,"技术套利，不会写代码能做吗？","可以。用现成 AI 工具、提示词与 SaaS 做整合与打包服务，不必自己开发合约。"],
+[2,"收入套利，多币种账户怎么搭？","法币对公/个体户账户、跨境支付工具、Solana 钱包、稳定币钱包分开管理、分开记账。"],
+[2,"身份套利是不是规避税务？","不是。身份套利是合法利用各地创业扶持与居留政策，必须合规报税，严禁偷税。"],
+[2,"人力资本套利怎么找海外客户？","海外自由职业平台、海外华人社群、地球村导航站的节点资源互换。"],
+[2,"光伏项目怎么用这套全球套利？","国内设备供应链对接东盟/非洲需求方，电站收益份额上链，节点居间拿激励；核心是线下交付与回款。"],
+[2,"房车租赁如何 RWA 化？","房车铸造 NFT，租金收益按合约自动分润给份额持有者，EACO 作治理凭证；需先解决产权与运营方责任划分。"],
+[2,"钨金、稀有金属怎么做套利节点？","做供需撮合中介，搭建仓单上链通道，仓单代币用于质押流转；合规与质检是前置条件。"],
+[2,"收入套利为什么不能单一现金流？","单一收入依赖单一市场与平台，政策或规则一变，收入可能直接归零。"],
+[2,"六层套利的优先顺序？","新手优先人力资本（最轻资产）→ 地理信息撮合 → 技术工具服务 → 成熟后再碰 RWA 金融套利。"],
+[2,"DID 身份节点有什么价值？","跨国交易双方缺乏信任基础，DID 信誉分可作为背书，降低信任成本与尽调成本。"],
+[2,"跨境建材（墙布、窗帘、地毯）怎么做？","国内工厂集采，对接海外经销商，做供应链节点，跨境物流与报关一站式匹配。"],
+[2,"什么是三角套利？","同一链上三个交易对之间存在短暂价差，机器人完成闭环兑换赚差价；竞争激烈，对速度与成本要求极高。"],
+[2,"Agent 机器人能帮我做什么？","自动扫全球价差、自动写报价、自动翻译商务文件、自动社群接待客户。"],
+[2,"环中国口岸路书在哪里？","收录在地球村导航站，完整版路书可按生态规则解锁。"],
+[2,"人力资本套利怎么定价？","按客户所在地区的市场价格定价，而不是你居住地的物价水平。"],
+[2,"数字游民签证有哪些热门地区？","多国已开放数字游民签证，情报在节点情报库持续更新；以官方移民局信息为准。"],
+[2,"六层套利可以叠加吗？","可以。最优是多层叠加：地理（低成本居住）+ 人力资本（线上高溢价接单）+ RWA 被动收益。"],
+[2,"金融套利风险最高的点是什么？","资产确权、线下履约与价格波动；RWA 项目必须做线下风控与尽调，链上凭证只是份额证明。"],
+[2,"卖 AI 工具会不会侵权？","只能用开源或已获商用授权的模型与素材，禁止盗用闭源模型接口打包售卖。"],
+[2,"被动收入有哪些？","课程 NFT 版税、RWA 收益分成、导航广告分成、节点服务费、工具订阅费。"],
+[2,"身份套利和身份造假有什么区别？","身份套利全部使用合法证件、合法居留与合法主体；造假属违法，体系严格禁止。"],
+[3,"为什么选 Solana 而不是别的公链？","确认快、Gas 低，适合高频小额跨境结算、AI Agent 自动执行与 RWA 分账。"],
+[3,"EACO Agent OPC 是什么？","生态内 AI 智能体集群方向，可执行套利扫描、商务对接、知识库问答与链上策略；能力以其产品现状为准。"],
+[3,"RPC 与索引服务的作用？","链上数据高速读取；价差机器人、RWA 看板与 Agent 都依赖稳定 RPC 节点。"],
+[3,"RWA 合约开发流程？","线下确权 → 审计 → 铸造资产凭证（NFT/SPL）→ 收益喂价 → 分红合约 → DAO 监管。"],
+[3,"链上 DID 怎么做？","Solana 账户绑定信誉凭证、交付记录与节点贡献，形成可验证的去中心化身份。"],
+[3,"跨境 DEX 网关可支持哪些币种？","SOL、EACO、USDC、eCNH，以及蒙图、缅元、卢布等稳定对；具体合规边界按属地法规判断。"],
+[3,"AI Agent 怎么付费？","可用 EACO、SOL 或稳定币支付算力与 API 调用费用。"],
+[3,"一人公司链上合约能实现什么？","自动分账、定金托管、履约释放、订阅扣费、版税自动分发。"],
+[3,"Helius、Triton 这类工具对套利的用处？","提供实时链上数据流、交易监控与事件推送，价差扫描依赖这些数据源。"],
+[3,"链上数据看板给谁用？","节点服务商、RWA 投资人、外贸商家，用于查看资产收益与订单流水。"],
+[3,"ZK 技术在生态里用在哪？","隐私结算与身份核验：不暴露全部资料，只出示合规证明。"],
+[3,"DePIN 算力网络怎么结合 EACO？","闲置服务器与 GPU 接入网络，提供者获 EACO 激励，算力供给 AI Agent。"],
+[3,"NFT 在生态里除了课程还有什么用？","节点身份凭证、房车/电站份额、路书授权、社群会员通行证。"],
+[3,"MEV 套利普通人能参与吗？","竞争极度激烈，不推荐新手；生态优先推广实体 RWA 套利，不鼓励纯链上抢跑。"],
+[3,"DAO 提案怎么提交？","在社区提交文档，说明方案、预算与激励规则，由持币节点投票。"],
+[4,"全球套利最大的风险清单？","政策管制、汇率波动、交易对手违约、信息失效、流动性枯竭、私钥被盗。"],
+[4,"怎么做风险平衡？","资金分层：生活备用金、周转资金、高风险资金严格分开；资产跨地域、跨品类分散。"],
+[4,"加密资产在国内的合规边界？","中国内地禁止虚拟货币代币发行融资及相关业务活动；EACO 定位为海外生态社区凭证，不面向内地用户募资或承诺保本收益；涉及境内的实体外贸与 RWA 业务须遵守属地法规。"],
+[4,"跨境贸易怎么规避回款风险？","优先定金 + 链上托管合约，分阶段释放货款；大额订单做线下尽调。"],
+[4,"私钥安全怎么管理？","硬件钱包 + 离线备份；生态资金强制多签管理。"],
+[4,"遇到政策突变怎么办？","预留退出通道，不做重资产锁死投入；边界红利会消失，保持业务可快速切换。"],
+[4,"RWA 线下确权重要吗？","最重要的一环。链上凭证只是份额证明，线下产权不清，代币就没有价值。"],
+[4,"能不能加杠杆做全球套利？","新手严禁杠杆；成熟节点也仅可极低杠杆，杠杆会放大边界反转的损失。"],
+[4,"怎么识别社群里的套利骗局？","凡承诺保本、固定高收益、拉人头层级返利的，都不属于这套体系。"],
+[4,"跨境税务怎么处理？","每个业务主体按经营所在地法律申报纳税，建议委托当地财税顾问。"],
+[4,"信息来源需要核验吗？","必须多重交叉核验，单一来源不能作为套利依据。"],
+[4,"节点违约了怎么处理？","DID 信誉分降级、暂停激励、DAO 仲裁、保证金扣罚。"],
+[4,"外汇管制地区做地理套利有什么限制？","严格遵守当地外汇法规，优先物物置换、服务互换与合规跨境支付通道。"],
+[4,"生态保险池的赔付条件？","仅限经 DAO 审核备案、合约托管的 RWA 项目；人为违规不在赔付范围。"],
+[4,"什么时候该停止一笔套利业务？","价差快速收窄、政策收紧、履约风险上升、流动性枯竭时，立即离场。"],
+[5,"地球村导航地址？","https://ucoingroup.github.io/Earth-Chinese-Navigation/ 。"],
+[5,"导航站的定位是什么？","全球套利超级个体的门户入口，聚合工具、节点链接、资料、DEX、RPC、学习文档与社群入口。"],
+[5,"可以提交自己的节点链接吗？","可以。提交表单，经审核通过后收录；收录节点获得曝光与生态激励。"],
+[5,"导航站流量收益怎么分配？","广告与跳转佣金收益按提案进入生态池，用于节点与内容激励。"],
+[5,"导航站有哪些分类栏目？","套利工具、Solana 生态入口、跨境支付、口岸贸易资源、学习资料库、节点名录、RWA 项目专区。"],
+[5,"导航站资料是否全部免费？","基础工具链接免费；完整路书、方法手册与高级问答库可按生态规则解锁。"],
+[5,"导航站会做多语言版本吗？","生态计划逐步上线英文、缅语、俄语等版本，由海外节点翻译共建。"],
+[6,"什么是地球村节点？","在本地（口岸、城市、国家）承接供需对接、商务接待与资源核验的超级个体，是套利网络的基础单元。"],
+[6,"节点等级怎么划分？","普通信息节点、服务节点、RWA 项目节点、DAO 治理节点，等级由交付记录与信誉分决定。"],
+[6,"节点收益形式？","撮合服务费、项目居间提成、生态定期激励、导航站专属流量。"],
+[6,"怎么加入地球村社群？","从导航站社群入口进入，遵守社区规则，以利他协作与案例分享为主。"],
+[6,"城市合伙人、授权讲师是什么？","经考核后获得授权，对外讲授《全球套利》课程，分成由 DAO 统一约定。"],
+[6,"跨节点合作流程？","DID 核验信誉 → 签合约或链上托管 → 交付验收 → 分账并更新信誉分。"],
+[7,"学完全套体系的成长路径？","新手 → 单项套利执行者 → 区域节点 → 多节点网络搭建者 → DAO 提案孵化项目，逐步构建自己的小生态。"],
+[7,"这套体系的终极愿景？","依托 EACO + Solana 基础设施，搭建利他、全球协作的超级个体网络，推动地球可持续文明，实现个体自由——这正是 EACO 的初心：Earth's Best Coin。"]
+];
+
+/* ============ 20 大高潜力行业 ============ */
+const IND_CATS={zh:["人力资本套利","地理套利","金融套利","技术套利","收入套利","身份套利"],en:["Human Capital","Geographic","Financial","Technology","Income","Identity"]};
+const IND_I18N={
+zh:{nav:"20 大行业",T:"五、地球村 20 大高潜力行业（2026–2030）",D:"筛选标准：适合超级个体、可跨边界套利、能接入 EACO 节点网络与 RWA 上链、轻资产优先、长期可持续、契合「利他 · 全球协作 · 文明自愈」。每条含套利点 / EACO 落地 / 落地 SOP / 风险清单 / 中英宣传短句。",std:"✅ 六层覆盖：人力资本（8、10）· 地理（5、13、18）· 金融（2、3、7、19）· 技术（4、11、20）· 收入（9、17）· 身份（9、20）；其余赛道为跨层叠加。所有赛道都可作为地球村导航一级栏目、写入 100 问答库、进 DAO 提案孵化池。",arb:"套利点",eaco:"EACO 落地",sop:"落地 SOP",risk:"风险清单",slogan:"宣传短句（中英）",sumT:"20 条宣传短句速查（≤15 字 · 感恩利他风格）",tpl:"共 {n} 个行业"},
+en:{nav:"20 Sectors",T:"5. 20 High-Potential Sectors of the Global Village (2026–2030)",D:"Filters: suited to solo operators, cross-border by nature, pluggable into the EACO node network and RWA registry, asset-light, sustainable, aligned with altruism, global collaboration and civilizational self-healing. Each entry: arbitrage edge / EACO implementation / execution SOP / risk list / bilingual slogan.",std:"✅ Six-layer coverage: human capital (8, 10) · geographic (5, 13, 18) · financial (2, 3, 7, 19) · technology (4, 11, 20) · income (9, 17) · identity (9, 20); the rest stack several layers. Every sector can become a top-level entry of the Global Village navigation, a record in the 100-Q&A base, and a DAO incubation candidate.",arb:"Arbitrage edge",eaco:"EACO implementation",sop:"Execution SOP",risk:"Risk list",slogan:"Slogan (ZH / EN)",sumT:"20 slogans at a glance (≤15 chars, altruistic tone)",tpl:"{n} sectors"},
+es:{nav:"20 Sectores",T:"5. 20 sectores de alto potencial de la Aldea Global (2026–2030)",D:"Criterios: apto para operadores individuales, arbitraje transfronterizo, integrable en la red de nodos EACO y el registro RWA, activos ligeros, sostenible y alineado con altruismo, colaboración global y autocuración civilizatoria. Cada ficha: ventaja, implementación EACO, SOP, riesgos y eslogan bilingüe.",std:"✅ Cobertura de seis capas: capital humano (8, 10) · geográfica (5, 13, 18) · financiera (2, 3, 7, 19) · tecnológica (4, 11, 20) · ingresos (9, 17) · identidad (9, 20).",arb:"Ventaja de arbitraje",eaco:"Implementación EACO",sop:"SOP de ejecución",risk:"Riesgos",slogan:"Eslogan (ZH / EN)",sumT:"20 eslóganes de un vistazo",tpl:"{n} sectores"},
+fr:{nav:"20 Secteurs",T:"5. 20 secteurs à fort potentiel du Village Mondial (2026–2030)",D:"Critères : adapté aux opérateurs solo, arbitrage transfrontalier, intégrable au réseau de nœuds EACO et au registre RWA, actifs légers, durable, aligné sur l'altruisme, la collaboration mondiale et l'auto-guérison civilisationnelle. Chaque fiche : avantage, mise en œuvre EACO, SOP, risques, slogan bilingue.",std:"✅ Couverture des six couches : capital humain (8, 10) · géographique (5, 13, 18) · financier (2, 3, 7, 19) · technologique (4, 11, 20) · revenus (9, 17) · identité (9, 20).",arb:"Avantage d'arbitrage",eaco:"Mise en œuvre EACO",sop:"SOP d'exécution",risk:"Risques",slogan:"Slogan (ZH / EN)",sumT:"20 slogans en un coup d'œil",tpl:"{n} secteurs"},
+de:{nav:"20 Branchen",T:"5. 20 zukunftsträchtige Branchen des globalen Dorfes (2026–2030)",D:"Kriterien: für Solo-Unternehmer geeignet, grenzüberschreitend, anschlussfähig an EACO-Knotennetz und RWA-Register, asset-light, nachhaltig, im Sinne von Altruismus, globaler Zusammenarbeit und zivilisatorischer Selbstheilung. Je Eintrag: Arbitragevorteil, EACO-Umsetzung, SOP, Risiken, zweisprachiger Slogan.",std:"✅ Abdeckung der sechs Ebenen: Humankapital (8, 10) · Geografie (5, 13, 18) · Finanzen (2, 3, 7, 19) · Technologie (4, 11, 20) · Einkommen (9, 17) · Identität (9, 20).",arb:"Arbitragevorteil",eaco:"EACO-Umsetzung",sop:"Umsetzungs-SOP",risk:"Risiken",slogan:"Slogan (ZH / EN)",sumT:"20 Slogans auf einen Blick",tpl:"{n} Branchen"},
+ru:{nav:"20 отраслей",T:"5. 20 перспективных отраслей мировой деревни (2026–2030)",D:"Критерии: подходит одиночному оператору, трансграничный арбитраж, интеграция в сеть узлов EACO и реестр RWA, без тяжёлых активов, устойчиво, в духе альтруизма, глобального сотрудничества и самовосстановления цивилизации. По каждой: арбитражное преимущество, реализация в EACO, SOP, риски, двуязычный слоган.",std:"✅ Покрытие шести уровней: человеческий капитал (8, 10) · география (5, 13, 18) · финансы (2, 3, 7, 19) · технологии (4, 11, 20) · доход (9, 17) · идентичность (9, 20).",arb:"Арбитражное преимущество",eaco:"Реализация в EACO",sop:"SOP внедрения",risk:"Риски",slogan:"Слоган (ZH / EN)",sumT:"20 слоганов одним взглядом",tpl:"{n} отраслей"},
+ar:{nav:"٢٠ قطاعاً",T:"٥. عشرون قطاعاً واعداً في القرية العالمية (٢٠٢٦–٢٠٣٠)",D:"المعايير: مناسب للمشغّل الفردي، مرابحة عبر الحدود، قابل للربط بشبكة عقد EACO وسجل RWA، خفيف الأصول، مستدام، متوافق مع الإيثار والتعاون العالمي والتعافي الحضاري. كل قطاع: ميزة المرابحة، التطبيق في EACO، خطوات التنفيذ، المخاطر، شعار ثنائي اللغة.",std:"✅ تغطية المستويات الستة: رأس المال البشري (٨، ١٠) · الجغرافيا (٥، ١٣، ١٨) · المال (٢، ٣، ٧، ١٩) · التقنية (٤، ١١، ٢٠) · الدخل (٩، ١٧) · الهوية (٩، ٢٠).",arb:"ميزة المرابحة",eaco:"التطبيق في EACO",sop:"خطوات التنفيذ",risk:"المخاطر",slogan:"الشعار (ZH / EN)",sumT:"٢٠ شعاراً في لمحة",tpl:"{n} قطاعاً"},
+ja:{nav:"20業界",T:"5. 地球村の20大高ポテンシャル業界（2026–2030）",D:"選定基準：スーパー個人に適合、越境裁定が可能、EACOノード網とRWA登録に接続可能、軽資産優先、長期持続可能、利他・グローバル協働・文明の自己回復に適合。各項目に裁定機会／EACO実装／実行SOP／リスク／中英スローガン。",std:"✅ 六層カバレッジ：人的資本（8、10）· 地理（5、13、18）· 金融（2、3、7、19）· 技術（4、11、20）· 収入（9、17）· アイデンティティ（9、20）。",arb:"裁定機会",eaco:"EACO実装",sop:"実行SOP",risk:"リスク",slogan:"スローガン（ZH / EN）",sumT:"20本のスローガン早見表",tpl:"{n} 業界"},
+ko:{nav:"20대 산업",T:"5. 지구촌 20대 고잠재 산업(2026–2030)",D:"선정 기준: 1인 운영자에 적합, 국경을 넘는 차익거래, EACO 노드 네트워크와 RWA 등록에 연결 가능, 경자산 우선, 장기 지속가능, 이타·글로벌 협업·문명 자생에 부합. 각 항목: 차익 기회 / EACO 실행 / 실행 SOP / 리스크 / 중영 슬로건.",std:"✅ 6계층 커버리지: 인적 자본(8, 10) · 지리(5, 13, 18) · 금융(2, 3, 7, 19) · 기술(4, 11, 20) · 소득(9, 17) · 정체성(9, 20).",arb:"차익 기회",eaco:"EACO 실행",sop:"실행 SOP",risk:"리스크",slogan:"슬로건(ZH / EN)",sumT:"20개 슬로건 한눈에 보기",tpl:"{n}개 산업"},
+pt:{nav:"20 Setores",T:"5. 20 setores de alto potencial da Aldeia Global (2026–2030)",D:"Critérios: adequado a operadores individuais, arbitragem transfronteiriça, integrável à rede de nós EACO e ao registro RWA, ativos leves, sustentável, alinhado ao altruísmo, à colaboração global e à autocura civilizacional. Cada ficha: vantagem, implementação EACO, SOP, riscos e slogan bilíngue.",std:"✅ Cobertura das seis camadas: capital humano (8, 10) · geográfica (5, 13, 18) · financeira (2, 3, 7, 19) · tecnológica (4, 11, 20) · renda (9, 17) · identidade (9, 20).",arb:"Vantagem de arbitragem",eaco:"Implementação EACO",sop:"SOP de execução",risk:"Riscos",slogan:"Slogan (ZH / EN)",sumT:"20 slogans num relance",tpl:"{n} setores"}
+};
+
+const IND=[
+{c:[1,2],zh:{n:"光储一体化跨境新能源（光伏 + 储能）",a:"国内设备供应链成本 + 各国补贴政策 + 区域电价三重差价；同一套组件在不同国家的回收周期可差 3–5 年。",e:"电站收益 RWA 拆份额（只做登记与披露，不做公开募资）、发电量数据由 Agent 采集上链、跨境项目合约托管分账、居间节点 EACO 激励。",s:["锁定一国一场景（如越南工厂屋顶），出 3 页方案与回收期模型","当地持牌安装商交付，自己只做撮合、资金托管与验收","建成即接管数据，出月度发电报告，形成可复制样板"],r:["并网与补贴政策变动，回收期模型失效","汇率与回款周期错配，现金流断裂","组件质保与运维责任归属不清，出事故互相推诿"],g:"把阳光搬到缺电的地方"},en:{n:"Cross-border solar + storage (PV & BESS)",a:"Three stacked gaps: Chinese supply-chain cost, national subsidy schemes, regional power tariffs. Payback for the same kit can differ by 3–5 years across countries.",e:"Tokenized plant revenue (registry & disclosure only, no public offering), Agent-collected generation data on-chain, contract escrow and split settlement, EACO rewards for matchmaking nodes.",s:["Pick one country and one scenario (e.g. a Vietnam factory roof); produce a 3-page plan and payback model","Let a licensed local installer deliver; you only match, escrow funds and accept","Take over the data at commissioning, publish monthly generation reports, replicate the template"],r:["Grid-connection and subsidy policy shifts break the payback model","FX and receivable-timing mismatch drains cash","Unclear warranty and O&M liability when incidents happen"],g:"Move sunshine to where power is scarce"}},
+{c:[2],zh:{n:"RWA 实物资产代币化服务",a:"不动产、仓单、设备、矿产流动性极差，全球小额资金进不来；拆份额上链即打通资产边界。",e:"资产确权存证 → Solana 上凭证铸造 → 收益自动分账 → DAO 尽调与披露模板，社区只提供工具与标准。",s:["先选权属清晰、现金流可验证的资产（从仓单起步，不碰不动产）","律师出确权意见书 + 第三方审计现金流","铸凭证、写分红规则、全量披露，只登记不募资"],r:["线下确权不清，链上凭证价值为零","各司法辖区对代币化份额定性不同，可能触监管","运营方挪用现金流，持有人无从追索"],g:"让搬不动的资产可以流动"}},
+{c:[2],zh:{n:"合规跨境多币种结算与汇兑节点",a:"传统电汇手续费 3–7%、到账 2–5 天；边境小额贸易与个体服务商缺低成本通道。",e:"DEX 兑换网关做生态内结算、eCNH / 稳定币做贸易主通道、智能合约定金托管、节点按笔收服务费。",s:["梳理一条真实贸易链路（如口岸建材），列出收付币种与频率","与持牌支付机构对接，链上环节限定为结算凭证与对账","沉淀标准合同与对账模板，向同链路商户复制"],r:["外汇管理与反洗钱合规，越线即违法","地下钱庄与非法换汇红线，坚决不碰","稳定币发行方与托管方信用风险"],g:"让钱走最短的那条路"}},
+{c:[3,4],zh:{n:"AI 跨境 Agent 与垂直情报服务",a:"语言壁垒 + 信息孤岛；各国政策、招标、供需情报散落在本地语言里，整合成本极高。",e:"EACO Agent 集群（扫描 / 翻译 / 报价 / 客服）、向量知识库订阅、情报贡献 EACO 激励。",s:["选一个窄场景（如东盟光伏招标），建 30 个一手信源","Agent 每日抓取 + 翻译 + 去重，人工只做核验","先免费出三周周报，再转订阅制"],r:["情报错误直接造成商业损失","抓取内容涉及版权与站点条款","AI 幻觉必须人工复核，不能直接对外"],g:"把世界的信号译成你的语言"}},
+{c:[1,4],zh:{n:"数字游民旅居配套产业",a:"高收入地区收入 + 低成本地区生活；旅居住宿、签证、通关、路书、社群配套供给严重不足。",e:"旅居路书 NFT（付费解锁）、数字游民 DID 凭证、房车租赁 RWA、全球接待节点分成。",s:["选 3 个签证友好、网络稳定的城市做深度踩点","与本地房东、车队签分成协议，做成标准套餐","用路书与社群获客，复购靠口碑与转介绍"],r:["签证与居留政策变化，客源骤降","短租合规与邻里纠纷","跨境收款与税务申报不清"],g:"在这里生活，向世界收钱"}},
+{c:[1],zh:{n:"边境跨境大宗与建材供应链",a:"地毯、墙布、窗帘、五金、稀有金属、农特产：产地价与海外零售价差常达 2–4 倍，口岸效率就是利润。",e:"仓单上链、供需撮合节点、订单履约托管、节点居间奖励。",s:["选 1 个品类 + 1 个口岸，先跑通一柜货","把报价、报关、物流、结算做成一张标准表","用这张表找海外经销商，做供应链节点而非囤货商"],r:["关税、配额与原产地规则变动","货物质量争议与退运成本","汇率与账期错配，垫资压力大"],g:"让产地直连货架"}},
+{c:[2],zh:{n:"全球碳资产与绿色信用服务",a:"各国碳配额、碳汇资源、认证标准不统一；发展中国家有资源缺需求，发达国家有需求缺项目。",e:"碳凭证 NFT 化（登记与溯源）、碳项目 DAO 孵化、绿色专项激励池。",s:["只做可核证的小项目（分布式光伏、林场）","第三方核证机构出报告，链上只存哈希","对接自愿减排买方，收服务费不做价格投机"],r:["认证标准与跨境互认不确定","双重计算与重复主张风险","政策口径变化快，项目可能失效"],g:"把减排量变成可核证的资产"}},
+{c:[0],zh:{n:"跨境人力资本外包与技能匹配",a:"发达国家工程师、设计师、剪辑时薪 40–120 美元；同等水平供给在低成本地区只要三分之一到五分之一。",e:"服务商 DID 信誉、订单智能匹配、链上分期结算、技能服务 NFT 套餐。",s:["只选一个可远程交付的技能，先做 3 个公开样本","按客户所在地定价，不按自己所在地定价","交付记录上链，形成可验证履历再接大单"],r:["收款通道与汇率损耗","客户违约与知识产权归属争议","平台规则变化导致账号与客源归零"],g:"同样的手艺，卖给更远的市场"}},
+{c:[0,5],zh:{n:"一人公司跨境咨询与合规服务",a:"各国公司注册、税务、签证、劳工法规差异巨大；超级个体不懂属地规则，认知差就是服务费。",e:"咨询订阅 NFT、节点顾问信誉分、文档链上存证（只存哈希，不存原文）。",s:["选 1 个国别 + 1 个主题（如在泰注册公司与工作证）","与当地持牌会计、律师绑定，自己只做前端与整合","出标准化清单与时间表，按项目收费"],r:["无牌照提供法律或税务意见的风险","属地规则变化导致方案失效","客户违规的连带风险"],g:"你负责出发，我负责规则"}},
+{c:[4],zh:{n:"AIGC 跨境内容出海",a:"海外多语种短视频、教材、商业素材供给不足；国内成熟脚本与 IP 本地化后边际成本极低。",e:"版权 NFT、版税链上自动分润、AI 素材库会员、内容贡献激励。",s:["选 1 个语种 + 1 个垂类（如西语光伏科普）","AI 做脚本—配音—剪辑流水线，人工只做审校","多平台分发，版权登记后做授权"],r:["版权、肖像权与训练数据来源","平台对 AI 生成内容的标注要求","本地化不当引发文化冲突"],g:"一个创意，说十种语言"}},
+{c:[3],zh:{n:"分布式算力与 DePIN 共享网络",a:"GPU 与带宽存在地区价差与闲置率；同一张卡在需求地的租金可达本地的数倍。",e:"算力节点接入、供给方 EACO 激励、算力用于套利 Agent 与推理任务。",s:["先算清电费、带宽、折旧三项成本与盈亏平衡利用率","接入 1 个成熟 DePIN 网络验证真实收入","再扩机器，不与自用需求抢资源"],r:["代币激励价格波动，回本模型失效","硬件折旧与用电、噪音限制","网络方违约或规则单方面变更"],g:"让闲置的算力去上班"}},
+{c:[2,5],zh:{n:"跨境风控、尽调与履约担保",a:"跨境交易最大成本是不信任；低成本第三方核验是刚需，市场几乎空白。",e:"DAO 仲裁、生态保险池、节点尽调存证、违约信誉降级。",s:["设计一页尽调清单（主体、权属、履约记录）","只对熟悉品类做担保，单笔设上限","保证金进合约托管，违约按规则扣罚"],r:["承担了不该承担的信用风险","仲裁结果执行难","保险池被恶意索赔拖垮"],g:"让陌生人也能安全做生意"}},
+{c:[1],zh:{n:"模块化预制建筑与轻钢旅居营地",a:"海外人工成本是国内的 4–8 倍；模块化把现场施工变成工厂制造 + 现场组装，成本与工期双降。",e:"项目份额 RWA、海外落地节点对接、订单资金托管。",s:["选 1 类标准产品（如 20 尺旅居单元），做认证与图纸包","在目标国找 1 个安装队做样板","用样板接营地与光伏配套订单，按项目托管收款"],r:["各国建筑规范与认证壁垒","海运、关税与现场损耗","安装质量不可控，售后成本高"],g:"房子在工厂造，世界在现场装"}},
+{c:[3],zh:{n:"低空经济与无人机跨境应用",a:"各国空域政策与作业价格差异大；测绘、植保、光伏巡检需求在农业国与能源国同时爆发。",e:"测绘数据存证、项目撮合节点、巡检订单链上分账。",s:["选 1 个可标准化作业（光伏电站巡检）","与当地持证飞手合作，自己出方案与设备","按 MW 或按亩报价，出巡检报告做复购"],r:["空域审批与飞行合规","测绘数据出境限制","设备损失与第三者责任保险"],g:"用一张航线图换一份收入"}},
+{c:[1],zh:{n:"银发跨境康养与远程健康监测",a:"发达国家养老医疗成本极高，低成本地区康养配套好；远程监测把服务跨境交付。",e:"康养套餐 NFT、健康数据 ZK 隐私存证、康养社群节点激励。",s:["选 1 个康养目的地 + 1 类人群（术后康复、候鸟养老）","与本地机构签床位与服务协议","用远程监测做增值，按月订阅"],r:["医疗资质与责任边界","健康数据合规与隐私泄露","突发医疗事件处置能力不足"],g:"把养老搬到更舒服的地方"}},
+{c:[5,4],zh:{n:"全球知识产权与版权跨境流转",a:"同一专利、课程、软件著作权在不同国家估值与授权价差数倍，信息不对称极大。",e:"IP 上链确权（哈希存证）、授权自动分润、跨境 IP 撮合节点。",s:["建一张 100 条的区域 IP 供需表","只做撮合与确权存证，绝不做侵权转售","授权合同模板化，按分成收费"],r:["各国知识产权制度差异","权属瑕疵与历史许可不清","侵权连带责任"],g:"好内容值得被更多人授权"}},
+{c:[4,0],zh:{n:"全球套利教育与超级个体孵化",a:"市面上缺少系统的六层套利、边界理论、节点网络实战课程；认知差是最厚的护城河。",e:"《全球套利》课程 NFT、授权讲师分成、城市节点社群激励、会员订阅。",s:["先把 100 问答做成免费公开课，验证需求","再出 12 周付费训练营，含作业与陪跑","招募城市合伙人做本地交付，统一教材与分成"],r:["内容被抄袭与盗版","学习效果无法承诺，退款纠纷","夸大宣传的合规风险"],g:"教人钓鱼，比送鱼更长久"}},
+{c:[1],zh:{n:"跨境物流、口岸仓储与中转运营",a:"口岸信息不透明、车货匹配低效；通关时效与仓储资源的差价常被中间层吃掉。",e:"口岸情报订阅、货主与车队撮合、仓储订单链上预约。",s:["驻点 1 个口岸，连续记录 30 天时效与价格","出「口岸时效地图」做内容获客","接撮合与仓配，按票抽成"],r:["通关查验与政策变化","货损货差赔付","垫资与账期压力"],g:"让货在口岸少等三天"}},
+{c:[2],zh:{n:"贵金属与稀有矿产数字化流通",a:"进出口管制、报价体系、检测标准各国不同；传统链条中间商多，仓单流转慢。",e:"钨金等仓单代币化（登记与溯源）、质押融资撮合、供需情报订阅。",s:["只做已入库、已检测的标准仓单","链上只存仓单哈希与检测报告，不代持实物","对接产业买方，做撮合与溯源服务"],r:["管制类商品的经营资质","实物核验、保管与保险","价格剧烈波动导致质押物不足值"],g:"一张仓单，走通两国市场"}},
+{c:[5,3],zh:{n:"去中心化身份 DID 与全球信誉网络",a:"跨国合作缺通用可信身份；传统 KYC 成本高、数据泄露风险大，信任成本被反复支付。",e:"地球村 DID 系统：节点交付、履约、贡献记录上链，跨地域可验证核验。",s:["定义最小信誉凭证（交付记录、履约记录、节点背书三项）","先在自有社群内测，用 DID 做准入","与生态站点互通，形成跨社区信誉"],r:["隐私与数据最小化原则","信誉刷分与女巫攻击","跨境数据合规与本地化要求"],g:"让信誉跟着人走"}}
+];
+
+/* ---------- 20 大行业：English（与 IND 顺序一一对应） ---------- */
+const IND_EN=[
+{n:"Cross-border solar + storage (PV & BESS)",a:"Three stacked gaps: Chinese supply-chain cost, national subsidy schemes, regional power tariffs. Payback for the same kit can differ by 3–5 years across countries.",e:"Tokenized plant revenue (registry and disclosure only, no public offering), Agent-collected generation data on-chain, contract escrow and split settlement, EACO rewards for matchmaking nodes.",s:["Pick one country and one scenario (e.g. a Vietnam factory roof); produce a 3-page plan and payback model","A licensed local installer delivers; you only match, escrow funds and accept","Take over the data at commissioning, publish monthly generation reports, replicate"],r:["Grid-connection and subsidy shifts break the payback model","FX and receivable-timing mismatch drains cash","Unclear warranty and O&M liability after incidents"],g:"Move sunshine where power is scarce"},
+{n:"RWA tokenization services",a:"Real estate, warehouse receipts, equipment and minerals are illiquid; global small capital cannot get in. Fractional on-chain claims open the asset border.",e:"Ownership proof and hash registry, credential minting on Solana, automated revenue split, DAO due-diligence and disclosure templates — tools and standards only.",s:["Start with clear-title, verifiable-cashflow assets (warehouse receipts first, no real estate)","Lawyer opinion on title plus a third-party cashflow audit","Mint credentials, publish split rules, full disclosure — registry only, no fundraising"],r:["Weak off-chain title makes the token worthless","Jurisdictions classify fractional tokens differently","Operator misappropriates cashflow; holders lack recourse"],g:"Make immovable assets movable"},
+{n:"Compliant multi-currency settlement nodes",a:"Legacy wires cost 3–7% and take 2–5 days; border SMEs and solo service providers lack cheap rails.",e:"DEX gateway for in-ecosystem settlement, eCNH and stablecoins as the trade rail, escrow for deposits, per-transaction node fees.",s:["Map one real trade chain (e.g. border building materials) with currencies and frequency","Partner with licensed payment institutions; keep the on-chain layer to settlement proofs and reconciliation","Codify contracts and reconciliation templates, replicate to peers on the same chain"],r:["FX control and AML — crossing the line is illegal","Illegal private FX and underground banks — never touch","Issuer and custodian risk on stablecoins"],g:"Let money take the shortest road"},
+{n:"AI cross-border agents and vertical intelligence",a:"Language barriers plus information islands: policy, tenders and supply-demand signals sit in local languages, and integration cost is high.",e:"EACO agent cluster (scan, translate, quote, support), vector knowledge-base subscription, EACO rewards for intelligence contributions.",s:["Pick one narrow scenario (e.g. ASEAN solar tenders) and build 30 primary sources","Agents scrape, translate and dedupe daily; humans only verify","Three weeks of free weekly briefs, then convert to subscription"],r:["Wrong intelligence directly causes business losses","Scraping raises copyright and site-terms issues","AI hallucination must be human-verified"],g:"Translate the world's signals into yours"},
+{n:"Digital-nomad living infrastructure",a:"High-income earnings plus low-cost living; lodging, visas, border crossing, roadbooks and community services are badly undersupplied.",e:"Living roadbook NFTs, nomad DID credentials, RV rental RWA, revenue share for host nodes.",s:["Scout three visa-friendly, well-connected cities in depth","Sign revenue-share deals with local landlords and fleets, then package standard bundles","Acquire via roadbooks and community; retain by word of mouth"],r:["Visa and residency policy changes cut demand","Short-stay compliance and neighbour disputes","Cross-border collection and tax filing unclear"],g:"Live here, bill the world"},
+{n:"Border bulk commodities and building-materials supply chain",a:"Carpets, wallcoverings, curtains, hardware, rare metals and farm produce show 2–4x origin-to-retail gaps; border efficiency is the margin.",e:"Warehouse receipts on-chain, supply-demand matching nodes, order escrow, node referral rewards.",s:["Choose one category and one port; run a single container end-to-end","Turn quote, customs, logistics and settlement into one standard sheet","Use that sheet to find overseas distributors — be the supply-chain node, not the stockpiler"],r:["Tariff, quota and rules-of-origin changes","Quality disputes and return freight","FX and payment-term mismatch; heavy advance funding"],g:"From origin straight to shelf"},
+{n:"Global carbon assets and green credit services",a:"Carbon quotas, sinks and certification standards differ by country; developing regions hold resources without demand, developed ones hold demand without projects.",e:"Carbon credential NFTs (registry and traceability), carbon-project DAO incubation, green incentive pool.",s:["Only verifiable small projects (distributed solar, forest farms)","Third-party certification reports; store only hashes on-chain","Serve voluntary buyers with fees, never with price speculation"],r:["Certification standards and mutual recognition unclear","Double counting and duplicate claims","Fast policy shifts can void a project"],g:"Turn reductions into verifiable assets"},
+{n:"Cross-border human-capital outsourcing and skill matching",a:"Engineers, designers and editors bill USD 40–120 an hour in developed markets; equivalent supply in low-cost regions costs one-third to one-fifth.",e:"Provider DID reputation, smart order matching, on-chain milestone settlement, skill-service NFT bundles.",s:["Pick one remotely deliverable skill and publish three sample works","Price by client location, never by your own location","Log delivery on-chain into a verifiable résumé, then chase bigger deals"],r:["Payment rails and FX loss","Client default and IP ownership disputes","Platform rule changes can wipe out account and pipeline"],g:"Same craft, farther markets"},
+{n:"One-person-company cross-border advisory",a:"Company formation, tax, visas and labour rules differ wildly; solo operators lack local knowledge, and that cognitive gap is the fee.",e:"Advisory subscription NFTs, node advisor reputation scores, document hash attestation (hashes only, never full text).",s:["Pick one country and one topic (e.g. Thai company plus work permit)","Partner with licensed local accountants and lawyers; you front and integrate","Deliver standard checklists and timelines, priced per project"],r:["Legal or tax advice without a licence","Local rule changes invalidate the plan","Client non-compliance creates spillover risk"],g:"You depart, I handle the rules"},
+{n:"AIGC content going global",a:"Multilingual short video, teaching materials and commercial assets are undersupplied abroad; localizing mature Chinese scripts and IP has near-zero marginal cost.",e:"Copyright NFTs, on-chain royalty splits, AI asset-library membership, content-contribution incentives.",s:["Pick one language and one vertical (e.g. Spanish solar explainers)","Run an AI pipeline for script, voice and edit; humans only review","Distribute across platforms, register copyright, then license"],r:["Copyright, likeness and training-data provenance","Platform rules on labelling AI-generated content","Poor localization causes cultural backlash"],g:"One idea, ten languages"},
+{n:"Distributed compute and DePIN networks",a:"GPU and bandwidth prices plus idle rates differ by region; the same card can rent for several times more in demand hubs.",e:"Compute nodes onboarded, supplier EACO incentives, compute allocated to arbitrage agents and inference.",s:["Cost power, bandwidth and depreciation first; find the break-even utilization","Join one mature DePIN network to validate real revenue","Scale machines only after that, without starving your own workloads"],r:["Token-incentive volatility breaks payback models","Hardware depreciation plus power and noise limits","Network operator default or unilateral rule changes"],g:"Put idle compute to work"},
+{n:"Cross-border risk control, due diligence and performance guarantees",a:"The biggest cost in cross-border trade is distrust; cheap third-party verification is a hard need and the market is nearly empty.",e:"DAO arbitration, ecosystem insurance pool, node due-diligence attestation, reputation downgrade on default.",s:["Design a one-page due-diligence checklist (entity, title, performance record)","Guarantee only categories you know, with a per-deal cap","Deposits in contract escrow; penalties execute by rule"],r:["Absorbing credit risk you should not carry","Arbitration awards are hard to enforce","Insurance pool drained by malicious claims"],g:"Strangers can trade safely"},
+{n:"Modular prefab buildings and light-steel camps",a:"Overseas labour costs 4–8x China's; modular turns site construction into factory production plus assembly, cutting cost and schedule.",e:"Project-share RWA, overseas delivery nodes, order fund escrow.",s:["Pick one standard product (e.g. a 20-ft living unit) with certification and drawing pack","Find one installation crew in the target country for a demo build","Use the demo to win camp and solar-support orders, escrowed per project"],r:["Local building codes and certification barriers","Sea freight, tariffs and site damage","Installation quality you cannot control, raising after-sales cost"],g:"Built in a factory, assembled worldwide"},
+{n:"Low-altitude economy and cross-border drone services",a:"Airspace rules and job pricing vary widely; survey, crop protection and solar inspection demand explodes in both agricultural and energy economies.",e:"Survey-data attestation, project matching nodes, inspection-order split settlement on-chain.",s:["Pick one standardizable job (solar plant inspection)","Partner with licensed local pilots; you supply the plan and equipment","Quote per MW or per hectare; recurring revenue from inspection reports"],r:["Airspace approval and flight compliance","Survey-data export restrictions","Equipment loss and third-party liability insurance"],g:"Trade a flight path for revenue"},
+{n:"Cross-border senior care and remote health monitoring",a:"Care and medical costs are extreme in developed markets while low-cost regions offer good facilities; remote monitoring delivers the service across borders.",e:"Care-package NFTs, ZK privacy attestation for health data, care-community node incentives.",s:["Pick one destination plus one group (post-op recovery, seasonal retirees)","Sign bed and service agreements with local institutions","Add remote monitoring as a paid monthly layer"],r:["Medical licensing and liability boundaries","Health-data compliance and privacy leaks","Insufficient handling of medical emergencies"],g:"Move eldercare somewhere kinder"},
+{n:"Global IP and copyright cross-border licensing",a:"The same patent, course or software copyright is valued and licensed at multiples across countries; asymmetry is huge.",e:"IP attestation on-chain (hash registry), automated royalty split, cross-border IP matching nodes.",s:["Build a 100-row regional IP supply-demand sheet","Match and attest only — never resell infringing rights","Template the licensing contract and charge on revenue share"],r:["Different IP regimes across countries","Title defects and unclear prior licences","Joint liability for infringement"],g:"Good content deserves more licensees"},
+{n:"Arbitrage education and solo-operator incubation",a:"Systematic courses on six-layer arbitrage, border theory and node networks are rare; cognitive gaps are the thickest moat.",e:"Global Arbitrage course NFTs, licensed-instructor revenue share, city-node community incentives, membership.",s:["Turn the 100 Q&A into a free open course to validate demand","Launch a 12-week paid cohort with homework and coaching","Recruit city partners for local delivery with unified materials and split"],r:["Content piracy and plagiarism","Learning outcomes cannot be promised; refund disputes","Compliance risk from exaggerated marketing"],g:"Teach fishing, not gifting fish"},
+{n:"Cross-border logistics, port warehousing and transit",a:"Port information is opaque and truck-cargo matching inefficient; the spread on clearance time and warehouse capacity is eaten by middlemen.",e:"Port-intelligence subscription, shipper-fleet matching, warehouse booking on-chain.",s:["Station at one port and log 30 days of lead times and prices","Publish a port lead-time map as content marketing","Take matching and warehousing commissions per shipment"],r:["Inspection and policy changes at the border","Cargo damage and shortfall claims","Advance funding and payment-term pressure"],g:"Three days less at the border"},
+{n:"Digital circulation of precious and rare metals",a:"Export controls, pricing systems and assay standards differ by country; legacy chains carry many middlemen and slow receipt transfer.",e:"Tungsten and other receipts tokenized (registry and traceability), pledge-financing matching, supply-demand intelligence subscription.",s:["Only standard receipts already warehoused and assayed","Store receipt hash and assay report on-chain; never hold physical metal for others","Serve industrial buyers with matching and traceability"],r:["Licensing for controlled commodities","Physical verification, custody and insurance","Sharp price swings leave collateral under-covered"],g:"One receipt, two markets"},
+{n:"Decentralized identity (DID) and a global reputation network",a:"Cross-border cooperation lacks a universal trusted identity; legacy KYC is costly and leak-prone, so trust is paid for repeatedly.",e:"Global Village DID: delivery, performance and contribution records on-chain, verifiable across regions.",s:["Define the minimal credential set (delivery record, performance record, node endorsement)","Pilot inside your own community, using DID for access","Interconnect with ecosystem sites to build cross-community reputation"],r:["Privacy and data minimization","Reputation gaming and Sybil attacks","Cross-border data compliance and localization"],g:"Reputation that travels with you"}
+];
+IND.forEach((x,i)=>{if(IND_EN[i])x.en=IND_EN[i];});
+
+/* ============ 渲染 ============ */
+let lang=localStorage.getItem("ea-lang")||"zh";
+let theme=localStorage.getItem("ea-theme")||"green";
+let m100Cat=-1,qaGroup=-1,q="",m100Mode="sys",qaMode="sys",indCat=-1;
+
+const $=id=>document.getElementById(id);
+const t=k=>(I18N[lang]&&I18N[lang][k])||I18N.en[k]||k;
+const dl=LANG_FALLBACK(lang);
+
+function buildLangSel(){
+  $("langSel").innerHTML=LANGS.map(([c,n])=>`<option value="${c}" ${c===lang?"selected":""}>${c==="zh"||c==="ar"||c==="ja"||c==="ko"?n:n}</option>`).join("");
+}
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.documentElement.dir=(lang==="ar")?"rtl":"ltr";
+  document.title=lang==="zh"?"Earth Arbitrage · 地球村全球套利 × EACO":"Earth Arbitrage · Global Village Arbitrage × EACO";
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;const v=(I18N[lang]&&I18N[lang][k])||I18N.en[k];if(v!==undefined)el.textContent=v;});
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{const k=el.dataset.i18nPh;const v=(I18N[lang]&&I18N[lang][k])||I18N.en[k];if(v!==undefined)el.placeholder=v;});
+  // 六层视角
+  const L=LAYERS[lang]||LAYERS.en;
+  $("layerGrid").innerHTML=L.map(([n,d])=>`<div class="card layerCard"><h3>${n}</h3><p>${d}</p></div>`).join("");
+  $("pillarGrid").innerHTML=t("pillars").map((v,i)=>i%2===0?`<div class="card layerCard"><h3>${v}</h3><p>${t("pillars")[i+1]}</p></div>`:"").join("");
+  // 核心十法（zh/en）
+  $("m10Grid").innerHTML=M10.map((m,i)=>`<div class="card"><span class="tag">${String(i+1).padStart(2,"0")}</span><h3>${m[dl==="zh"?0:2]}</h3><p>${m[dl==="zh"?1:3]}</p></div>`).join("");
+  $("base10Title").textContent=lang==="zh"?"总纲：10 个基础落地方法（100 种方法的总纲）":"Ten Base Methods (the outline behind the 100)";
+  $("base10Tag").textContent=lang==="zh"?"总纲":"Outline";
+  $("base10List").innerHTML=(BASE10[lang]||BASE10.en).map(x=>`<li>${x}</li>`).join("");
+  // footer
+  $("fPos").textContent=t("fPos");$("fSupply").textContent=t("fSupply");$("fLP").textContent=t("fLP");$("fChain").textContent=t("fChain");
+  $("goalList").innerHTML=t("goals").map(g=>`<li>${g}</li>`).join("");
+  $("disclaimer").textContent=t("disc");
+  $("roadGrid").innerHTML=(ROAD[lang]||ROAD.en).map(([h,d])=>`<div class="card roadCard"><h3>${h}</h3><p style="font-size:13.5px">${d}</p></div>`).join("");
+  renderInfra();
+  renderInd();
+  buildTabs();renderM100();renderQA();
+}
+function renderInfra(){
+  const I=INFRA_I18N[lang]||INFRA_I18N.en;
+  $("infraT").textContent=I.T;$("infraD").textContent=I.D;
+  $("navInfra").textContent=I.nav;
+  const z=dl==="zh";
+  $("infraGrid").innerHTML=INFRA.map((x,i)=>{
+    const name=z?x[0]:x[4], what=z?x[1]:x[5], why=z?x[2]:x[6], steps=z?x[3]:x[7];
+    return `<div class="card infraCard"><span class="tag">${String(i+1).padStart(2,"0")}</span><h3>${name}</h3>
+      <div class="ib"><b>${I.what}</b><p>${what}</p></div>
+      <div class="ib"><b>${I.why}</b><p>${why}</p></div>
+      <div class="ib"><b>${I.steps}</b><p>${steps}</p></div></div>`;
+  }).join("");
+  $("infra6Grid").innerHTML=INFRA6.map(([n,items])=>`<div class="card infraCard"><h3 style="font-size:15px">${n}</h3><ul class="mini">${items.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+}
+function buildTabs(){
+  const cN=dl==="zh"?CATS:CATS_EN;
+  const isSys=m100Mode==="sys";
+  const mCats=isSys?CATS:BIZ_CATS;
+  $("m100Tabs").innerHTML=`<button data-c="-1" class="${m100Cat===-1?"active":""}">${t("all")}</button>`+mCats.map((c,i)=>`<button data-c="${i}" class="${m100Cat===i?"active":""}">${isSys?(i+1)+". "+cN[i]:c.replace(/（.*/,"")}</button>`).join("");
+  $("m100Tabs").querySelectorAll("button").forEach(b=>b.onclick=()=>{m100Cat=+b.dataset.c;buildTabs();renderM100();});
+  const gN=dl==="zh"?GRPS:GRPS_EN;
+  const isSysQ=qaMode==="sys";
+  const qCats=isSysQ?GRPS:BIZ_SECS;
+  $("qaTabs").innerHTML=`<button data-g="-1" class="${qaGroup===-1?"active":""}">${t("all")}</button>`+qCats.map((g,i)=>`<button data-g="${i}" class="${qaGroup===i?"active":""}">${isSysQ?(i+1)+". "+gN[i]:g.replace(/ Q.*/,"")}</button>`).join("");
+  $("qaTabs").querySelectorAll("button").forEach(b=>b.onclick=()=>{qaGroup=+b.dataset.g;buildTabs();renderQA();});
+}
+function hit(...ss){if(!q)return true;const s=ss.join(" ").toLowerCase();return q.split(/\s+/).every(w=>s.includes(w));}
+function renderM100(){
+  const z=dl==="zh";
+  if(m100Mode==="biz"){
+    const items=BIZ_M.map((m,i)=>({i,m})).filter(({m})=>(m100Cat===-1||m[0]===m100Cat)&&hit(m[1]));
+    $("m100Count").textContent=t("countTpl").replace("{n}",items.length);
+    $("m100Grid").innerHTML=items.map(({i,m})=>`<div class="card mItem"><span class="tag">${String(i+1).padStart(3,"0")} · ${BIZ_CATS[m[0]].replace(/（.*/,"")}</span><h3 style="font-size:14.6px">${m[1]}</h3></div>`).join("")||`<p class="desc">🔍 0</p>`;
+    return;
+  }
+  const det=m=>(M100D[m[1]]||["",""])[z?0:1]||"";
+  const items=M100.map((m,i)=>({i,m})).filter(({m})=>(m100Cat===-1||m[0]===m100Cat)&&hit(z?m[1]:m[4],z?m[2]:m[5],z?m[3]:m[6],det(m)));
+  $("m100Count").textContent=t("countTpl").replace("{n}",items.length);
+  $("m100Grid").innerHTML=items.map(({i,m})=>{
+    const how=det(m);
+    return `<div class="card mItem"><span class="tag">${String(i+1).padStart(3,"0")} · ${z?CATS[m[0]]:CATS_EN[m[0]]}</span><h3>${z?m[1]:m[4]}</h3><div class="meta"><b>${z?"逻辑":"Logic"}:</b> ${z?m[2]:m[5]}</div><div class="meta"><b>EACO:</b> ${z?m[3]:m[6]}</div>${how?`<div class="mHow"><b>${z?"怎么做":"How"}:</b> ${how}</div>`:""}</div>`;
+  }).join("")||`<p class="desc">🔍 0</p>`;
+}
+function renderQA(){
+  const z=dl==="zh";
+  if(qaMode==="biz"){
+    const items=BIZ_QA.map((a,i)=>({i,a})).filter(({a})=>(qaGroup===-1||a[0]===qaGroup)&&hit(a[1],a[2]));
+    $("qaCount").textContent=t("countTpl").replace("{n}",items.length);
+    $("qaList").innerHTML=items.map(({i,a})=>`<details><summary><span class="qn">Q${String(i+1).padStart(3,"0")}</span><span>${a[1]}</span></summary><div class="ans">${a[2]}</div></details>`).join("")||`<p class="desc">🔍 0</p>`;
+    return;
+  }
+  const ex=a=>{const e=QA_EXTRA[QA.indexOf(a)];return e?(z?e[0]:e[1]):"";};
+  const items=QA.map((a,i)=>({i,a})).filter(({a})=>(qaGroup===-1||a[0]===qaGroup)&&hit(z?a[1]:a[3],z?a[2]:a[4],ex(a)));
+  $("qaCount").textContent=t("countTpl").replace("{n}",items.length);
+  $("qaList").innerHTML=items.map(({i,a})=>{
+    const extra=ex(a);
+    return `<details><summary><span class="qn">Q${String(i+1).padStart(3,"0")}</span><span>${z?a[1]:a[3]}</span></summary><div class="ans">${z?a[2]:a[4]}${extra?`<div class="extra">${extra}</div>`:""}</div></details>`;
+  }).join("")||`<p class="desc">🔍 0</p>`;
+}
+function renderInd(){
+  const I=IND_I18N[lang]||IND_I18N.en;
+  $("indT").textContent=I.T;$("indD").textContent=I.D;$("indStd").textContent=I.std;$("navInd").textContent=I.nav;
+  $("indSloganTag").textContent=I.slogan;$("indSloganTitle").textContent=I.sumT;
+  const z=dl==="zh";
+  const cats=z?IND_CATS.zh:IND_CATS.en;
+  const cnt=IND_CATS.zh.map((_,i)=>IND.filter(x=>x.c.includes(i)).length);
+  $("indStat").innerHTML=cats.map((c,i)=>`<span>${c} · ${cnt[i]}</span>`).join("")+`<span>${z?"合计":"Total"} · ${IND.length}</span>`;
+  $("indTabs").innerHTML=`<button data-i="-1" class="${indCat===-1?"active":""}">${t("all")}</button>`+cats.map((c,i)=>`<button data-i="${i}" class="${indCat===i?"active":""}">${c}</button>`).join("");
+  $("indTabs").querySelectorAll("button").forEach(b=>b.onclick=()=>{indCat=+b.dataset.i;renderInd();});
+  const items=IND.map((x,i)=>({i,x})).filter(({x})=>(indCat===-1||x.c.includes(indCat))&&hit(JSON.stringify(z?x.zh:x.en)));
+  $("indCount").textContent=(I.tpl||t("countTpl")).replace("{n}",items.length);
+  $("indGrid").innerHTML=items.map(({i,x})=>{
+    const d=z?x.zh:x.en;
+    return `<div class="card indCard"><span class="tag">${String(i+1).padStart(2,"0")} · ${x.c.map(ci=>cats[ci]).join(" / ")}</span>
+      <h3>${d.n}</h3>
+      <div class="ib"><b>${I.arb}</b><p>${d.a}</p></div>
+      <div class="ib"><b>${I.eaco}</b><p>${d.e}</p></div>
+      <div class="ib"><b>${I.sop}</b><ol>${d.s.map(s=>`<li>${s}</li>`).join("")}</ol></div>
+      <div class="ib"><b>${I.risk}</b><ul class="risk">${d.r.map(s=>`<li>${s}</li>`).join("")}</ul></div>
+      <div class="slogan">💬 ${d.g} · <span style="color:var(--muted)">${(z?x.en:x.zh).g}</span></div></div>`;
+  }).join("")||`<p class="desc">🔍 0</p>`;
+  $("indSloganList").innerHTML=IND.map((x,i)=>`<li><b style="color:var(--accent2)">${String(i+1).padStart(2,"0")}</b> ${x.zh.g} — ${x.en.g}</li>`).join("");
+}
+function applyTheme(){
+  document.body.dataset.theme=theme;
+  document.querySelectorAll(".themeBtn").forEach(b=>b.classList.toggle("active",b.dataset.themeBtn===theme));
+}
+/* ============ 事件 ============ */
+$("langSel").onchange=e=>{lang=e.target.value;localStorage.setItem("ea-lang",lang);applyLang();};
+document.querySelectorAll(".themeBtn").forEach(b=>b.onclick=()=>{theme=b.dataset.themeBtn;localStorage.setItem("ea-theme",theme);applyTheme();});
+$("search").oninput=e=>{q=e.target.value.trim();renderM100();renderQA();renderInd();};
+$("copyCA").onclick=async()=>{try{await navigator.clipboard.writeText(CA);$("copyCA").textContent=t("fCopied");setTimeout(()=>$("copyCA").textContent=t("fCopy"),1500);}catch(e){window.prompt(t("fCA"),CA);}};
+$("topBtn").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+window.addEventListener("scroll",()=>{$("topBtn").style.display=window.scrollY>600?"block":"none";});
+/* ============ 启动 ============ */
+document.querySelectorAll("#m100Mode .modeBtn").forEach(b=>b.onclick=()=>{
+  m100Mode=b.dataset.m;m100Cat=-1;q="";$("search").value="";
+  document.querySelectorAll("#m100Mode .modeBtn").forEach(x=>x.classList.toggle("active",x===b));
+  buildTabs();renderM100();
+});
+document.querySelectorAll("#qaMode .modeBtn").forEach(b=>b.onclick=()=>{
+  qaMode=b.dataset.m;qaGroup=-1;q="";$("search").value="";
+  document.querySelectorAll("#qaMode .modeBtn").forEach(x=>x.classList.toggle("active",x===b));
+  buildTabs();renderQA();
+});
+buildLangSel();applyTheme();applyLang();
+</script>
+</body>
+</html>
