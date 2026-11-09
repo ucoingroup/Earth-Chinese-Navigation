@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球华人导航 · Global Chinese Navigator</title>
+<style>
+  :root{
+    --radius:16px;
+    --maxw:1180px;
+  }
+  /* ========== 主题一：苹果绿（默认，清爽明亮） ========== */
+  body[data-theme="green"]{
+    --bg:#f1f8ef;
+    --bg2:#ffffff;
+    --ink:#1f3324;
+    --muted:#5f7a64;
+    --accent:#2e9e4f;
+    --accent2:#57c268;
+    --accent-ink:#ffffff;
+    --card:#ffffff;
+    --card-border:#d8ecd8;
+    --card-shadow:0 4px 16px rgba(46,158,79,.10);
+    --chip-bg:#e6f5e8;
+    --chip-ink:#2e7d3c;
+    --hero-grad:linear-gradient(135deg,#e4f5e0 0%,#f6fbf4 60%,#eaf7ec 100%);
+    --footer-bg:#183a22;
+    --footer-ink:#d9ecd9;
+    --tag-bg:#eaf6ea;
+    --tag-ink:#3a7d4a;
+    --link:#2e7d3c;
+    --font-sans:"PingFang SC","Microsoft YaHei","Segoe UI",Arial,sans-serif;
+  }
+  /* ========== 主题二：科技蓝（深色科技感） ========== */
+  body[data-theme="blue"]{
+    --bg:#0b1220;
+    --bg2:#111a2c;
+    --ink:#e6eefc;
+    --muted:#8fa3c4;
+    --accent:#3b82f6;
+    --accent2:#22d3ee;
+    --accent-ink:#ffffff;
+    --card:#131d31;
+    --card-border:#1f3050;
+    --card-shadow:0 4px 20px rgba(34,211,238,.12);
+    --chip-bg:#16243d;
+    --chip-ink:#7dd3fc;
+    --hero-grad:linear-gradient(135deg,#0e1a33 0%,#0b1220 55%,#101b2f 100%);
+    --footer-bg:#080d17;
+    --footer-ink:#9db4d8;
+    --tag-bg:#122238;
+    --tag-ink:#67e8f9;
+    --link:#7dd3fc;
+    --font-sans:"PingFang SC","Microsoft YaHei","Segoe UI",Arial,sans-serif;
+  }
+  /* ========== 主题三：华夏古典（宣纸朱金） ========== */
+  body[data-theme="classical"]{
+    --bg:#f6efe0;
+    --bg2:#fdf8ee;
+    --ink:#3c2f22;
+    --muted:#7a6a52;
+    --accent:#9e2b25;
+    --accent2:#b8860b;
+    --accent-ink:#fdf8ee;
+    --card:#fdf8ee;
+    --card-border:#e0d3b4;
+    --card-shadow:0 4px 14px rgba(158,43,37,.10);
+    --chip-bg:#f3e9d2;
+    --chip-ink:#8a5a12;
+    --hero-grad:linear-gradient(135deg,#f8f1df 0%,#f3e9d0 60%,#efe2c4 100%);
+    --footer-bg:#2e2418;
+    --footer-ink:#e8dcc0;
+    --tag-bg:#f5ebd3;
+    --tag-ink:#8a5a12;
+    --link:#9e2b25;
+    --font-sans:"STKaiti","KaiTi","STSong","SimSun","Noto Serif SC",serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-sans);
+    line-height:1.6;
+    transition:background .3s,color .3s;
+  }
+
+  /* ---------- 顶栏 ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--bg2);
+    border-bottom:1px solid var(--card-border);
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
+  }
+  .topbar{
+    max-width:var(--maxw);margin:0 auto;
+    display:flex;align-items:center;gap:14px;
+    padding:12px 20px;flex-wrap:wrap;
+  }
+  .logo{
+    font-size:20px;font-weight:700;color:var(--accent);
+    display:flex;align-items:center;gap:8px;white-space:nowrap;
+  }
+  .logo .globe{font-size:22px;}
+  .spacer{flex:1;}
+  .switches{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+  .lang-sel{
+    appearance:none;-webkit-appearance:none;
+    background:var(--chip-bg);color:var(--chip-ink);
+    border:1px solid var(--card-border);border-radius:999px;
+    padding:7px 30px 7px 16px;font-size:13px;font-family:inherit;cursor:pointer;
+    background-image:linear-gradient(45deg,transparent 50%,var(--chip-ink) 50%),linear-gradient(135deg,var(--chip-ink) 50%,transparent 50%);
+    background-position:calc(100% - 16px) 55%,calc(100% - 11px) 55%;
+    background-size:5px 5px,5px 5px;background-repeat:no-repeat;
+  }
+  .lang-sel option{background:var(--bg2);color:var(--ink);}
+  .theme-dots{display:flex;gap:8px;}
+  .tdot{
+    width:26px;height:26px;border-radius:50%;cursor:pointer;
+    border:2px solid var(--card-border);transition:.2s;position:relative;
+  }
+  .tdot:hover{transform:scale(1.12);}
+  .tdot.active{border-color:var(--ink);box-shadow:0 0 0 3px var(--chip-bg);}
+  .tdot.green{background:linear-gradient(135deg,#57c268,#2e9e4f);}
+  .tdot.blue{background:linear-gradient(135deg,#3b82f6,#22d3ee);}
+  .tdot.classical{background:linear-gradient(135deg,#b8860b,#9e2b25);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--hero-grad);
+    padding:64px 20px 56px;text-align:center;
+    border-bottom:1px solid var(--card-border);
+  }
+  .hero h1{
+    font-size:clamp(26px,4.2vw,42px);font-weight:800;letter-spacing:.5px;
+    color:var(--ink);
+  }
+  .hero h1 .hl{color:var(--accent);}
+  .hero .sub{
+    margin-top:14px;font-size:clamp(14px,1.8vw,17px);
+    color:var(--muted);max-width:780px;margin-left:auto;margin-right:auto;
+  }
+  .hero .tribute{
+    margin:22px auto 0;max-width:700px;
+    background:var(--card);border:1px solid var(--card-border);
+    border-inline-start:4px solid var(--accent);
+    border-radius:12px;padding:14px 18px;
+    font-size:14px;color:var(--muted);text-align:start;
+    box-shadow:var(--card-shadow);
+  }
+  .hero .tribute b{color:var(--accent);font-weight:700;}
+
+  /* ---------- 分类锚点 ---------- */
+  .cat-nav{
+    max-width:var(--maxw);margin:0 auto;padding:18px 20px 0;
+    display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+  }
+  .cat-nav a{
+    text-decoration:none;color:var(--chip-ink);
+    background:var(--chip-bg);border:1px solid var(--card-border);
+    padding:7px 16px;border-radius:999px;font-size:14px;transition:.2s;
+  }
+  .cat-nav a:hover{background:var(--accent);color:var(--accent-ink);}
+
+  /* ---------- 分类区块 ---------- */
+  main{max-width:var(--maxw);margin:0 auto;padding:30px 20px 10px;}
+  section.cat{margin-bottom:44px;scroll-margin-top:90px;}
+  .cat-head{
+    display:flex;align-items:center;gap:12px;margin-bottom:16px;
+    border-bottom:2px solid var(--accent);padding-bottom:8px;
+  }
+  .cat-head .ic{font-size:26px;}
+  .cat-head h2{font-size:22px;font-weight:700;}
+  .cat-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-inline-start:6px;}
+  .grid{
+    display:grid;gap:16px;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  }
+  .card{
+    background:var(--card);border:1px solid var(--card-border);
+    border-radius:var(--radius);padding:16px;
+    box-shadow:var(--card-shadow);
+    display:flex;flex-direction:column;gap:8px;
+    transition:transform .18s,box-shadow .18s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.13);}
+  .card .name{
+    font-weight:700;font-size:16px;color:var(--ink);
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  }
+  .card .name .flag{font-size:13px;color:var(--muted);font-weight:400;}
+  .card .desc{font-size:13px;color:var(--muted);flex:1;}
+  .card .tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{
+    font-size:11px;padding:2px 9px;border-radius:999px;
+    background:var(--tag-bg);color:var(--tag-ink);
+  }
+  .card a.go{
+    display:inline-block;margin-top:2px;
+    color:var(--link);font-size:13px;font-weight:600;text-decoration:none;
+    border-bottom:1px dashed var(--link);align-self:flex-start;
+  }
+  .card a.go:hover{opacity:.75;}
+
+  /* ---------- 华人友好榜 ---------- */
+  .f-top{max-width:var(--maxw);margin:0 auto;padding:0 20px 10px;scroll-margin-top:90px;}
+  .f-intro{
+    background:var(--card);border:1px solid var(--card-border);
+    border-radius:var(--radius);padding:16px 20px;margin-bottom:26px;
+    box-shadow:var(--card-shadow);
+    display:flex;flex-direction:column;gap:4px;
+  }
+  .f-intro b{font-size:19px;color:var(--accent);}
+  .f-intro span{font-size:13px;color:var(--muted);}
+  .f-grid{grid-template-columns:repeat(auto-fill,minmax(330px,1fr));}
+  .f-card{flex-direction:row;align-items:flex-start;gap:12px;}
+  .f-rank{
+    min-width:30px;height:30px;border-radius:50%;
+    background:var(--chip-bg);color:var(--chip-ink);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:14px;flex-shrink:0;
+  }
+  .f-rank.top{background:var(--accent);color:var(--accent-ink);}
+  .f-city{font-weight:700;font-size:15px;color:var(--ink);}
+  .f-why{font-size:13px;color:var(--muted);margin-top:3px;}
+
+  /* ---------- 翻译功能 / 十大语言 ---------- */
+  .l-grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
+  .l-card{flex-direction:row;align-items:flex-start;gap:12px;}
+  .l-name{font-weight:700;font-size:16px;color:var(--ink);}
+  .l-name .zh{font-size:13px;color:var(--muted);font-weight:400;}
+  .l-meta{font-size:13px;color:var(--muted);margin-top:3px;line-height:1.8;}
+  .l-meta b{color:var(--ink);font-weight:700;}
+  .ok-chip{
+    display:inline-block;margin-top:4px;
+    font-size:11px;padding:2px 10px;border-radius:999px;
+    background:var(--chip-bg);color:var(--chip-ink);
+    border:1px solid var(--card-border);
+  }
+
+  /* ---------- EACO 底部区块 ---------- */
+  .eaco{
+    background:var(--footer-bg);color:var(--footer-ink);
+    margin-top:60px;padding:52px 20px 36px;
+  }
+  .eaco-inner{max-width:var(--maxw);margin:0 auto;}
+  .eaco h2{
+    font-size:24px;font-weight:800;letter-spacing:1px;
+    color:var(--accent2);display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  }
+  .eaco h2 .earth{font-size:28px;}
+  .eaco .pos{margin-top:10px;font-size:15px;opacity:.9;}
+  .eaco-grid{
+    display:grid;gap:14px;margin-top:22px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  }
+  .eaco-box{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:14px;padding:16px;
+  }
+  .eaco-box h3{font-size:13px;letter-spacing:1px;opacity:.75;margin-bottom:8px;}
+  .eaco-box .v{font-size:15px;font-weight:600;}
+  .ca-wrap{grid-column:1/-1;}
+  .ca-line{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px;
+  }
+  .ca-code{
+    font-family:Consolas,Menlo,monospace;font-size:13px;
+    background:rgba(0,0,0,.35);padding:8px 12px;border-radius:8px;
+    word-break:break-all;flex:1;min-width:240px;color:#a7f3d0;
+    border:1px dashed rgba(255,255,255,.25);
+    direction:ltr;text-align:left;
+  }
+  .copy-btn{
+    border:none;cursor:pointer;font-family:inherit;
+    background:var(--accent2);color:#0b1220;
+    padding:8px 16px;border-radius:8px;font-size:13px;font-weight:700;
+    transition:.2s;
+  }
+  .copy-btn:hover{opacity:.85;}
+  .ca-warn{font-size:12px;color:#fca5a5;margin-top:8px;}
+  .eaco .equal{
+    margin-top:20px;background:rgba(255,255,255,.06);
+    border-inline-start:4px solid var(--accent2);
+    border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.9;
+  }
+  .eaco .goals{margin-top:14px;}
+  .eaco .goals li{margin-inline-start:20px;font-size:14px;line-height:2;}
+  .eaco .principle{margin-top:8px;font-size:14px;}
+  .eaco .principle .gloss{opacity:.75;font-size:13px;}
+  .eaco-links{margin-top:16px;display:flex;gap:14px;flex-wrap:wrap;}
+  .eaco-links a{
+    color:var(--accent2);font-size:14px;font-weight:600;text-decoration:none;
+    border-bottom:1px dashed var(--accent2);
+  }
+  .eaco-links a:hover{opacity:.8;}
+  .disclaimer{
+    margin-top:22px;border-top:1px solid rgba(255,255,255,.15);
+    padding-top:14px;font-size:12px;opacity:.72;line-height:1.8;
+  }
+  .footnote{
+    margin-top:16px;font-size:12px;text-align:center;opacity:.6;
+  }
+
+  @media (max-width:560px){
+    .topbar{justify-content:center;}
+    .hero{padding:44px 16px 40px;}
+  }
+</style>
+</head>
+<body data-theme="green">
+
+<header>
+  <div class="topbar">
+    <div class="logo"><span class="globe">🌏</span><span data-i18n="t_title">全球华人导航</span></div>
+    <div class="spacer"></div>
+    <div class="switches">
+      <select id="langSel" class="lang-sel" aria-label="Language"></select>
+      <div class="theme-dots" id="themeDots">
+        <span class="tdot green active" data-theme="green" title="Apple Green"></span>
+        <span class="tdot blue" data-theme="blue" title="Tech Blue"></span>
+        <span class="tdot classical" data-theme="classical" title="Chinese Classical"></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <h1 id="heroT"></h1>
+  <p class="sub" data-i18n="t_sub"></p>
+  <div class="tribute"><b id="tributeT"></b></div>
+</div>
+
+<div class="cat-nav" id="catNav"></div>
+
+<main id="main"></main>
+
+<!-- ============ 华人友好榜 ============ -->
+<div class="f-top" id="friendly-top"></div>
+
+<!-- ============ 翻译功能 · 十大语言 ============ -->
+<div class="f-top" id="langs-top"></div>
+
+<!-- ============ EACO 地球基本信息 ============ -->
+<div class="eaco" id="eaco">
+  <div class="eaco-inner">
+    <h2><span class="earth">🌍</span><span data-i18n="e_h2">EACO 地球 · Earth's Best Coin</span></h2>
+    <p class="pos" data-i18n="e_pos"></p>
+
+    <div class="eaco-grid">
+      <div class="eaco-box">
+        <h3 data-i18n="e_name">名称</h3>
+        <div class="v">Earth's Best Coin = EACO<br>华语：地球最好币</div>
+      </div>
+      <div class="eaco-box">
+        <h3 data-i18n="e_supply">总供应量</h3>
+        <div class="v">1,350,000,000 · 13.5 亿 / 1.35B</div>
+      </div>
+      <div class="eaco-box">
+        <h3 data-i18n="e_lp_h">流动性</h3>
+        <div class="v" data-i18n="e_lp">LP 10% 永久锁定</div>
+      </div>
+      <div class="eaco-box ca-wrap">
+        <h3 data-i18n="e_ca">合约地址（Solana Mint · CA）</h3>
+        <div class="ca-line">
+          <code class="ca-code" id="caCode">DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH</code>
+          <button class="copy-btn" id="copyCa" data-i18n="t_copy">复制</button>
+        </div>
+        <p class="ca-warn" data-i18n="e_warn"></p>
+      </div>
+    </div>
+
+    <div class="equal">
+      <div><b>EACO</b> = Positive Energy × Positive Mindset × Global Collaboration × Continuous Optimization</div>
+      <div><b>EACO</b> = 正能量 × 积极态度 × 全球协作 × 持续优化</div>
+    </div>
+
+    <div class="goals">
+      <b data-i18n="e_goals"></b>
+      <ol id="goalList"></ol>
+      <p class="principle" id="principleLine"></p>
+    </div>
+
+    <div class="eaco-links">
+      <a href="https://ucoingroup.github.io/earths-best-coin/" target="_blank" rel="noopener" data-i18n="e_site">🌐 官方网站</a>
+    </div>
+
+    <p class="disclaimer" data-i18n="e_disc"></p>
+
+    <p class="footnote" data-i18n="e_foot"></p>
+  </div>
+</div>
+
+<script>
+  /* ================= 支持的 10 种语言（全球使用人数 TOP10） ================= */
+  const LANGS = [
+    {code:"zh", label:"华语"},
+    {code:"en", label:"English"},
+    {code:"hi", label:"हिन्दी"},
+    {code:"es", label:"Español"},
+    {code:"fr", label:"Français"},
+    {code:"ar", label:"العربية", rtl:true},
+    {code:"bn", label:"বাংলা"},
+    {code:"pt", label:"Português"},
+    {code:"ru", label:"Русский"},
+    {code:"ur", label:"اردو", rtl:true},
+  ];
+
+  /* ================= UI 文案（10 语） ================= */
+  const T = {
+  zh:{
+    t_title:"全球华人导航",
+    t_hero:"海外华人的|衣食住行 · 一页直达",
+    t_sub:"留学、外贸、求职、生活、汇款、社群——为全球 5000 万海外华人整理的实用导航。像熊猫外卖一样，为远离家乡的你，把熟悉的华语世界装进口袋。",
+    t_tribute:"🕯️ 谨以此页，致敬在墨尔本夜色中离我们而去的冯师傅，以及每一位在异国街头奔波的普通谋生者——愿逝者安息，愿每一个努力生活的人都被温柔善待。",
+    t_visit:"前往访问 →",
+    t_navFriendly:"华人友好榜",
+    t_navLangs:"翻译功能",
+    t_friendlyT:"华人友好榜 · 各大洲 TOP 10",
+    t_friendlyS:"按华人社区规模、华语服务便利度与社区口碑综合整理，排名仅供参考。",
+    t_langT:"翻译功能 · 地球村十大语言",
+    t_langS:"全球使用人数最多的 10 种语言（按总使用人数估算）。本页已内置全部 10 种语言切换，右上角即可更换。",
+    t_total:"总使用人数",
+    t_native:"母语使用者",
+    t_supported:"本页支持 ✓",
+    t_note:"数据为 Ethnologue 等机构对总使用人数（母语+第二语言）的近年估算，不同统计口径略有差异，仅供参考。",
+    t_copy:"复制", t_copied:"已复制 ✓",
+    e_h2:"EACO 地球 · Earth's Best Coin",
+    e_pos:"EACO（地球最好币）：Solana 链上「地球最好的 AI + RWA + Web3 代币」，致力于连接全球华人社区与全球协作网络。",
+    e_name:"名称", e_supply:"总供应量", e_lp_h:"流动性",
+    e_lp:"LP 10% 永久锁定",
+    e_ca:"合约地址（Solana Mint · CA）",
+    e_warn:"⚠️ 认准合约地址，谨防假币！转账前请逐字核对 CA，勿信任何私下发送的『新地址』。",
+    e_goals:"核心目标（五大）：",
+    e_principle_gloss:"",
+    e_site:"🌐 官方网站",
+    e_disc:"免责声明：本页内容不构成任何投资建议。加密资产波动剧烈，存在本金全损风险；请自行核实合约地址（CA）与当地法律法规合规要求，理性参与，风险自担。",
+    e_foot:"全球华人导航 · 为每一个在路上的人而做 · Made for everyone on the road",
+  },
+  en:{
+    t_title:"Global Chinese Navigator",
+    t_hero:"One page for every|Chinese life abroad",
+    t_sub:"Study, trade, jobs, living, remittance and community — a curated navigator for 50 million overseas Chinese. Like Hungry Panda, it puts the familiar Chinese world in your pocket.",
+    t_tribute:"🕯️ In memory of Master Feng, who lost his life in the night of Melbourne, and every ordinary person hustling on foreign streets — may they rest in peace, and may every hardworking soul be treated with kindness.",
+    t_visit:"Visit →",
+    t_navFriendly:"Friendly Places",
+    t_navLangs:"Translation",
+    t_friendlyT:"Where Chinese Thrive · Top 10 per Continent",
+    t_friendlyS:"Compiled from Chinese community size, Chinese-language services and community reputation; rankings are indicative only.",
+    t_langT:"Translation · Top 10 World Languages",
+    t_langS:"The 10 most-spoken languages on Earth (by total speakers). This page supports switching to all 10 — use the selector at the top right.",
+    t_total:"Total speakers",
+    t_native:"Native speakers",
+    t_supported:"Supported here ✓",
+    t_note:"Figures are recent estimates of total speakers (native + second language) by Ethnologue and similar institutions; definitions vary slightly between sources.",
+    t_copy:"Copy", t_copied:"Copied ✓",
+    e_h2:"EACO Earth · Earth's Best Coin",
+    e_pos:"EACO (Earth's Best Coin): the best AI + RWA + Web3 token on Solana, connecting global Chinese communities with a worldwide collaboration network.",
+    e_name:"Name", e_supply:"Total Supply", e_lp_h:"Liquidity",
+    e_lp:"LP 10% permanently locked",
+    e_ca:"Contract Address (Solana Mint · CA)",
+    e_warn:"⚠️ Always verify the contract address to avoid fake tokens! Double-check the CA character by character; never trust any 'new address' sent privately.",
+    e_goals:"Core Goals:",
+    e_principle_gloss:"Highest principle: all civilizations serve human civilization — including EACO.",
+    e_site:"🌐 Official Website",
+    e_disc:"Disclaimer: Nothing on this page constitutes investment advice. Crypto assets are highly volatile and you may lose your entire principal. Verify the contract address (CA) and local legal compliance yourself; participate rationally at your own risk.",
+    e_foot:"Global Chinese Navigator · Made for everyone on the road",
+  },
+  hi:{
+    t_title:"वैश्विक चीनी मार्गदर्शिका",
+    t_hero:"विदेश में चीनी जीवन|एक पेज, सीधा पहुँच",
+    t_sub:"पढ़ाई, व्यापार, नौकरी, जीवन, धन-प्रेषण और समुदाय — दुनिया भर के 5 करोड़ प्रवासी चीनियों के लिए व्यावहारिक मार्गदर्शिका। Hungry Panda की तरह, घर से दूर आपके लिए परिचित चीनी दुनिया आपकी जेब में।",
+    t_tribute:"🕯️ मेलबर्न की रात में हमसे दूर चले गए मास्टर फेंग और विदेशी सड़कों पर मेहनत करने वाले हर आम इंसान को समर्पित — शांति मिले, और हर मेहनती इंसान के साथ दया का व्यवहार हो।",
+    t_visit:"वेबसाइट →",
+    t_navFriendly:"अनुकूल स्थान",
+    t_navLangs:"अनुवाद",
+    t_friendlyT:"चीनियों के लिए अनुकूल स्थान · प्रत्येक महाद्वीप के शीर्ष 10",
+    t_friendlyS:"चीनी समुदाय के आकार, चीनी भाषा सेवाओं और सामुदायिक प्रतिष्ठा के आधार पर; क्रम केवल संकेतात्मक है।",
+    t_langT:"अनुवाद · विश्व की शीर्ष 10 भाषाएँ",
+    t_langS:"दुनिया की सबसे अधिक बोली जाने वाली 10 भाषाएँ (कुल वक्ताओं के अनुसार)। यह पृष्ठ सभी 10 भाषाओं में उपलब्ध है — ऊपर दाएँ चयनकर्ता से बदलें।",
+    t_total:"कुल वक्ता",
+    t_native:"मातृभाषी वक्ता",
+    t_supported:"यहाँ समर्थित ✓",
+    t_note:"आँकड़े Ethnologue आदि संस्थाओं के कुल वक्ता (मातृभाषी + द्वितीय भाषा) के हालिया अनुमान हैं; स्रोत अनुसार थोड़ा भिन्न हो सकता है।",
+    t_copy:"कॉपी", t_copied:"कॉपी हुआ ✓",
+    e_h2:"EACO धरती · Earth's Best Coin",
+    e_pos:"EACO (Earth's Best Coin): Solana पर सर्वश्रेष्ठ AI + RWA + Web3 टोकन, वैश्विक चीनी समुदायों को विश्वव्यापी सहयोग नेटवर्क से जोड़ने हेतु।",
+    e_name:"नाम", e_supply:"कुल आपूर्ति", e_lp_h:"तरलता",
+    e_lp:"LP 10% स्थायी रूप से लॉक",
+    e_ca:"कॉन्ट्रैक्ट पता (Solana Mint · CA)",
+    e_warn:"⚠️ कॉन्ट्रैक्ट पते की पुष्टि करें, नकली टोकन से सावधान! CA अक्षर-दर-अक्षर जाँचें; निजी तौर पर भेजे गए किसी 'नए पते' पर भरोसा न करें।",
+    e_goals:"मुख्य लक्ष्य (5):",
+    e_principle_gloss:"सर्वोच्च सिद्धांत: सभी सभ्यताएँ मानव सभ्यता की सेवा करती हैं, जिसमें EACO शामिल है।",
+    e_site:"🌐 आधिकारिक वेबसाइट",
+    e_disc:"अस्वीकरण: इस पृष्ठ की कोई सामग्री निवेश सलाह नहीं है। क्रिप्टो संपत्ति अत्यधिक अस्थिर हैं और पूरी पूँजी का नुकसान संभव है। कृपया CA और स्थानीय कानूनी अनुपालना स्वयं सत्यापित करें; अपने जोखिम पर तर्कसंगत रूप से भाग लें।",
+    e_foot:"वैश्विक चीनी मार्गदर्शिका · हर राह चलने वाले के लिए",
+  },
+  es:{
+    t_title:"Guía Global China",
+    t_hero:"La vida china en el extranjero|una página, acceso directo",
+    t_sub:"Estudios, comercio, empleo, vida, remesas y comunidad — una guía práctica para los 50 millones de chinos ultramar. Como Hungry Panda, pone el mundo chino familiar en tu bolsillo.",
+    t_tribute:"🕯️ En memoria del maestro Feng, perdido en la noche de Melbourne, y de cada persona que se afana en calles extranjeras — descansad en paz; que cada trabajador sea tratado con bondad.",
+    t_visit:"Visitar →",
+    t_navFriendly:"Lugares amistosos",
+    t_navLangs:"Traducción",
+    t_friendlyT:"Lugares amistosos para los chinos · Top 10 por continente",
+    t_friendlyS:"Según el tamaño de la comunidad china, los servicios en chino y su reputación; el orden es orientativo.",
+    t_langT:"Traducción · Los 10 idiomas más hablados del mundo",
+    t_langS:"Los 10 idiomas con más hablantes del planeta (por total de hablantes). Esta página admite los 10 — cambia el idioma arriba a la derecha.",
+    t_total:"Hablantes totales",
+    t_native:"Hablantes nativos",
+    t_supported:"Disponible aquí ✓",
+    t_note:"Cifras: estimaciones recientes de hablantes totales (nativos + segunda lengua) de Ethnologue y similares; las definiciones varían según la fuente.",
+    t_copy:"Copiar", t_copied:"Copiado ✓",
+    e_h2:"EACO Tierra · Earth's Best Coin",
+    e_pos:"EACO (Earth's Best Coin): el mejor token de IA + RWA + Web3 en Solana, que conecta las comunidades chinas del mundo con una red de colaboración global.",
+    e_name:"Nombre", e_supply:"Oferta total", e_lp_h:"Liquidez",
+    e_lp:"LP 10% bloqueado permanentemente",
+    e_ca:"Dirección del contrato (Solana Mint · CA)",
+    e_warn:"⚠️ ¡Verifica la dirección del contrato para evitar falsificaciones! Comprueba el CA letra por letra; no confíes en 'nuevas direcciones' enviadas en privado.",
+    e_goals:"Objetivos centrales:",
+    e_principle_gloss:"Principio supremo: toda civilización sirve a la civilización humana, incluida EACO.",
+    e_site:"🌐 Sitio web oficial",
+    e_disc:"Aviso: nada aquí constituye asesoramiento de inversión. Las criptomonedas son muy volátiles y puede perder todo el capital. Verifique el CA y el cumplimiento legal local; participe racionalmente bajo su propio riesgo.",
+    e_foot:"Guía Global China · para todos los que están en camino",
+  },
+  fr:{
+    t_title:"Guide Global Chinois",
+    t_hero:"La vie chinoise à l'étranger|une page, accès direct",
+    t_sub:"Études, commerce, emploi, vie quotidienne, transferts d'argent et communauté — un guide pratique pour 50 millions de Chinois d'outre-mer. Comme Hungry Panda, il met le monde chinois familier dans votre poche.",
+    t_tribute:"🕯️ En mémoire de Maître Feng, disparu dans la nuit de Melbourne, et de tous ceux qui se débattent dans des rues étrangères — qu'ils reposent en paix ; que chaque travailleur soit traité avec bienveillance.",
+    t_visit:"Visiter →",
+    t_navFriendly:"Lieux amis",
+    t_navLangs:"Traduction",
+    t_friendlyT:"Où prospèrent les Chinois · Top 10 par continent",
+    t_friendlyS:"Selon la taille de la communauté chinoise, les services en chinois et la réputation ; classement indicatif.",
+    t_langT:"Traduction · Les 10 langues les plus parlées au monde",
+    t_langS:"Les 10 langues comptant le plus de locuteurs (total). Cette page prend en charge les 10 — changez de langue en haut à droite.",
+    t_total:"Locuteurs totaux",
+    t_native:"Locuteurs natifs",
+    t_supported:"Pris en charge ✓",
+    t_note:"Chiffres : estimations récentes des locuteurs totaux (natifs + seconde langue) par Ethnologue et autres ; les définitions varient selon les sources.",
+    t_copy:"Copier", t_copied:"Copié ✓",
+    e_h2:"EACO Terre · Earth's Best Coin",
+    e_pos:"EACO (Earth's Best Coin) : le meilleur token IA + RWA + Web3 sur Solana, reliant les communautés chinoises mondiales à un réseau de collaboration planétaire.",
+    e_name:"Nom", e_supply:"Offre totale", e_lp_h:"Liquidité",
+    e_lp:"LP 10% verrouillé en permanence",
+    e_ca:"Adresse du contrat (Solana Mint · CA)",
+    e_warn:"⚠️ Vérifiez l'adresse du contrat pour éviter les faux jetons ! Contrôlez le CA lettre par lettre ; ne faites confiance à aucune « nouvelle adresse » envoyée en privé.",
+    e_goals:"Objectifs centraux :",
+    e_principle_gloss:"Principe suprême : toute civilisation sert la civilisation humaine, y compris EACO.",
+    e_site:"🌐 Site officiel",
+    e_disc:"Avertissement : rien ici ne constitue un conseil en investissement. Les cryptos sont très volatiles ; perte totale possible. Vérifiez le CA et la conformité locale ; participez rationnellement à vos risques et périls.",
+    e_foot:"Guide Global Chinois · pour tous ceux qui sont en route",
+  },
+  ar:{
+    t_title:"دليل الصينيين العالمي",
+    t_hero:"حياة الصينيين في الخارج|صفحة واحدة، وصول مباشر",
+    t_sub:"الدراسة والتجارة والعمل والحياة والتحويلات والمجتمع — دليل عملي لخمسين مليون صيني في الخارج. مثل Hungry Panda، يضع العالم الصيني المألوف في جيبك.",
+    t_tribute:"🕯️ إحياءً لذكرى السيد فنغ الذي رحل في ليل ملبورن، وكل إنسان عادي يتعب في شوارع أجنبية — رحمهم الله، وليُعامَل كل مجتهد بلطف.",
+    t_visit:"زيارة ←",
+    t_navFriendly:"أماكن ودية",
+    t_navLangs:"الترجمة",
+    t_friendlyT:"الأماكن الصديقة للصينيين · أفضل 10 لكل قارة",
+    t_friendlyS:"حسب حجم المجتمع الصيني والخدمات بالصينية وسمعته؛ الترتيب استرشادي فقط.",
+    t_langT:"الترجمة · أكثر 10 لغات تحدثاً في العالم",
+    t_langS:"أكثر 10 لغات استخداماً على الأرض (بحسب إجمالي المتحدثين). تدعم هذه الصفحة اللغات العشر جميعاً — بدّل اللغة من أعلى اليمين.",
+    t_total:"إجمالي المتحدثين",
+    t_native:"الناطقون الأصليون",
+    t_supported:"مدعومة هنا ✓",
+    t_note:"الأرقام تقديرات حديثة لإجمالي المتحدثين (لغة أم + ثانية) من Ethnologue ومؤسسات مشابهة؛ تختلف التعريفات بين المصادر.",
+    t_copy:"نسخ", t_copied:"تم النسخ ✓",
+    e_h2:"EACO الأرض · Earth's Best Coin",
+    e_pos:"EACO (عملة الأرض الأفضل): أفضل رمز ذكاء اصطناعي + RWA + Web3 على Solana، يربط المجتمعات الصينية العالمية بشبكة تعاون عالمية.",
+    e_name:"الاسم", e_supply:"إجمالي المعروض", e_lp_h:"السيولة",
+    e_lp:"مقفل السيولة 10% بشكل دائم",
+    e_ca:"عنوان العقد (Solana Mint · CA)",
+    e_warn:"⚠️ تحقق من عنوان العقد لتجنب العملات المزيفة! راجع العنوان حرفاً بحرف؛ لا تثق بأي «عنوان جديد» يُرسل سراً.",
+    e_goals:"الأهداف الأساسية:",
+    e_principle_gloss:"المبدأ الأعلى: كل حضارة تخدم الحضارة الإنسانية، بما في ذلك EACO.",
+    e_site:"🌐 الموقع الرسمي",
+    e_disc:"إخلاء مسؤولية: لا يُعد أي محتوى هنا نصيحة استثمارية. العملات المشفرة شديدة التقلب وقد تخسر رأس مالك بالكامل. تحقق من العقد والامتثال المحلي بنفسك؛ شارك بحكمة على مسؤوليتك.",
+    e_foot:"دليل الصينيين العالمي · لكل من في الطريق",
+  },
+  bn:{
+    t_title:"গ্লোবাল চাইনিজ নেভিগেটর",
+    t_hero:"বিদেশে চীনা জীবন|এক পাতায় সরাসরি প্রবেশ",
+    t_sub:"পড়াশোনা, বাণিজ্য, চাকরি, জীবন, রেমিট্যান্স ও কমিউনিটি — বিশ্বের ৫ কোটি প্রবাসী চীনাদের জন্য ব্যবহারিক নেভিগেটর। Hungry Panda-র মতো, বাড়ি থেকে দূরে আপনার জন্য চেনা চীনা পৃথিবী পকেটে।",
+    t_tribute:"🕯️ মেলবোর্নের রাতে আমাদের ছেড়ে চলে যাওয়া ফেং শিফু ও বিদেশি রাস্তায় সংগ্রাম করা প্রতিটি সাধারণ মানুষের স্মৃতিতে — তারা শান্তিতে ঘুমাক, প্রতিটি পরিশ্রমী মানুষ যেন স্নেহ পায়।",
+    t_visit:"ভিজিট →",
+    t_navFriendly:"অনুকূল স্থান",
+    t_navLangs:"অনুবাদ",
+    t_friendlyT:"চীনাদের জন্য অনুকূল স্থান · প্রতি মহাদেশের সেরা ১০",
+    t_friendlyS:"চীনা কমিউনিটির আকার, চীনা ভাষার সেবা ও সুনামের ভিত্তিতে; ক্রম কেবল নির্দেশক।",
+    t_langT:"অনুবাদ · বিশ্বের শীর্ষ ১০ ভাষা",
+    t_langS:"মোট ভাষাভাষীর হিসাবে বিশ্বের সর্বাধিক কথিত ১০টি ভাষা। এই পাতা ১০টি ভাষাই সমর্থন করে — ওপরে ডানদিক থেকে বদলান।",
+    t_total:"মোট ভাষাভাষী",
+    t_native:"মাতৃভাষী",
+    t_supported:"এখানে সমর্থিত ✓",
+    t_note:"Ethnologue প্রভৃতির সাম্প্রতিক অনুমান (মাতৃভাষী + দ্বিতীয় ভাষা); সূত্রভেদে সামান্য পার্থক্য থাকতে পারে।",
+    t_copy:"কপি", t_copied:"কপি হয়েছে ✓",
+    e_h2:"EACO পৃথিবী · Earth's Best Coin",
+    e_pos:"EACO (Earth's Best Coin): Solana-তে সেরা AI + RWA + Web3 টোকেন, বিশ্বব্যাপী চীনা কমিউনিটিকে বৈশ্বিক সহযোগিতা নেটওয়ার্কের সাথে সংযুক্ত করে।",
+    e_name:"নাম", e_supply:"মোট সরবরাহ", e_lp_h:"লিকুইডিটি",
+    e_lp:"LP 10% স্থায়ীভাবে লক",
+    e_ca:"কন্ট্রাক্ট অ্যাড্রেস (Solana Mint · CA)",
+    e_warn:"⚠️ নকল টোকেন এড়াতে কন্ট্রাক্ট অ্যাড্রেস যাচাই করুন! CA অক্ষরে অক্ষরে মিলিয়ে নিন; ব্যক্তিগতভাবে পাঠানো কোনো 'নতুন অ্যাড্রেস' বিশ্বাস করবেন না।",
+    e_goals:"মূল লক্ষ্য (৫টি):",
+    e_principle_gloss:"সর্বোচ্চ নীতি: সব সভ্যতা মানব সভ্যতার সেবা করে, EACO সহ।",
+    e_site:"🌐 অফিসিয়াল ওয়েবসাইট",
+    e_disc:"দাবিত্যাগ: এই পাতার কোনো বিষয়বস্তু বিনিয়োগ পরামর্শ নয়। ক্রিপ্টো সম্পদ অত্যন্ত অস্থিতিশীল; মূলধন সম্পূর্ণ হারানোর ঝুঁকি আছে। CA ও স্থানীয় আইন নিজে যাচাই করুন; নিজ দায়িত্বে যুক্তিসঙ্গতভাবে অংশ নিন।",
+    e_foot:"গ্লোবাল চাইনিজ নেভিগেটর · পথের সবার জন্য",
+  },
+  pt:{
+    t_title:"Guia Global Chinês",
+    t_hero:"A vida chinesa no exterior|uma página, acesso direto",
+    t_sub:"Estudos, comércio, emprego, vida, remessas e comunidade — um guia prático para os 50 milhões de chinos no exterior. Como a Hungry Panda, coloca o mundo chinês familiar no seu bolso.",
+    t_tribute:"🕯️ Em memória do mestre Feng, perdido na noite de Melbourne, e de cada pessoa que luta em ruas estrangeiras — descansem em paz; que cada trabalhador seja tratado com gentileza.",
+    t_visit:"Visitar →",
+    t_navFriendly:"Lugares amigáveis",
+    t_navLangs:"Tradução",
+    t_friendlyT:"Lugares amigáveis para chineses · Top 10 por continente",
+    t_friendlyS:"Baseado no tamanho da comunidade chinesa, serviços em chinês e reputação; ordem indicativa.",
+    t_langT:"Tradução · Os 10 idiomas mais falados do mundo",
+    t_langS:"Os 10 idiomas com mais falantes do mundo (por total de falantes). Esta página suporta os 10 — mude o idioma no canto superior direito.",
+    t_total:"Falantes totais",
+    t_native:"Falantes nativos",
+    t_supported:"Suportado aqui ✓",
+    t_note:"Números: estimativas recentes de falantes totais (nativos + segunda língua) da Ethnologue e similares; definições variam conforme a fonte.",
+    t_copy:"Copiar", t_copied:"Copiado ✓",
+    e_h2:"EACO Terra · Earth's Best Coin",
+    e_pos:"EACO (Earth's Best Coin): o melhor token de IA + RWA + Web3 na Solana, conectando comunidades chinesas globais a uma rede de colaboração mundial.",
+    e_name:"Nome", e_supply:"Oferta total", e_lp_h:"Liquidez",
+    e_lp:"LP 10% bloqueado permanentemente",
+    e_ca:"Endereço do contrato (Solana Mint · CA)",
+    e_warn:"⚠️ Verifique o endereço do contrato para evitar falsos tokens! Confira o CA letra por letra; não confie em 'novos endereços' enviados em privado.",
+    e_goals:"Objetivos centrais:",
+    e_principle_gloss:"Princípio supremo: toda civilização serve à civilização humana, incluindo EACO.",
+    e_site:"🌐 Site oficial",
+    e_disc:"Aviso: nada aqui constitui aconselhamento de investimento. Criptoativos são muito voláteis; pode perder todo o capital. Verifique o CA e a conformidade local; participe racionalmente por sua conta e risco.",
+    e_foot:"Guia Global Chinês · para todos que estão a caminho",
+  },
+  ru:{
+    t_title:"Глобальный навигатор для китайцев",
+    t_hero:"Китайская жизнь за рубежом|одна страница — прямой доступ",
+    t_sub:"Учёба, торговля, работа, быт, денежные переводы и сообщество — практический навигатор для 50 миллионов китайцев за рубежом. Как Hungry Panda, он кладёт знакомый китайский мир вам в карман.",
+    t_tribute:"🕯️ Памяти мастера Фэна, ушедшего в ночь в Мельбурне, и всех, кто трудится на чужих улицах, — вечный покой; пусть к каждому труженику относятся с добротой.",
+    t_visit:"Перейти →",
+    t_navFriendly:"Дружелюбные места",
+    t_navLangs:"Перевод",
+    t_friendlyT:"Где китайцам живётся лучше · Топ-10 по континентам",
+    t_friendlyS:"По размеру китайских общин, доступности услуг на китайском и репутации; порядок ориентировочный.",
+    t_langT:"Перевод · Топ-10 языков мира",
+    t_langS:"10 языков мира с наибольшим числом говорящих (по общему числу). Эта страница поддерживает все 10 — переключатель вверху справа.",
+    t_total:"Всего говорящих",
+    t_native:"Носители языка",
+    t_supported:"Поддерживается ✓",
+    t_note:"Данные — недавние оценки общего числа говорящих (родной + второй язык) от Ethnologue и др.; методики различаются.",
+    t_copy:"Копировать", t_copied:"Скопировано ✓",
+    e_h2:"EACO Земля · Earth's Best Coin",
+    e_pos:"EACO (Earth's Best Coin): лучший токен AI + RWA + Web3 на Solana, объединяющий китайские сообщества мира с сетью глобального сотрудничества.",
+    e_name:"Название", e_supply:"Общий объём эмиссии", e_lp_h:"Ликвидность",
+    e_lp:"LP 10% заблокирован навсегда",
+    e_ca:"Адрес контракта (Solana Mint · CA)",
+    e_warn:"⚠️ Сверяйте адрес контракта, остерегайтесь подделок! Проверяйте CA посимвольно; не доверяйте «новым адресам», присланным в личку.",
+    e_goals:"Ключевые цели:",
+    e_principle_gloss:"Высший принцип: всякая цивилизация служит человеческой цивилизации, включая EACO.",
+    e_site:"🌐 Официальный сайт",
+    e_disc:"Дисклеймер: ничего здесь не является инвестиционной рекомендацией. Криптоактивы крайне волатильны; возможна полная потеря капитала. Проверяйте CA и местное законодательство; участвуйте разумно на свой риск.",
+    e_foot:"Глобальный навигатор · для всех, кто в пути",
+  },
+  ur:{
+    t_title:"عالمی چائنیز نیویگیٹر",
+    t_hero:"بیرونِ ملک چینی زندگی|ایک صفحہ، براہِ راست رسائی",
+    t_sub:"تعلیم، تجارت، ملازمت، زندگی، رقم بھیجنا اور کمیونٹی — دنیا بھر کے 50 ملین اوورسیز چینی کے لیے عملی گائیڈ۔ Hungry Panda کی طرح، گھر سے دور آپ کے لیے واقف چینی دنیا جیب میں۔",
+    t_tribute:"🕯️ ماسٹر فینگ جنہوں نے میلبورن کی رات میں جان دی، اور ہر عام محنتی کی یاد میں جو بیرونِ ملک سڑکوں پر روز روٹی کمانے نکلے — انہیں سلامتی ملے، ہر محنتی انسان کے ساتھ نرمی کا سلوک ہو۔",
+    t_visit:"وزٹ کریں →",
+    t_navFriendly:"دوستانه مقامات",
+    t_navLangs:"ترجمہ",
+    t_friendlyT:"چینی کے لیے دوستانه مقامات · ہر براعظم کی ٹاپ 10",
+    t_friendlyS:"چینی کمیونٹی کے حجم، چینی زبان کی خدمات اور شہرت کی بنیاد پر؛ ترتیب صرف رہنمائی کے لیے ہے۔",
+    t_langT:"ترجمہ · دنیا کی ٹاپ 10 زبانیں",
+    t_langS:"کل بولنے والوں کے حساب سے دنیا کی سب سے زیادہ استعمال ہونے والی 10 زبانیں۔ یہ صفحہ تمام 10 زبانوں کی حمایت کرتا ہے — اوپر دائیں طرف سے تبدیل کریں۔",
+    t_total:"کل بولنے والے",
+    t_native:"مادری زبان بولنے والے",
+    t_supported:"یہاں دستیاب ✓",
+    t_note:"اعداد و شمار Ethnologue وغیرہ کے کل بولنے والوں (مادری + دوسری زبان) کے حالیہ تخمینے ہیں؛ ذرائع کے حساب سے کچھ فرق ممکن ہے۔",
+    t_copy:"کاپی", t_copied:"کاپی ہو گیا ✓",
+    e_h2:"EACO زمین · Earth's Best Coin",
+    e_pos:"EACO (ارتھز بیسٹ کوئن): Solana پر بہترین AI + RWA + Web3 ٹوکن، عالمی چینی کمیونٹیز کو عالمی تعاون کے نیٹ ورک سے جوڑتا ہے۔",
+    e_name:"نام", e_supply:"کل سپلائی", e_lp_h:"سیولیت",
+    e_lp:"LP 10% مستقل طور پر لاک",
+    e_ca:"کانٹریکٹ ایڈریس (Solana Mint · CA)",
+    e_warn:"⚠️ جعلی ٹوکن سے بچنے کے لیے کانٹریکٹ ایڈریس کی تصدیق کریں! CA حرف بہ حرف چیک کریں؛ ذاتی طور پر بھیجے گئے کسی 'نئے ایڈریس' پر بھروسہ نہ کریں۔",
+    e_goals:"بنیادی اہداف:",
+    e_principle_gloss:"اعلیٰ اصول: ہر تہذیب انسانی تہذیب کی خدمت کرتی ہے، بشمول EACO۔",
+    e_site:"🌐 سرکاری ویب سائٹ",
+    e_disc:"ڈسکلیمر: یہاں کا کوئی مواد سرمایہ کاری کی نصیحت نہیں۔ کرپٹو اثاثے انتہائی متغیر ہیں؛ پورا سرمایہ ہونے کا خطرہ ہے۔ CA اور مقامی قانونی تعمیل خود تصدیق کریں؛ اپنی ذمہ داری پر معقول انداز میں حصہ لیں۔",
+    e_foot:"عالمی چائنیز نیویگیٹر · ہر راہنما کے لیے",
+  },
+  };
+
+  /* ================= 核心目标（官方华语原文原样保留 + 各语对照） ================= */
+  const GOALS = [
+    {zh:"提升个体认知", t:{en:"Elevate individual cognition", hi:"व्यक्तिगत संज्ञान बढ़ाएँ", es:"Elevar la cognición individual", fr:"Élever la cognition individuelle", ar:"رفع الإدراك الفردي", bn:"ব্যক্তিগত জ্ঞান বৃদ্ধি", pt:"Elevar a cognição individual", ru:"Развитие индивидуального познания", ur:"انفرادی شعور کو فروغ دینا"}},
+    {zh:"提升组织效率", t:{en:"Improve organizational efficiency", hi:"संगठनात्मक दक्षता सुधारें", es:"Mejorar la eficiencia organizativa", fr:"Améliorer l'efficacité organisationnelle", ar:"تحسين كفاءة المنظمات", bn:"সাংগঠনিক দক্ষতা উন্নত করা", pt:"Melhorar a eficiência organizacional", ru:"Повышение эффективности организаций", ur:"تنظیمی کارکردگیہ بہتر بنانا"}},
+    {zh:"推动社会文明进步", t:{en:"Advance social civilization", hi:"सामाजिक सभ्यता की प्रगति", es:"Impulsar el progreso de la civilización", fr:"Faire progresser la civilisation sociale", ar:"دفع تقدم الحضارة الاجتماعية", bn:"সামাজিক সভ্যতার অগ্রগতি", pt:"Impulsionar o progresso da civilização", ru:"Содействие прогрессу общества", ur:"سماجی تہذیب کی ترقی"}},
+    {zh:"促进地球可持续发展", t:{en:"Promote Earth's sustainability", hi:"पृथ्वी के सतत विकास को बढ़ावा", es:"Promover la sostenibilidad de la Tierra", fr:"Promouvoir la durabilité de la Terre", ar:"تعزيز الاستدامة على الأرض", bn:"পৃথিবীর টেকসই উন্নয়ন এগিয়ে নেওয়া", pt:"Promover a sustentabilidade da Terra", ru:"Устойчивое развитие Земли", ur:"زمین کی پائیدار ترقی کو فروغ"}},
+    {zh:"融合 100 个认知模型", t:{en:"Integrate 100 mental models", hi:"100 संज्ञान मॉडल का एकीकरण", es:"Integrar 100 modelos mentales", fr:"Intégrer 100 modèles mentaux", ar:"دمج 100 نموذج إدراكي", bn:"১০০টি জ্ঞান মডেল একীভূত করা", pt:"Integrar 100 modelos mentais", ru:"Объединение 100 когнитивных моделей", ur:"100 شناختی ماڈلز کا انضمام"}},
+  ];
+
+  /* ================= 分类数据（描述默认中英，其他语言回退英文） ================= */
+  const CATS = [
+    {
+      id:"food", ic:"🍜",
+      name:{zh:"美食外卖", en:"Food & Delivery", hi:"खाना और डिलीवरी", es:"Comida y reparto", fr:"Cuisine et livraison", ar:"الطعام والتوصيل", bn:"খাবার ও ডেলিভারি", pt:"Comida e entrega", ru:"Еда и доставка", ur:"کھانا اور ڈیلیوری"},
+      items:[
+        {n:"熊猫外卖 HungryPanda", flag:"英/澳/美/加/欧", u:"https://www.hungrypanda.com",
+         d:{zh:"中国留学生创办的中餐外卖平台，覆盖 10 国 80+ 城市，华人外卖市场占有率超 95%。", en:"Chinese-food delivery founded by Chinese students; 10 countries, 80+ cities, 95%+ share in Chinese communities."},
+         t:["中餐","外卖","生鲜"]},
+        {n:"饭团外卖 Fantuan", flag:"北美/澳", u:"https://www.fantuan.com",
+         d:{zh:"北美、澳洲华人常用外卖平台，中餐日料奶茶一应俱全。", en:"Popular Chinese-food delivery across North America and Australia."},
+         t:["外卖","北美"]},
+        {n:"Uber Eats", flag:"全球", u:"https://www.ubereats.com",
+         d:{zh:"全球主流外卖平台，覆盖城市最广，深夜也有骑手接单。", en:"Global mainstream delivery platform with the widest city coverage."},
+         t:["外卖","全球"]},
+        {n:"DoorDash", flag:"美/加/澳", u:"https://www.doordash.com",
+         d:{zh:"北美最大的外卖平台之一，也是许多华人骑手的主要收入来源。", en:"One of the largest delivery platforms in North America and a key income source for Chinese riders."},
+         t:["外卖","骑手"]},
+        {n:"亚米网 Yamibuy", flag:"北美", u:"https://www.yamibuy.com",
+         d:{zh:"北美最大亚洲食品百货电商，零食、调料、锅碗瓢盆一站买齐。", en:"Largest Asian grocery e-commerce in North America — snacks, sauces and housewares."},
+         t:["生鲜","百货"]},
+        {n:"Weee!", flag:"北美", u:"https://www.sayweee.com",
+         d:{zh:"亚裔生鲜超市，主打中超食材与海鲜，常有大额满减。", en:"Asian grocery with fresh produce and seafood, frequent deals."},
+         t:["生鲜","超市"]},
+      ]
+    },
+    {
+      id:"edu", ic:"🎓",
+      name:{zh:"留学教育", en:"Study Abroad", hi:"विदेश में पढ़ाई", es:"Estudiar en el extranjero", fr:"Études à l'étranger", ar:"الدراسة في الخارج", bn:"বিদেশে পড়াশোনা", pt:"Estudar no exterior", ru:"Учёба за рубежом", ur:"بیرونِ ملک تعلیم"},
+      items:[
+        {n:"一亩三分地", flag:"北美", u:"https://www.1point3acres.com",
+         d:{zh:"北美留学求职第一论坛：申请、签证、找工、面经应有尽有。", en:"Top forum for studying and job hunting in North America."},
+         t:["论坛","申请"]},
+        {n:"寄托天下", flag:"全球", u:"https://www.gter.net",
+         d:{zh:"老牌留学社区，GRE/托福备考与院校申请经验分享。", en:"Long-standing study-abroad community with test-prep and application tips."},
+         t:["备考","申请"]},
+        {n:"QS 世界大学排名", flag:"全球", u:"https://www.topuniversities.com",
+         d:{zh:"权威大学排名与专业对比，选校参考必备。", en:"Authoritative university rankings for school selection."},
+         t:["排名","选校"]},
+        {n:"教育部留学服务中心", flag:"中国", u:"https://www.cscse.edu.cn",
+         d:{zh:"学历学位认证、留学归国政策官方渠道，回国发展必看。", en:"Official channel for degree authentication and returnee policies."},
+         t:["认证","归国"]},
+      ]
+    },
+    {
+      id:"job", ic:"💼",
+      name:{zh:"工作求职", en:"Jobs & Career", hi:"नौकरी और करियर", es:"Empleo y carrera", fr:"Emploi et carrière", ar:"الوظائف والمسار المهني", bn:"চাকরি ও ক্যারিয়ার", pt:"Emprego e carreira", ru:"Работа и карьера", ur:"ملازمت اور کیریئر"},
+      items:[
+        {n:"LinkedIn 领英", flag:"全球", u:"https://www.linkedin.com",
+         d:{zh:"全球职场社交与招聘主阵地，海外找工作的起点。", en:"The global professional network — the starting point for jobs abroad."},
+         t:["职场","招聘"]},
+        {n:"Indeed", flag:"全球", u:"https://www.indeed.com",
+         d:{zh:"全球最大招聘搜索引擎，蓝领白领岗位都有。", en:"The largest job search engine worldwide."},
+         t:["招聘","全职"]},
+        {n:"SEEK", flag:"澳大利亚", u:"https://www.seek.com.au",
+         d:{zh:"澳洲第一大招聘网站，本地全职兼职主流渠道。", en:"Australia's No.1 job site."},
+         t:["澳洲","招聘"]},
+        {n:"加拿大 Job Bank", flag:"加拿大", u:"https://www.jobbank.gc.ca",
+         d:{zh:"加拿大政府官方求职平台，含劳工市场信息。", en:"Canada's official government job platform."},
+         t:["加拿大","官方"]},
+        {n:"Glassdoor", flag:"全球", u:"https://www.glassdoor.com",
+         d:{zh:"查公司评价、薪资水平与面试题，谈薪前先看看。", en:"Company reviews, salaries and interview questions before you negotiate."},
+         t:["薪资","评价"]},
+      ]
+    },
+    {
+      id:"life", ic:"🏠",
+      name:{zh:"生活安居", en:"Living & Housing", hi:"आवास और जीवन", es:"Vida y vivienda", fr:"Vie et logement", ar:"السكن والحياة", bn:"বাসস্থান ও জীবনযাপন", pt:"Moradia e vida", ru:"Жильё и быт", ur:"رہائش اور زندگی"},
+      items:[
+        {n:"Zillow", flag:"美国", u:"https://www.zillow.com",
+         d:{zh:"美国租房买房信息最全的平台，房价历史一目了然。", en:"The most complete US housing platform."},
+         t:["租房","买房"]},
+        {n:"Domain", flag:"澳大利亚", u:"https://www.domain.com.au",
+         d:{zh:"澳洲主流租房买房平台，与 realestate.com.au 并列。", en:"Major Australian property platform."},
+         t:["澳洲","租房"]},
+        {n:"Zoopla", flag:"英国", u:"https://www.zoopla.co.uk",
+         d:{zh:"英国租房买房主流平台，覆盖全英房源。", en:"Mainstream UK property platform."},
+         t:["英国","租房"]},
+        {n:"Craigslist", flag:"北美", u:"https://www.craigslist.org",
+         d:{zh:"北美二手交易、租房、拼车老牌信息板，注意防骗。", en:"Classic US classifieds for second-hand, rentals and rideshares."},
+         t:["二手","信息"]},
+        {n:"Gumtree", flag:"英/澳", u:"https://www.gumtree.com",
+         d:{zh:"英国、澳洲本地二手与生活信息平台。", en:"UK & Australia classifieds for second-hand goods."},
+         t:["二手","英澳"]},
+        {n:"中国领事服务网", flag:"中国", u:"https://cs.mfa.gov.cn",
+         d:{zh:"护照签证办理、海外安全提醒官方渠道，出国在外必备收藏。", en:"Official passport/visa info and overseas safety alerts."},
+         t:["证件","安全"]},
+      ]
+    },
+    {
+      id:"money", ic:"💸",
+      name:{zh:"汇款金融", en:"Remittance & Finance", hi:"रेमिट्यान्स और वित्त", es:"Remesas y finanzas", fr:"Transferts et finance", ar:"الحوالات والمال", bn:"রেমিট্যান্স ও ফাইন্যান্স", pt:"Remessas e finanças", ru:"Переводы и финансы", ur:"رقم بھیجنا اور فنانس"},
+      items:[
+        {n:"熊猫速汇 PandaRemit", flag:"全球→中国", u:"https://www.pandaremit.com",
+         d:{zh:"华人常用的跨境汇款平台，线上操作，汇率透明。", en:"Cross-border remittance popular among overseas Chinese."},
+         t:["汇款","跨境"]},
+        {n:"Wise", flag:"全球", u:"https://wise.com",
+         d:{zh:"国际转账费用低、汇率按实时中间价，多币种账户。", en:"Low-cost international transfers with mid-market rates."},
+         t:["转账","多币种"]},
+        {n:"Remitly", flag:"全球", u:"https://www.remitly.com",
+         d:{zh:"面向个人跨境汇款，新用户常有优惠费率。", en:"Personal remittance service with introductory offers."},
+         t:["汇款","个人"]},
+      ]
+    },
+    {
+      id:"social", ic:"💬",
+      name:{zh:"社区资讯", en:"Community & News", hi:"समुदाय और समाचार", es:"Comunidad y noticias", fr:"Communauté et actualités", ar:"المجتمع والأخبار", bn:"কমিউনিটি ও সংবাদ", pt:"Comunidade e notícias", ru:"Сообщество и новости", ur:"کمیونٹی اور خبریں"},
+      items:[
+        {n:"小红书 RED", flag:"全球", u:"https://www.xiaohongshu.com",
+         d:{zh:"海外华人的生活攻略库：租房、办卡、落地第一周怎么过，搜一搜都有。", en:"Life-hack library for overseas Chinese — housing, banking and landing tips."},
+         t:["攻略","生活"]},
+        {n:"Reddit", flag:"全球", u:"https://www.reddit.com",
+         d:{zh:"各国城市版块与华人子版，本地一手信息。", en:"City subreddits and Chinese communities for local intel."},
+         t:["论坛","本地"]},
+        {n:"BBC 中文", flag:"英国", u:"https://www.bbc.com/zhongwen/simp",
+         d:{zh:"简体中文国际新闻资讯，海外视角看世界。", en:"Chinese-language international news."},
+         t:["新闻","国际"]},
+        {n:"中国领事 APP", flag:"中国", u:"https://cs.mfa.gov.cn/zlbg/zgls/",
+         d:{zh:"海外中国公民领保求助、护照旅行证在线办理官方应用。", en:"Official app for consular protection and passport services abroad."},
+         t:["领保","官方"]},
+      ]
+    },
+  ];
+
+  /* ================= 华人友好榜数据 ================= */
+  const FRIENDLY = [
+    {id:"asia", ic:"🌏", name:{zh:"亚洲", en:"Asia", hi:"एशिया", es:"Asia", fr:"Asie", ar:"آسيا", bn:"এশিয়া", pt:"Ásia", ru:"Азия", ur:"ایشیاء"}, items:[
+      {f:"🇸🇬", n:{zh:"新加坡", en:"Singapore"}, w:{zh:"约 74% 华人，华语为官方语言之一，华语生活几乎零障碍。", en:"~74% ethnic Chinese; Mandarin is an official language — life in Chinese is nearly seamless."}},
+      {f:"🇲🇾", n:{zh:"吉隆坡 · 马来西亚", en:"Kuala Lumpur, Malaysia"}, w:{zh:"华人约 700 万，华文学校与华人商会体系完整。", en:"~7 million Chinese; complete Chinese-school and chamber-of-commerce network."}},
+      {f:"🇹🇭", n:{zh:"曼谷 · 泰国", en:"Bangkok, Thailand"}, w:{zh:"华人融入深、经济地位高，华语与潮州话通行度高。", en:"Deeply integrated Chinese community with strong economic standing."}},
+      {f:"🇮🇩", n:{zh:"雅加达 · 印尼", en:"Jakarta, Indonesia"}, w:{zh:"全球华人人口最多的国家之一，北区华人商业圈成熟。", en:"Home to one of the world's largest Chinese populations; mature business districts."}},
+      {f:"🇵🇭", n:{zh:"马尼拉 · 菲律宾", en:"Manila, Philippines"}, w:{zh:"华商影响力大，华人商圈与华语学校遍布。", en:"Powerful Chinese business networks and schools across the metro."}},
+      {f:"🇻🇳", n:{zh:"胡志明市 · 越南", en:"Ho Chi Minh City, Vietnam"}, w:{zh:"堤岸（第五郡）华人区百年历史，粤语华语通行。", en:"Century-old Cholon Chinese district; Cantonese and Mandarin widely spoken."}},
+      {f:"🇯🇵", n:{zh:"东京 · 日本", en:"Tokyo, Japan"}, w:{zh:"华侨华人近百万，池袋被称为『东京中华街』。", en:"Nearly 1 million Chinese; Ikebukuro known as 'Tokyo Chinatown'."}},
+      {f:"🇰🇷", n:{zh:"首尔 · 韩国", en:"Seoul, South Korea"}, w:{zh:"中国留学生与大林洞华人社区规模庞大。", en:"Huge Chinese student population and the Daerim-dong Chinese district."}},
+      {f:"🇰🇭", n:{zh:"金边 · 柬埔寨", en:"Phnom Penh, Cambodia"}, w:{zh:"华人经济活跃，华语是当地商业常用语言。", en:"Vibrant Chinese economy; Mandarin common in business."}},
+      {f:"🇲🇲", n:{zh:"仰光 · 缅甸", en:"Yangon, Myanmar"}, w:{zh:"华侨历史深厚，华文教育与商会延续百年。", en:"Deep overseas-Chinese heritage with century-old schools and associations."}},
+    ]},
+    {id:"europe", ic:"🌍", name:{zh:"欧洲", en:"Europe", hi:"यूरोप", es:"Europa", fr:"Europe", ar:"أوروبا", bn:"ইউরোপ", pt:"Europa", ru:"Европа", ur:"یورپ"}, items:[
+      {f:"🇬🇧", n:{zh:"伦敦 · 英国", en:"London, UK"}, w:{zh:"华人数十万，唐人街成熟，华语服务覆盖衣食住行。", en:"Hundreds of thousands of Chinese; mature Chinatown and services."}},
+      {f:"🇫🇷", n:{zh:"巴黎 · 法国", en:"Paris, France"}, w:{zh:"13 区与美丽城华人聚居，欧洲最大华人社区之一。", en:"13th arrondissement and Belleville — among Europe's largest Chinese communities."}},
+      {f:"🇪🇸", n:{zh:"马德里 · 西班牙", en:"Madrid, Spain"}, w:{zh:"Usera 被称为『马德里中国城』，华人商铺密度极高。", en:"Usera is Madrid's Chinatown with dense Chinese businesses."}},
+      {f:"🇮🇹", n:{zh:"米兰 & 普拉托 · 意大利", en:"Milan & Prato, Italy"}, w:{zh:"普拉托华人社区欧洲闻名，纺织服装业华人主导。", en:"Prato's Chinese community is famous; Chinese-led textile industry."}},
+      {f:"🇩🇪", n:{zh:"柏林 & 法兰克福 · 德国", en:"Berlin & Frankfurt, Germany"}, w:{zh:"留学生众多，工业界对华人工程师需求旺盛。", en:"Many Chinese students; strong demand for Chinese engineers in industry."}},
+      {f:"🇳🇱", n:{zh:"阿姆斯特丹 · 荷兰", en:"Amsterdam, Netherlands"}, w:{zh:"唐人街历史逾百年，华语旅游与服务完善。", en:"Century-old Chinatown with good Chinese-language services."}},
+      {f:"🇵🇹", n:{zh:"里斯本 · 葡萄牙", en:"Lisbon, Portugal"}, w:{zh:"华人商贸活跃，移民门槛与生活成本相对友好。", en:"Active Chinese trade; relatively friendly immigration and living costs."}},
+      {f:"🇭🇺", n:{zh:"布达佩斯 · 匈牙利", en:"Budapest, Hungary"}, w:{zh:"中东欧最大华人市场所在地，中匈经贸关系友好。", en:"Largest Chinese market in Central-Eastern Europe; friendly ties with China."}},
+      {f:"🇧🇪", n:{zh:"布鲁塞尔 & 安特卫普 · 比利时", en:"Brussels & Antwerp, Belgium"}, w:{zh:"华人商贸与中资企业集中地。", en:"Hub for Chinese trade and enterprises."}},
+      {f:"🇮🇪", n:{zh:"都柏林 · 爱尔兰", en:"Dublin, Ireland"}, w:{zh:"英语环境 + 科技岗位多，华人社区增长迅速。", en:"English-speaking with booming tech jobs; fast-growing Chinese community."}},
+    ]},
+    {id:"namerica", ic:"🌎", name:{zh:"北美洲", en:"North America", hi:"उत्तरी अमेरिका", es:"América del Norte", fr:"Amérique du Nord", ar:"أمريكا الشمالية", bn:"উত্তর আমেরিকা", pt:"América do Norte", ru:"Северная Америка", ur:"شمالی امریکہ"}, items:[
+      {f:"🇨🇦", n:{zh:"多伦多 · 加拿大", en:"Toronto, Canada"}, w:{zh:"华人约 70 万，万锦市华人过半，华语服务无处不在。", en:"~700k Chinese; Chinese-majority Markham with services everywhere."}},
+      {f:"🇨🇦", n:{zh:"温哥华 · 加拿大", en:"Vancouver, Canada"}, w:{zh:"列治文华人近半数，粤语普通话皆通行。", en:"Richmond is nearly half Chinese; Cantonese and Mandarin both common."}},
+      {f:"🇺🇸", n:{zh:"纽约 · 美国", en:"New York, USA"}, w:{zh:"法拉盛、华埠、八大道三大华人区，华人超百万。", en:"Flushing, Manhattan Chinatown and 8th Ave — over 1 million Chinese."}},
+      {f:"🇺🇸", n:{zh:"洛杉矶 · 美国", en:"Los Angeles, USA"}, w:{zh:"圣盖博谷被称『中国谷』，中餐与华语生活最丰富。", en:"The San Gabriel Valley 'Chinese Valley' — richest Chinese dining and life."}},
+      {f:"🇺🇸", n:{zh:"旧金山湾区 · 美国", en:"San Francisco Bay Area, USA"}, w:{zh:"北美最悠久华埠，科技行业华人工程师聚集。", en:"Oldest Chinatown in North America; hub of Chinese tech engineers."}},
+      {f:"🇺🇸", n:{zh:"西雅图 · 美国", en:"Seattle, USA"}, w:{zh:"亚裔比例高，科技大厂对华人职场友好。", en:"High Asian population; big-tech friendly for Chinese professionals."}},
+      {f:"🇺🇸", n:{zh:"休斯顿 · 美国", en:"Houston, USA"}, w:{zh:"华人医疗、能源从业者聚集，生活成本低。", en:"Chinese professionals in medicine and energy; low cost of living."}},
+      {f:"🇨🇦", n:{zh:"蒙特利尔 & 卡尔加里 · 加拿大", en:"Montreal & Calgary, Canada"}, w:{zh:"移民政策友好，华人社区稳定增长。", en:"Immigrant-friendly policies; steadily growing Chinese communities."}},
+      {f:"🇵🇦", n:{zh:"巴拿马城 · 巴拿马", en:"Panama City, Panama"}, w:{zh:"华人及华裔约占总人口一成，华人商业根深蒂固。", en:"Chinese and descendants are ~10% of the population; deep-rooted commerce."}},
+      {f:"🇲🇽", n:{zh:"蒙特雷 & 墨西哥城 · 墨西哥", en:"Monterrey & Mexico City, Mexico"}, w:{zh:"中资制造业重镇，华人社区快速成长。", en:"Hub of Chinese manufacturing investment; fast-growing community."}},
+    ]},
+    {id:"samerica", ic:"🌎", name:{zh:"南美洲", en:"South America", hi:"दक्षिणी अमेरिका", es:"América del Sur", fr:"Amérique du Sud", ar:"أمريكا الجنوبية", bn:"দক্ষিণ আমেরিকা", pt:"América do Sul", ru:"Южная Америка", ur:"جنوبی امریکہ"}, items:[
+      {f:"🇵🇪", n:{zh:"利马 · 秘鲁", en:"Lima, Peru"}, w:{zh:"华裔血统人口比例全球最高之一，『Chifa』中餐文化深入日常。", en:"One of the highest Chinese-descendant ratios worldwide; Chifa food culture."}},
+      {f:"🇧🇷", n:{zh:"圣保罗 · 巴西", en:"São Paulo, Brazil"}, w:{zh:"自由区（Liberdade）东亚文化区，华商与中资聚集。", en:"Liberdade East-Asian district; hub of Chinese business and investment."}},
+      {f:"🇦🇷", n:{zh:"布宜诺斯艾利斯 · 阿根廷", en:"Buenos Aires, Argentina"}, w:{zh:"Belgrano 中国城，华人超市遍布全城。", en:"Belgrano Chinatown; Chinese-run supermarkets across the city."}},
+      {f:"🇨🇱", n:{zh:"圣地亚哥 · 智利", en:"Santiago, Chile"}, w:{zh:"智利经济稳定，对华人经商环境友好。", en:"Stable economy with a friendly environment for Chinese business."}},
+      {f:"🇪🇨", n:{zh:"瓜亚基尔 · 厄瓜多尔", en:"Guayaquil, Ecuador"}, w:{zh:"华人超市与小商品商贸网络成熟。", en:"Mature Chinese supermarket and trade networks."}},
+      {f:"🇻🇪", n:{zh:"加拉加斯 · 委内瑞拉", en:"Caracas, Venezuela"}, w:{zh:"华侨历史百年，餐饮与超市业主力。", en:"Century-old Chinese community; mainstay of dining and retail."}},
+      {f:"🇵🇾", n:{zh:"东方市 · 巴拉圭", en:"Ciudad del Este, Paraguay"}, w:{zh:"南美最大华人商贸集散地之一。", en:"One of South America's largest Chinese trade hubs."}},
+      {f:"🇨🇴", n:{zh:"波哥大 · 哥伦比亚", en:"Bogotá, Colombia"}, w:{zh:"中国城建设中，中资与华商增长快。", en:"Chinatown under development; fast-growing Chinese trade."}},
+      {f:"🇧🇴", n:{zh:"圣克鲁斯 · 玻利维亚", en:"Santa Cruz, Bolivia"}, w:{zh:"华人商贸活跃，餐饮业集中。", en:"Active Chinese commerce concentrated in dining and trade."}},
+      {f:"🇺🇾", n:{zh:"蒙得维的亚 · 乌拉圭", en:"Montevideo, Uruguay"}, w:{zh:"华人超市业占主导，社区安稳友好。", en:"Chinese supermarkets dominate retail; safe and friendly community."}},
+    ]},
+    {id:"oceania", ic:"🌏", name:{zh:"大洋洲", en:"Oceania", hi:"ओशिनिया", es:"Oceanía", fr:"Océanie", ar:"أوقيانوسيا", bn:"ওশেনিয়া", pt:"Oceânia", ru:"Океания", ur:"اوقیانوسیہ"}, items:[
+      {f:"🇦🇺", n:{zh:"悉尼 · 澳大利亚", en:"Sydney, Australia"}, w:{zh:"华人 50 万+，Chatswood、Burwood 华语生活便利度媲美国内。", en:"500k+ Chinese; Chatswood & Burwood as convenient as back home."}},
+      {f:"🇦🇺", n:{zh:"墨尔本 · 澳大利亚", en:"Melbourne, Australia"}, w:{zh:"Box Hill 华人商圈闻名，华人历史自淘金潮起逾 170 年。", en:"Famous Box Hill Chinese hub; 170+ years of Chinese history since the gold rush."}},
+      {f:"🇳🇿", n:{zh:"奥克兰 · 新西兰", en:"Auckland, New Zealand"}, w:{zh:"华人 20 万+，华语服务与华人商圈完善。", en:"200k+ Chinese with complete services and commercial hubs."}},
+      {f:"🇦🇺", n:{zh:"布里斯班 · 澳大利亚", en:"Brisbane, Australia"}, w:{zh:"Sunnybank 被称为『布里斯班中国城』。", en:"Sunnybank is known as Brisbane's Chinatown."}},
+      {f:"🇦🇺", n:{zh:"珀斯 · 澳大利亚", en:"Perth, Australia"}, w:{zh:"矿业与商机吸引华人移民，社区增长快。", en:"Mining and business opportunities attract fast-growing Chinese migration."}},
+      {f:"🇦🇺", n:{zh:"阿德莱德 · 澳大利亚", en:"Adelaide, Australia"}, w:{zh:"移民政策友好，生活成本相对较低。", en:"Friendly migration policies and relatively low living costs."}},
+      {f:"🇳🇿", n:{zh:"惠灵顿 & 基督城 · 新西兰", en:"Wellington & Christchurch, New Zealand"}, w:{zh:"华人比例高，华语教育普及。", en:"High Chinese ratio and widespread Chinese-language education."}},
+      {f:"🇫🇯", n:{zh:"苏瓦 · 斐济", en:"Suva, Fiji"}, w:{zh:"华侨历史 170 年，华人商业地位稳固。", en:"170 years of Chinese heritage; established commercial standing."}},
+      {f:"🇵🇬", n:{zh:"莫尔兹比港 · 巴布亚新几内亚", en:"Port Moresby, Papua New Guinea"}, w:{zh:"华侨商业网络历史悠久。", en:"Long-established overseas-Chinese business networks."}},
+      {f:"🇦🇺", n:{zh:"堪培拉 · 澳大利亚", en:"Canberra, Australia"}, w:{zh:"留学生与华人公务员群体的安居地。", en:"A settled home for Chinese students and professionals."}},
+    ]},
+    {id:"africa", ic:"🌍", name:{zh:"非洲", en:"Africa", hi:"अफ्रीका", es:"África", fr:"Afrique", ar:"إفريقيا", bn:"আফ্রিকা", pt:"África", ru:"Африка", ur:"افریقہ"}, items:[
+      {f:"🇿🇦", n:{zh:"约翰内斯堡 · 南非", en:"Johannesburg, South Africa"}, w:{zh:"非洲最大华人社区，Cyrildene 中国城。", en:"Africa's largest Chinese community with Cyrildene Chinatown."}},
+      {f:"🇲🇺", n:{zh:"路易港 · 毛里求斯", en:"Port Louis, Mauritius"}, w:{zh:"华人约占 3%，春节为法定假日，中毛友谊深厚。", en:"Chinese ~3% of population; Lunar New Year is a public holiday."}},
+      {f:"🇳🇬", n:{zh:"拉各斯 · 尼日利亚", en:"Lagos, Nigeria"}, w:{zh:"非洲最大中资与华商聚集地之一。", en:"One of Africa's largest hubs for Chinese firms and traders."}},
+      {f:"🇰🇪", n:{zh:"内罗毕 · 肯尼亚", en:"Nairobi, Kenya"}, w:{zh:"中资项目密集，华人工程与商贸群体庞大。", en:"Dense Chinese projects; large engineering and trade community."}},
+      {f:"🇦🇴", n:{zh:"罗安达 · 安哥拉", en:"Luanda, Angola"}, w:{zh:"华工华商众多，中安经贸规模居非洲前列。", en:"Many Chinese workers and traders; top-tier China-Africa trade volume."}},
+      {f:"🇪🇬", n:{zh:"开罗 · 埃及", en:"Cairo, Egypt"}, w:{zh:"华人商贸与中资企业集中，泰达合作区知名。", en:"Concentration of Chinese business and the well-known TEDA zone."}},
+      {f:"🇪🇹", n:{zh:"亚的斯亚贝巴 · 埃塞俄比亚", en:"Addis Ababa, Ethiopia"}, w:{zh:"非洲中资总部聚集地，被称为『非洲小中国』。", en:"HQ cluster of Chinese investment in Africa — 'little China of Africa'."}},
+      {f:"🇹🇿", n:{zh:"达累斯萨拉姆 · 坦桑尼亚", en:"Dar es Salaam, Tanzania"}, w:{zh:"华商传统市场成熟。", en:"Well-established Chinese trading markets."}},
+      {f:"🇬🇭", n:{zh:"阿克拉 · 加纳", en:"Accra, Ghana"}, w:{zh:"华商与中资制造业活跃。", en:"Active Chinese traders and manufacturing investment."}},
+      {f:"🇲🇦", n:{zh:"卡萨布兰卡 · 摩洛哥", en:"Casablanca, Morocco"}, w:{zh:"新兴华商与义乌小商品集散地。", en:"Emerging Chinese commerce and Yiwu-goods distribution hub."}},
+    ]},
+  ];
+
+  /* ================= 地球村十大语言数据（按总使用人数估算） ================= */
+  const TOP10 = [
+    {code:"en", native:"English",            zh:"英语",           total:"1.5B · 15亿",    nat:"≈3.8亿",   f:"🇬🇧"},
+    {code:"zh", native:"官话（普通话）",      zh:"汉语普通话",      total:"1.14B · 11.4亿", nat:"≈9.4亿",   f:"🇨🇳"},
+    {code:"hi", native:"हिन्दी (Hindi)",      zh:"印地语",          total:"≈6.1亿",         nat:"≈3.45亿",  f:"🇮🇳"},
+    {code:"es", native:"Español",            zh:"西班牙语",        total:"≈5.6亿",         nat:"≈4.85亿",  f:"🇪🇸"},
+    {code:"fr", native:"Français",           zh:"法语",           total:"≈3.1亿",         nat:"≈8000万",  f:"🇫🇷"},
+    {code:"ar", native:"العربية",            zh:"阿拉伯语",        total:"≈3.3亿",         nat:"—",        f:"🇸🇦"},
+    {code:"bn", native:"বাংলা (Bengali)",     zh:"孟加拉语",        total:"≈2.7亿",         nat:"≈2.34亿",  f:"🇧🇩"},
+    {code:"pt", native:"Português",          zh:"葡萄牙语",        total:"≈2.6亿",         nat:"≈2.36亿",  f:"🇵🇹"},
+    {code:"ru", native:"Русский",            zh:"俄语",           total:"≈2.55亿",        nat:"≈1.47亿",  f:"🇷🇺"},
+    {code:"ur", native:"اردو (Urdu)",        zh:"乌尔都语",        total:"≈2.3亿",         nat:"≈7100万",  f:"🇵🇰"},
+  ];
+
+  /* ================= 语言状态 ================= */
+  let lang = "zh";
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+
+  function applyLang(){
+    const L = LANGS.find(l=>l.code===lang);
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+    document.documentElement.dir = L && L.rtl ? "rtl" : "ltr";
+    $$("[data-i18n]").forEach(el=>{
+      const k = el.dataset.i18n;
+      const v = (T[lang] && T[lang][k]) ?? (T.en[k] ?? T.zh[k]);
+      if(v !== undefined && v !== "") el.textContent = v;
+    });
+    const parts = T[lang].t_hero.split("|");
+    $("#heroT").innerHTML = parts[0] + `<span class="hl"> · ${parts[1] || ""}</span>`;
+    $("#tributeT").textContent = T[lang].t_tribute;
+    $("#langSel").value = lang;
+    render();
+  }
+
+  /* ================= 渲染：分类 / 友好榜 / 十大语言 / EACO ================= */
+  function renderFriendly(){
+    const box = $("#friendly-top");
+    const L = T[lang];
+    let html = `<div class="f-intro"><b>🏆 ${L.t_friendlyT}</b><span>${L.t_friendlyS}</span></div>`;
+    FRIENDLY.forEach(cont=>{
+      html += `<section class="cat" id="f-${cont.id}">
+          <div class="cat-head">
+            <span class="ic">${cont.ic}</span>
+            <h2>${cont.name[lang]}<span class="en">${cont.name.en}</span></h2>
+          </div>
+          <div class="grid f-grid">` +
+        cont.items.map((it,i)=>`
+            <div class="card f-card">
+              <div class="f-rank${i<3?" top":""}">${i+1}</div>
+              <div>
+                <div class="f-city">${it.f} ${it.n[lang] || it.n.en || it.n.zh}</div>
+                <div class="f-why">${it.w[lang] || it.w.en || it.w.zh}</div>
+              </div>
+            </div>`).join("") +
+        `</div></section>`;
+    });
+    box.innerHTML = html;
+  }
+
+  function renderLangs(){
+    const box = $("#langs-top");
+    const L = T[lang];
+    let html = `<div class="f-intro"><b>${L.t_langT}</b><span>${L.t_langS}<br>${L.t_note}</span></div>`;
+    html += `<div class="grid l-grid">` + TOP10.map((l,i)=>`
+      <div class="card l-card">
+        <div class="f-rank${i<3?" top":""}">${i+1}</div>
+        <div>
+          <div class="l-name">${l.f} ${l.native} <span class="zh">· ${l.zh}</span></div>
+          <div class="l-meta">
+            <b>${L.t_total}:</b> ${l.total} &nbsp;|&nbsp; <b>${L.t_native}:</b> ${l.nat}
+            <br><span class="ok-chip">${L.t_supported}</span>
+          </div>
+        </div>
+      </div>`).join("") + `</div>`;
+    box.innerHTML = html;
+  }
+
+  function renderEaco(){
+    const L = T[lang];
+    $("#goalList").innerHTML = GOALS.map(g=>{
+      const gloss = lang === "zh" ? "" : " · " + (g.t[lang] || g.t.en);
+      return `<li>${g.zh}${gloss}</li>`;
+    }).join("");
+    const p = lang === "zh"
+      ? "最高原则：一切文明为人类文明服务，包括 EACO。"
+      : "最高原则：一切文明为人类文明服务，包括 EACO。<br><span class='gloss'>" + L.e_principle_gloss + "</span>";
+    $("#principleLine").innerHTML = p;
+  }
+
+  function render(){
+    const nav = $("#catNav"), main = $("#main");
+    nav.innerHTML = "";
+    main.innerHTML = "";
+    CATS.forEach(cat=>{
+      const name = cat.name[lang] || cat.name.en;
+      nav.insertAdjacentHTML("beforeend", `<a href="#${cat.id}">${cat.ic} ${name}</a>`);
+      const items = cat.items.map(it=>`
+        <div class="card">
+          <div class="name">${it.n}${it.flag ? `<span class="flag">· ${it.flag}</span>` : ""}</div>
+          <div class="desc">${it.d[lang] || it.d.en || it.d.zh}</div>
+          <div class="tags">${it.t.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+          <a class="go" href="${it.u}" target="_blank" rel="noopener">${T[lang].t_visit}</a>
+        </div>`).join("");
+      main.insertAdjacentHTML("beforeend", `
+        <section class="cat" id="${cat.id}">
+          <div class="cat-head">
+            <span class="ic">${cat.ic}</span>
+            <h2>${name}<span class="en">${cat.name.en}</span></h2>
+          </div>
+          <div class="grid">${items}</div>
+        </section>`);
+    });
+    nav.insertAdjacentHTML("beforeend", `<a href="#friendly-top">🏆 ${T[lang].t_navFriendly}</a>`);
+    nav.insertAdjacentHTML("beforeend", `<a href="#langs-top">🗣️ ${T[lang].t_navLangs}</a>`);
+    renderFriendly();
+    renderLangs();
+    renderEaco();
+  }
+
+  /* ================= 初始化与事件 ================= */
+  $("#langSel").innerHTML = LANGS.map(l=>`<option value="${l.code}">${l.label}</option>`).join("");
+  $("#langSel").addEventListener("change", e=>{ lang = e.target.value; applyLang(); });
+
+  $("#themeDots").addEventListener("click", e=>{
+    const t = e.target.closest(".tdot"); if(!t) return;
+    document.body.dataset.theme = t.dataset.theme;
+    $$(".tdot").forEach(d=>d.classList.toggle("active", d===t));
+  });
+
+  $("#copyCa").addEventListener("click", ()=>{
+    const ca = $("#caCode").textContent.trim();
+    (navigator.clipboard ? navigator.clipboard.writeText(ca) : Promise.reject())
+      .then(()=>{ const b=$("#copyCa"); b.textContent = T[lang].t_copied; setTimeout(()=>b.textContent = T[lang].t_copy, 1500); })
+      .catch(()=>{ prompt("CA:", ca); });
+  });
+
+  applyLang();
+</script>
+</body>
+</html>
